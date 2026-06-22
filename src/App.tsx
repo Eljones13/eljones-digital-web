@@ -235,11 +235,17 @@ function articleLd() {
 function FounderBio() {
   return (
     <aside className="mt-10 flex flex-col gap-5 rounded-lg border border-line bg-white p-6 sm:flex-row sm:items-center">
-      <img
-        src="/errol-jones-founder.png"
-        alt="Errol Jones, founder of Eljones Digital"
-        className="h-20 w-20 flex-none rounded-md object-cover object-[50%_32%]"
-      />
+      <picture className="flex-none">
+        <source srcSet="/errol-jones-founder.webp" type="image/webp" />
+        <img
+          src="/errol-jones-founder.png"
+          alt="Errol Jones, founder of Eljones Digital"
+          width={80}
+          height={80}
+          loading="lazy"
+          className="h-20 w-20 flex-none rounded-md object-cover object-[50%_32%]"
+        />
+      </picture>
       <div>
         <p className="eyebrow mb-2">Expert author</p>
         <p className="leading-relaxed text-muted">
@@ -756,12 +762,18 @@ function AboutPage() {
       <Section surface>
         <div className="container-x grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="card overflow-hidden">
-            <img
-              src="/errol-jones-founder.png"
-              alt="Errol Jones, founder of Eljones Digital"
-              className="aspect-[4/3] w-full object-cover object-[50%_32%]"
-              loading="eager"
-            />
+            <picture>
+              <source srcSet="/errol-jones-founder.webp" type="image/webp" />
+              <img
+                src="/errol-jones-founder.png"
+                alt="Errol Jones, founder of Eljones Digital"
+                width={797}
+                height={797}
+                loading="eager"
+                fetchPriority="high"
+                className="aspect-[4/3] w-full object-cover object-[50%_32%]"
+              />
+            </picture>
             <div className="p-8">
               <p className="eyebrow mb-3">Founder</p>
               <h2 className="text-3xl font-bold text-navy">{SITE.founder}</h2>
