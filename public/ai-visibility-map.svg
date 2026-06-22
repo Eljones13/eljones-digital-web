@@ -1,0 +1,39 @@
+<svg width="960" height="680" viewBox="0 0 960 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="680" rx="34" fill="#F5F7FB"/>
+  <rect x="74" y="70" width="812" height="540" rx="30" fill="#FFFFFF" stroke="#E6EAF3" stroke-width="2"/>
+  <text x="118" y="128" fill="#1A1A2E" font-family="Sora, Arial, sans-serif" font-size="34" font-weight="800">AI visibility map</text>
+  <text x="118" y="163" fill="#5A6076" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="20" font-weight="600">Where the brand is found, cited and missing.</text>
+  <circle cx="480" cy="340" r="86" fill="#15152B"/>
+  <circle cx="480" cy="340" r="112" stroke="#E6EAF3" stroke-width="2" stroke-dasharray="8 10"/>
+  <text x="409" y="333" fill="#FFFFFF" font-family="Sora, Arial, sans-serif" font-size="26" font-weight="800">Client site</text>
+  <text x="421" y="367" fill="#8EB8FF" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="700" letter-spacing="2">ENTITY CORE</text>
+  <g stroke="#CBD5E8" stroke-width="3">
+    <path d="M480 228L275 218"/>
+    <path d="M565 274L706 206"/>
+    <path d="M594 378L754 440"/>
+    <path d="M480 452L304 504"/>
+    <path d="M374 362L206 402"/>
+  </g>
+  <g>
+    <rect x="156" y="176" width="238" height="84" rx="18" fill="#F7FAFF" stroke="#DDE6F7"/>
+    <circle cx="196" cy="218" r="17" fill="#2F7BED"/>
+    <text x="228" y="214" fill="#1A1A2E" font-family="Sora, Arial, sans-serif" font-size="18" font-weight="800">ChatGPT</text>
+    <text x="228" y="239" fill="#5A6076" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="15">mentions tracked</text>
+    <rect x="604" y="164" width="218" height="84" rx="18" fill="#FFF4F6" stroke="#F6C8D1"/>
+    <circle cx="644" cy="206" r="17" fill="#E94560"/>
+    <text x="676" y="202" fill="#1A1A2E" font-family="Sora, Arial, sans-serif" font-size="18" font-weight="800">Perplexity</text>
+    <text x="676" y="227" fill="#5A6076" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="15">citation gaps</text>
+    <rect x="644" y="398" width="202" height="84" rx="18" fill="#F7FAFF" stroke="#DDE6F7"/>
+    <circle cx="684" cy="440" r="17" fill="#2F7BED"/>
+    <text x="716" y="436" fill="#1A1A2E" font-family="Sora, Arial, sans-serif" font-size="18" font-weight="800">AI Overviews</text>
+    <text x="716" y="461" fill="#5A6076" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="15">topic coverage</text>
+    <rect x="166" y="360" width="216" height="84" rx="18" fill="#F7FAFF" stroke="#DDE6F7"/>
+    <circle cx="206" cy="402" r="17" fill="#2F7BED"/>
+    <text x="238" y="398" fill="#1A1A2E" font-family="Sora, Arial, sans-serif" font-size="18" font-weight="800">Gemini</text>
+    <text x="238" y="423" fill="#5A6076" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="15">answer quality</text>
+    <rect x="210" y="466" width="230" height="84" rx="18" fill="#FFF4F6" stroke="#F6C8D1"/>
+    <circle cx="250" cy="508" r="17" fill="#E94560"/>
+    <text x="282" y="504" fill="#1A1A2E" font-family="Sora, Arial, sans-serif" font-size="18" font-weight="800">Third-party proof</text>
+    <text x="282" y="529" fill="#5A6076" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="15">authority needed</text>
+  </g>
+</svg>

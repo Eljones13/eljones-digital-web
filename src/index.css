@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #1a1a2e;
+    --royal: #0f3460;
+    --azure: #2f7bed;
+    --accent: #e94560;
+    --ink: #15152b;
+    --muted: #5a6076;
+    --surface: #f5f7fb;
+    --line: #e6eaf3;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--azure);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[0.72rem] font-medium uppercase tracking-eyebrow text-azure;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[0.95rem] font-semibold transition-all duration-200;
+  }
+  .btn-accent {
+    @apply btn bg-accent text-white shadow-[0_14px_34px_-14px_rgba(233,69,96,0.75)] hover:-translate-y-0.5 hover:bg-accent-700;
+  }
+  .btn-navy {
+    @apply btn bg-navy text-white hover:-translate-y-0.5 hover:bg-navy-700;
+  }
+  .btn-ghost {
+    @apply btn border border-white/25 text-white hover:bg-white/10;
+  }
+  .btn-outline {
+    @apply btn border border-line bg-white text-ink hover:-translate-y-0.5 hover:border-royal hover:text-royal;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-white shadow-card;
+  }
+
+  .image-panel {
+    @apply relative overflow-hidden rounded-2xl border border-line bg-white shadow-lift;
+  }
+
+  .image-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, transparent 18%, rgba(255,255,255,0.34) 35%, transparent 53%);
+    transform: translateX(-120%);
+    animation: soft-sheen 7.5s ease-in-out infinite;
+  }
+
+  .premium-img {
+    @apply block h-full w-full object-cover transition-transform duration-700;
+  }
+
+  .image-panel:hover .premium-img {
+    transform: scale(1.025);
+  }
+
+  /* AI-citation answer block: 134-167 word self-contained answers */
+  .answer-block {
+    @apply rounded-2xl border border-line border-l-[5px] border-l-accent bg-surface p-6 text-[1.04rem] leading-[1.75] text-ink/90 sm:p-7;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1 font-mono text-[0.72rem] font-medium text-royal;
+  }
+
+  .dotgrid {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  .link-underline {
+    @apply relative text-royal transition-colors hover:text-accent;
+  }
+
+  /* long-form blog typography */
+  .prose-post {
+    @apply text-[1.06rem] leading-[1.8] text-ink/85;
+  }
+  .prose-post h2 {
+    @apply mt-12 mb-4 text-2xl font-bold text-navy sm:text-[1.7rem];
+  }
+  .prose-post h3 {
+    @apply mt-9 mb-3 text-xl font-bold text-navy;
+  }
+  .prose-post p {
+    @apply mb-5;
+  }
+  .prose-post ul {
+    @apply mb-6 ml-5 list-disc space-y-2 marker:text-accent;
+  }
+  .prose-post strong {
+    @apply font-semibold text-ink;
+  }
+  .prose-post a {
+    @apply font-medium text-royal underline decoration-accent/40 underline-offset-2 hover:text-accent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .mask-fade-r {
+    -webkit-mask-image: linear-gradient(90deg, #000 70%, transparent);
+    mask-image: linear-gradient(90deg, #000 70%, transparent);
+  }
+
+  @keyframes slow-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes soft-sheen {
+    0%, 56% { transform: translateX(-125%); opacity: 0; }
+    64% { opacity: 1; }
+    82%, 100% { transform: translateX(125%); opacity: 0; }
+  }
+
+  .animate-slow-float {
+    animation: slow-float 7s ease-in-out infinite;
+  }
+}

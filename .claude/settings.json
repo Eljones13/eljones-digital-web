@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat ~/.claude/BOIL-THE-OCEAN.md 2>/dev/null | head -100 || echo \"NO BOIL-THE-OCEAN FILE\")",
+      "Read(//c/Users/ZBOOK/.claude/**)",
+      "Bash(npm -v)",
+      "Read(//c/Users/ZBOOK/Desktop/Big Company Business/**)",
+      "Read(//c/Users/ZBOOK/Desktop/**)",
+      "Bash(rm -rf src .tanstack .lovable public/portfolio)",
+      "Bash(rm -f package-lock.json bun.lock bunfig.toml components.json eslint.config.js vite.config.ts tsconfig.json .prettierrc .prettierignore SITE_README.md)",
+      "Bash(mkdir -p src/components src/pages src/data public)",
+      "Bash(cd \"/c/Users/ZBOOK/Desktop/Big Company Business/digital-ascent-main\" && echo \"=== project .claude ===\" && find .claude -type f 2>/dev/null | head -40 && echo \"\" && echo \"=== grep gateguard refs ===\" && grep -rl \"gateguard\\\\|fact-force\\\\|GATEGUARD\" .claude ~/.claude 2>/dev/null | head -20)",
+      "Read(//c/c/Users/ZBOOK/Desktop/Big Company Business/digital-ascent-main/**)",
+      "Bash(npm install *)",
+      "Bash(rm -rf node_modules package-lock.json)",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(node -e \"const p=require\\('./node_modules/vite-react-ssg/package.json'\\); console.log\\('vite-react-ssg', p.version\\); console.log\\('react', require\\('./node_modules/react/package.json'\\).version\\); console.log\\('react-router-dom', require\\('./node_modules/react-router-dom/package.json'\\).version\\); console.log\\('vite', require\\('./node_modules/vite/package.json'\\).version\\); console.log\\('tailwind', require\\('./node_modules/tailwindcss/package.json'\\).version\\)\")",
+      "PowerShell($ErrorActionPreference='SilentlyContinue'; $u='https://eljonesdigital.com'; try { $r = Invoke-WebRequest -Uri $u -MaximumRedirection 5 -TimeoutSec 30 -UseBasicParsing; \"STATUS=$\\($r.StatusCode\\)\"; \"FINALURI=$\\($r.BaseResponse.ResponseUri\\)\"; \"CONTENTLENGTH=$\\($r.RawContentLength\\)\"; \"---HEADERS---\"; $r.Headers.GetEnumerator\\(\\) | ForEach-Object { \"$\\($_.Key\\): $\\($_.Value\\)\" } } catch { \"FETCH_ERROR: $\\($_.Exception.Message\\)\"; \"STATUSCODE: $\\($_.Exception.Response.StatusCode.value__\\)\" })",
+      "PowerShell($ErrorActionPreference='SilentlyContinue'; $dir='c:\\\\Users\\\\ZBOOK\\\\Desktop\\\\Big Company Business\\\\digital-ascent-main\\\\audit'; New-Item -ItemType Directory -Force -Path $dir | Out-Null; $u='https://eljonesdigital.com'; $r = Invoke-WebRequest -Uri $u -MaximumRedirection 5 -TimeoutSec 30 -UseBasicParsing; $r.Content | Out-File -FilePath \"$dir\\\\home.html\" -Encoding utf8; \"Saved home.html bytes=$\\($r.Content.Length\\)\"; foreach\\($f in @\\('robots.txt','sitemap.xml','llms.txt','sitemap_index.xml'\\)\\){ try { $rr = Invoke-WebRequest -Uri \"$u/$f\" -TimeoutSec 20 -UseBasicParsing; \"OK $f status=$\\($rr.StatusCode\\) len=$\\($rr.Content.Length\\)\"; $rr.Content | Out-File -FilePath \"$dir\\\\$f\" -Encoding utf8 } catch { \"MISS $f status=$\\($_.Exception.Response.StatusCode.value__\\)\" } })",
+      "WebSearch",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

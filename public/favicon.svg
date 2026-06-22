@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Eljones Digital">
+  <rect width="64" height="64" rx="10" fill="#1a1a2e"/>
+  <path d="M10 44 L24 20 L35 34 L43 24 L54 44 Z" fill="#0f3460"/>
+  <rect x="12" y="12" width="28" height="8" rx="2" fill="#e94560"/>
+  <text x="14" y="52" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="700">ED</text>
+</svg>

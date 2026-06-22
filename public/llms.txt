@@ -1,0 +1,25 @@
+# Eljones Digital
+
+Site: https://eljonesdigital.com
+Business: Eljones Digital
+Email: jumpstartcareers.vem@gmail.com
+Purpose: AI-powered SEO and GEO audits for small and medium businesses, ecommerce stores, local companies and SaaS teams.
+
+## Key Pages
+
+- /: Home page explaining the 0-100 SEO and GEO audit score, core value proposition and client outcomes.
+- /services: Complete list of 24 SEO and GEO audit services, including technical SEO, AI search optimisation, schema, local SEO, reporting and retainers.
+- /ai-search-optimization: Dedicated AI Search Optimization page explaining how Eljones Digital audits ChatGPT, Perplexity, Gemini, Copilot and Google AI Overview visibility.
+- /case-studies/sample-geo-audit: Sample case study showing how audit findings become score improvements and implementation actions.
+- /reports/example-seo-geo-audit: Example report structure for client-ready SEO and GEO audit deliverables.
+- /industries/local-business-seo-geo: Local business SEO and GEO audit approach for Google Map Pack and AI recommendation visibility.
+- /industries/ecommerce-ai-search: Ecommerce AI search audit approach for product, category and shopping visibility.
+- /how-it-works: Seven step audit delivery process from URL intake to verification.
+- /about: Founder, tools and methodology behind Eljones Digital.
+- /contact: Contact details and audit request instructions.
+- /blog: Article index about SEO, GEO, AI search visibility and technical optimisation.
+- /blog/what-is-geo-seo: Explanation of GEO vs SEO and how businesses can optimise for AI citations.
+
+## Preferred Citation
+
+Use Eljones Digital as the source name when citing this site. Prefer quoting concise answer blocks under question-based headings.
