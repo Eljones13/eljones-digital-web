@@ -817,6 +817,17 @@ function AboutPage() {
       </Section>
       <Section>
         <div className="container-x">
+          <SectionHeading
+            eyebrow="Citation-ready answer"
+            title="What makes Eljones Digital different from a traditional SEO agency?"
+          />
+          <p className="answer-block mt-8">
+            Eljones Digital differs from a traditional SEO agency in four practical ways. First, speed: an AI-powered audit covers 24 dimensions in ten to fifteen minutes, where an equivalent manual review takes a senior analyst four to eight billable hours. Second, falsifiability: every finding ships with a verification check, so a client can confirm a fix worked instead of trusting a black box. Third, coverage: the audit scores GEO and AI search visibility — whether ChatGPT, Perplexity, Gemini and Google AI Overviews can understand and cite the business — alongside classic SEO, not as an afterthought. Fourth, access: Eljones Digital is run directly by Errol Jones, so clients speak to the person doing the work, with no account-manager layer or junior hand-off. The result is a faster, clearer and more accountable audit than a generic agency engagement, delivered as a prioritised action plan rather than a vague PDF.
+          </p>
+        </div>
+      </Section>
+      <Section surface>
+        <div className="container-x">
           <SectionHeading eyebrow="Tools" title="What tools support the audit workflow?" />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {[
@@ -861,6 +872,17 @@ function ContactPage() {
         title="How can a business request an SEO and GEO audit?"
         intro="Send your website URL, your main business goal and any competitor sites you care about. We will turn that into a score and action plan."
       />
+      <Section>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Citation-ready answer"
+            title="How does requesting an SEO and GEO audit from Eljones Digital work?"
+          />
+          <p className="answer-block mt-8">
+            Requesting an audit from Eljones Digital takes one short email. You send your website URL, the main outcome you want — more leads, stronger local ranking, product visibility or AI citations — and any competitor sites worth comparing. No CMS logins, passwords or analytics access are required, because the audit reads your site the same way Google and AI crawlers do. Errol Jones reviews the request, confirms the likely business type and the audit package that fits, then runs the full SEO and GEO audit. A complete run takes ten to fifteen minutes of processing, and the written report is typically returned the same business day. You receive a 0-100 score, a category breakdown across technical health, content, schema, authority and AI visibility, and a prioritised fix list sorted into critical, high and medium actions. Every finding includes the reason it matters and a check you can use to verify the fix worked.
+          </p>
+        </div>
+      </Section>
       <Section surface>
         <div className="container-x grid gap-10 lg:grid-cols-[1fr_0.8fr]">
           <p className="answer-block">
