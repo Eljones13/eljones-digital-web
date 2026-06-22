@@ -1351,7 +1351,7 @@ const aiServices: { name: string; tag: string; desc: string; receive: string }[]
   {
     name: "Disruption Risk Analysis",
     tag: "Disruption",
-    desc: "We identify which of your business lines a 2-person team with Claude and open-source AI could replicate in 60–90 days. Includes a week-by-week build simulation, a Day 90 product description, Month 6 projection, and a threat score per business line. Scroll down to see a condensed sample of what this looks like.",
+    desc: "We identify which of your business lines a 2-person team with Claude and open-source AI could replicate in 60–90 days. Includes a week-by-week build simulation, a Day 90 product description, Month 6 projection, and a threat score per business line.",
     receive: "Disruption scenario report with defender response window and recommended countermeasures.",
   },
   {
@@ -1702,7 +1702,14 @@ function AiStrategyPage() {
                   <span className="font-mono text-xs text-muted/70">{String(i + 1).padStart(2, "0")}</span>
                 </div>
                 <h3 className="text-xl font-bold leading-snug text-navy">{s.name}</h3>
-                <p className="mt-3 flex-1 leading-relaxed text-muted">{s.desc}</p>
+                <div className="mt-3 flex-1">
+                  <p className="leading-relaxed text-muted">{s.desc}</p>
+                  {s.tag === "Disruption" && (
+                    <a href="#simulation" className="mt-3 inline-block text-[#e94560] underline text-sm">
+                      See a sample disruption simulation ↓
+                    </a>
+                  )}
+                </div>
                 <div className="mt-5 border-t border-line pt-5">
                   <p className="eyebrow mb-2">What you receive</p>
                   <p className="text-[0.9rem] leading-relaxed text-ink/80">{s.receive}</p>
