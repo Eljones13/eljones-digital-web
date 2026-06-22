@@ -420,20 +420,20 @@ function HomePage() {
         <div className="dotgrid absolute inset-0 opacity-45" aria-hidden="true" />
         <div className="container-x relative grid items-center gap-10 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:pb-28">
           <div className="animate-fade-up">
-            <p className="eyebrow mb-5">SEO + GEO audit agency</p>
+            <p className="eyebrow mb-5">AI readiness audits</p>
             <h1 className="text-balance text-4xl font-bold leading-[1.03] sm:text-6xl">
-              AI-powered SEO and GEO audits that deliver a real 0-100 score.
+              AI is threatening your business from two directions at once.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72">
-              We audit your website for search engines and AI answer engines at the same time, then give you the exact fixes that improve visibility, citations, schema trust and technical health.
+              AI search engines are replacing the websites they used to recommend. And AI-native startups are replicating the services that used to require a full team. We audit both threats — and give you a falsifiable action plan for each.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a className="btn-accent" href={mailto("Audit my website", "Hi Eljones Digital,\n\nMy website is:\nMy main goal is:\n")}>
-                Get my 0-100 score
-              </a>
-              <Link className="btn-ghost" to="/services">
-                View all services
+              <Link className="btn-accent" to="/services">
+                Start with Phase 1 — Get found by AI →
               </Link>
+              <a className="btn-ghost" href="#journey">
+                See how the journey works ↓
+              </a>
             </div>
           </div>
           <div className="animate-slow-float mx-auto w-full max-w-md rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-lift backdrop-blur">
@@ -449,6 +449,85 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* TWO-PHASE JOURNEY (1b) — anchor target for the hero "journey" CTA */}
+      <Section id="journey" className="scroll-mt-28">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Your AI readiness journey"
+            title="Two threats. One structured response."
+          />
+          <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-[1fr_auto_1fr]">
+            <article className="card flex h-full flex-col p-8">
+              <span className="chip self-start">Phase 1</span>
+              <h3 className="mt-5 text-2xl font-bold text-navy">Get found by AI</h3>
+              <p className="mt-1 font-mono text-sm font-bold text-accent">from £497</p>
+              <p className="mt-4 flex-1 leading-relaxed text-muted">
+                AI search engines — ChatGPT, Perplexity, Google AI Overviews — have already replaced traditional search for millions of users. If your website isn't structured for AI citation, you're invisible to the tools your customers now use first. The GEO + SEO audit scores your site across 24 dimensions and gives you a prioritised fix plan, delivered the same day.
+              </p>
+              <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/services">
+                See what the audit covers →
+              </Link>
+              <p className="mt-5 border-t border-line pt-4 font-mono text-xs font-semibold uppercase tracking-eyebrow text-royal">
+                ✅ Most clients start here
+              </p>
+            </article>
+            <div className="hidden items-center justify-center px-2 lg:flex" aria-hidden="true">
+              <span className="font-mono text-3xl text-accent">→</span>
+            </div>
+            <article className="card flex h-full flex-col p-8">
+              <span className="chip self-start">Phase 2</span>
+              <h3 className="mt-5 text-2xl font-bold text-navy">Don't get replaced by AI</h3>
+              <p className="mt-1 font-mono text-sm font-bold text-accent">from £497</p>
+              <p className="mt-4 flex-1 leading-relaxed text-muted">
+                Fixing your website visibility is Phase 1. Phase 2 is the harder question: could a 2-person team with a £50/month Claude subscription replicate your highest-margin service in 90 days? For most professional services firms, the honest answer is yes. The ExO AI Strategy Audit shows you exactly which business lines are exposed — and what to build at the edge before someone else does.
+              </p>
+              <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/ai-strategy">
+                See the disruption simulation →
+              </Link>
+              <p className="mt-5 border-t border-line pt-4 font-mono text-xs font-semibold uppercase tracking-eyebrow text-royal">
+                🔒 Recommended after Phase 1
+              </p>
+            </article>
+          </div>
+          <p className="mt-8 max-w-3xl leading-relaxed text-muted">
+            Most clients complete Phase 1 first. The GEO audit findings often reveal exactly why Phase 2 matters for their business.{" "}
+            <Link className="font-semibold text-royal hover:text-accent" to="/contact">
+              Start with the GEO audit →
+            </Link>
+          </p>
+        </div>
+      </Section>
+
+      {/* THE TWO THREATS EXPLAINED (1c) */}
+      <Section surface>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="The threat landscape"
+            title="Why AI is disrupting your business from the outside and the inside simultaneously."
+          />
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="flex flex-col">
+              <h3 className="text-xl font-bold text-navy">Your customers have already moved to AI search.</h3>
+              <p className="answer-block mt-5 flex-1">
+                AI Overviews now reach more than 2 billion monthly users, while ChatGPT and Perplexity have together passed 1 billion users. These tools don't return a list of ten links for someone to work through — they synthesise a single answer and cite one source as the authority behind it. If your website isn't structured for AI citation, the engine quietly recommends a competitor instead, and you never even see the query. This isn't a shift coming in five years; it is happening right now, on the searches your customers run today. The GEO audit identifies every technical and content reason AI engines are skipping your site — from crawler access and schema gaps to vague, unquotable copy — and turns each one into a fix you can verify.
+              </p>
+              <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/how-it-works">
+                See how the GEO audit fixes this →
+              </Link>
+            </div>
+            <div className="flex flex-col">
+              <h3 className="text-xl font-bold text-navy">A 2-person team with Claude can replicate your service in 90 days.</h3>
+              <p className="answer-block mt-5 flex-1">
+                The cost of coordinating human labour inside a company has collapsed towards zero. The professional services built on that coordination — consulting, legal, recruitment, marketing and finance — are the most exposed, because their value is mostly knowledge, documentation and hand-offs that AI can now execute in parallel. A 2-person team with Claude, open-source models and no-code automation can deliver what used to need a 5-person team: the same output, in less time, at around 40% lower price. The ExO 3.0 framework by Salim Ismail and Peter Diamandis maps this transition precisely, dimension by dimension. The ExO audit runs a live disruption simulation on your specific business — modelling, week by week, how a lean competitor would rebuild your highest-margin line.
+              </p>
+              <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/ai-strategy">
+                See a sample disruption simulation →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </Section>
 
       <Section>
         <div className="container-x">
@@ -551,6 +630,53 @@ function HomePage() {
           </div>
         </div>
       </Section>
+
+      {/* PHASE TRANSITION TIMELINE (1d) — sits above the closing CTA */}
+      <Section surface>
+        <div className="container-x">
+          <SectionHeading eyebrow="The journey" title="Where do most businesses start?" />
+          <ol className="mt-10 grid gap-5 md:grid-cols-3">
+            {[
+              {
+                n: "1",
+                title: "GEO + SEO Audit",
+                body: "Score your site's AI visibility across 24 dimensions. Get a prioritised fix list the same day.",
+                link: "Start here →",
+                to: "/contact",
+              },
+              {
+                n: "2",
+                title: "Fix Implementation",
+                body: "Action the critical fixes from the report — either yourself, your developer, or with our implementation service.",
+                link: "See what's included →",
+                to: "/services",
+              },
+              {
+                n: "3",
+                title: "ExO AI Strategy Audit",
+                body: "Once your external visibility is secured, audit your internal exposure. Find out which business lines are at risk and what to build at the edge.",
+                link: "Learn about Phase 2 →",
+                to: "/ai-strategy",
+              },
+            ].map((step) => (
+              <li key={step.n} className="card flex h-full flex-col p-7">
+                <span className="grid h-10 w-10 flex-none place-items-center rounded-full bg-accent font-mono text-base font-bold text-white">
+                  {step.n}
+                </span>
+                <h3 className="mt-5 text-xl font-bold text-navy">{step.title}</h3>
+                <p className="mt-3 flex-1 leading-relaxed text-muted">{step.body}</p>
+                <Link className="mt-5 inline-block font-semibold text-royal hover:text-accent" to={step.to}>
+                  {step.link}
+                </Link>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
+            Some clients start directly at Phase 2 if they already have an SEO agency. Either entry point is fine — the audits are independent.
+          </p>
+        </div>
+      </Section>
+
       <CTA />
     </>
   );
@@ -591,12 +717,36 @@ function ServicesPage() {
         title="What can Eljones Digital do for companies you audit?"
         intro="Every service below turns an audit finding into a business outcome: more visibility, stronger AI citations, better trust signals, clearer reporting and fixes the client can act on."
       />
+      {/* PHASE FRAMING (2a) */}
+      <Section>
+        <div className="container-x">
+          <SectionHeading title="Two phases. One question: is your business ready for the AI transition?" />
+          <div className="mt-6 grid max-w-4xl gap-5 text-lg leading-relaxed text-muted">
+            <p>
+              Phase 1 is about external visibility — ensuring AI search engines can read, understand, and cite your business. Every service in Phase 1 improves the score your website receives from AI crawlers and answer engines.
+            </p>
+            <p>
+              Phase 2 is about internal resilience — ensuring your core service model isn't being replicated by a leaner AI-native competitor while you focus on the website. Phase 2 services are linked at the bottom of this page.
+            </p>
+          </div>
+        </div>
+      </Section>
       <Section surface>
         <div className="container-x">
           <p className="answer-block">
             Eljones Digital gives value to audited companies by finding the exact reasons their website is not performing, ranking those reasons by business impact and turning them into practical fixes. A client does not only receive a technical checklist. They receive a score, a diagnosis and a step-by-step action plan for search visibility, AI visibility, content trust, local presence, structured data, speed and reporting. This is valuable because most companies know they need better SEO but cannot tell which work matters first. The audit removes guesswork. It identifies critical issues that should be fixed this week, high priority work for the month and medium priority improvements for the quarter. For business owners, that means less wasted agency spend, clearer decisions and a report they can give to a developer, marketing lead or board.
           </p>
           <FounderBio />
+        </div>
+      </Section>
+      {/* PHASE 1 LABEL (2b) */}
+      <Section>
+        <div className="container-x">
+          <span className="chip">Phase 1 — Get found by AI</span>
+          <h3 className="mt-5 text-2xl font-bold text-navy sm:text-3xl">SEO + GEO Audit Services</h3>
+          <p className="mt-3 max-w-2xl leading-relaxed text-muted">
+            Score your site 0–100 across 24 dimensions. Every finding is falsifiable — you can verify every fix yourself.
+          </p>
         </div>
       </Section>
       {SERVICE_GROUPS.map((group) => (
@@ -626,18 +776,20 @@ function ServicesPage() {
           </div>
         </div>
       </Section>
-      <Section>
+      {/* PHASE 2 CROSS-SELL (2c) */}
+      <Section surface>
         <div className="container-x">
-          <SectionHeading
-            eyebrow="Premium tier"
-            title="Is your business prepared for AI disruption beyond your website?"
-          />
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted">
-            SEO and GEO audits improve how your website performs in search. But search visibility is only one piece of the picture. If your company's core service can be replicated by a 2-person AI-native team in 90 days, a higher-ranking website won't protect your revenue. Our ExO AI Strategy Audit — based on the ExO 3.0 Organizational Singularity framework by Salim Ismail and Peter Diamandis — scores your entire organisation's AI readiness and tells you exactly where your exposure is.
+          <span className="chip">Phase 2 — Don't get replaced by AI</span>
+          <h2 className="mt-5 text-balance text-3xl font-bold text-navy sm:text-[2.5rem] sm:leading-[1.1]">
+            You've fixed the visibility. Now audit the deeper threat.
+          </h2>
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
+            Most clients come to us for the GEO audit. But the GEO audit answers one question: can AI find you? There is a second question most businesses haven't asked yet: can AI replace you? If your core service runs on human coordination — research, analysis, reporting, consulting, recruitment — a 2-person team with Claude can replicate it in 90 days. The ExO AI Strategy Audit, based on the ExO 3.0 framework by Salim Ismail and Peter Diamandis, scores your entire organisation's AI exposure and tells you exactly what to build at the edge before someone else does.
           </p>
-          <Link className="btn-outline mt-8" to="/ai-strategy">
-            Learn about ExO AI Strategy Audits →
+          <Link className="btn-accent mt-8" to="/ai-strategy">
+            Explore Phase 2 — ExO AI Strategy Audit →
           </Link>
+          <p className="mt-4 text-sm text-muted">Recommended after completing Phase 1. Sold separately.</p>
         </div>
       </Section>
       <CTA />
@@ -774,6 +926,26 @@ function HowItWorksPage() {
                 <p className="rounded-md bg-surface px-4 py-3 text-center font-mono text-sm font-bold text-royal">{step.time}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </Section>
+      {/* WHAT COMES NEXT — PHASE 2 CALLOUT (TASK 5) */}
+      <Section surface>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="What comes next"
+            title="Phase 1 is your foundation. Phase 2 is your defence."
+          />
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
+            Once your GEO and SEO fixes are in place, the next question is whether your core business model is as exposed as your website was. For most professional services firms, the answer is yes. The ExO AI Strategy Audit picks up where the GEO audit ends — auditing your organisation's internal AI readiness and running a live disruption simulation on your most vulnerable business line.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link className="btn-accent" to="/ai-strategy">
+              Explore the ExO AI Strategy Audit →
+            </Link>
+            <Link className="font-semibold text-royal hover:text-accent" to="/contact">
+              Or go straight to booking →
+            </Link>
           </div>
         </div>
       </Section>
@@ -1321,6 +1493,26 @@ function AiStrategyPage() {
               </li>
             </ol>
           </nav>
+          {/* START WITH PHASE 1 INFO BANNER (4a) */}
+          <div className="mt-6 flex max-w-3xl items-start gap-3 rounded-xl border border-azure-400/40 bg-azure-400/10 px-5 py-4 text-sm leading-relaxed text-white/85">
+            <svg viewBox="0 0 20 20" fill="currentColor" className="mt-0.5 h-5 w-5 flex-none text-azure-400" aria-hidden="true">
+              <path
+                fillRule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p>
+              New to Eljones Digital? Most clients start with the{" "}
+              <Link
+                className="font-semibold text-azure-400 underline decoration-azure-400/40 underline-offset-2 hover:text-white"
+                to="/services"
+              >
+                GEO + SEO audit (Phase 1) →
+              </Link>{" "}
+              before booking an ExO strategy audit. The GEO report findings often make Phase 2 feel urgent.
+            </p>
+          </div>
           <div className="mt-10 max-w-3xl animate-fade-up">
             <p className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-[0.72rem] font-medium uppercase tracking-eyebrow text-azure-400">
               AI Strategy Audit
@@ -1381,6 +1573,79 @@ function AiStrategyPage() {
               </article>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* SAMPLE OUTPUT (4b) — anchor target for /ai-strategy#simulation */}
+      <Section id="simulation" className="scroll-mt-28">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Sample output"
+            title="What does a 90-day disruption simulation look like?"
+            intro="An illustrative walkthrough for a mid-sized recruitment agency — the same week-by-week build plan the ExO audit produces for your own highest-margin business line. The figures are sample figures, grounded in tools and costs that exist today."
+          />
+          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+            {[
+              { label: "Exposed business line", value: "Permanent recruitment" },
+              { label: "Replication window", value: "60–90 days" },
+              { label: "Threat score", value: "8 / 10" },
+            ].map((stat) => (
+              <article key={stat.label} className="card p-7">
+                <p className="eyebrow mb-2">{stat.label}</p>
+                <p className="font-mono text-2xl font-bold text-navy">{stat.value}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {[
+              {
+                week: "Weeks 1–2",
+                title: "Map the workflow",
+                body: "Two operators document the agency's core loop end to end — intake brief, sourcing, screening, shortlisting, client updates. Claude turns the transcripts into a prescriptive, step-by-step playbook an AI agent can execute.",
+              },
+              {
+                week: "Weeks 3–5",
+                title: "Build the sourcing engine",
+                body: "An open-source model plus a scraping and enrichment pipeline pulls and ranks candidates against each brief. No-code automation handles outreach sequencing and reply triage. A human reviews edge cases only.",
+              },
+              {
+                week: "Weeks 6–8",
+                title: "Automate screening & shortlists",
+                body: "Claude runs structured interviews, scores transcripts against the brief, and drafts client-ready shortlists with evidence. The two operators move to oversight — approving, correcting, handling exceptions.",
+              },
+              {
+                week: "Weeks 9–12",
+                title: "Launch at the edge",
+                body: "A thin client portal exposes live pipelines and shortlists. Pricing is set ~40% below the incumbent because the cost base is two people and roughly £150/month of tooling. First briefs ship in days, not weeks.",
+              },
+            ].map((step) => (
+              <article key={step.week} className="card p-7">
+                <p className="font-mono text-sm font-bold text-accent">{step.week}</p>
+                <h3 className="mt-2 text-xl font-bold text-navy">{step.title}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{step.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="flex flex-col">
+              <h3 className="text-xl font-bold text-navy">Day 90 — the replica is live</h3>
+              <p className="answer-block mt-5 flex-1">
+                By Day 90 the replica exists as a working service: a client submits a role, an AI agent sources and screens candidates overnight, and a human reviewer approves a shortlist by morning. Turnaround drops from two weeks to 48 hours, the fee is roughly 40% lower than the incumbent agency, and the whole operation runs on two people plus a ~£150/month AI toolset. It is not a prototype — it bills clients.
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <h3 className="text-xl font-bold text-navy">Month 6 — the gap widens</h3>
+              <p className="answer-block mt-5 flex-1">
+                By Month 6 the same two-person team has templatised the workflow across three more verticals, because the expensive part — designing the agent loop — is already done. Margin per placement is several times that of a traditional agency, so they can keep undercutting on price and still reinvest. The incumbent's defender response window has closed: matching that cost base now means rebuilding around AI agents from the inside, which is exactly what the ExO audit tells you to start before the simulation becomes someone else's real business.
+              </p>
+            </div>
+          </div>
+          <p className="mt-8 max-w-3xl leading-relaxed text-muted">
+            Your audit replaces “recruitment agency” with your business — and tells you how wide your response window really is.{" "}
+            <Link className="font-semibold text-royal hover:text-accent" to="/contact">
+              Run this simulation on my business →
+            </Link>
+          </p>
         </div>
       </Section>
 
@@ -1644,10 +1909,10 @@ function PricingPage() {
         <div className="container-x">
           <p className="eyebrow mb-4">Pricing</p>
           <h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1.05] text-navy sm:text-6xl">
-            Simple, transparent pricing
+            Start with Phase 1. Add Phase 2 when you're ready.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Every audit is delivered by Errol directly — no account managers, no hidden fees.
+            Every client begins with the GEO + SEO audit. The ExO AI Strategy services are the natural next step — once you've seen the external threat, the internal one becomes impossible to ignore.
           </p>
           <div
             role="note"
@@ -1667,14 +1932,16 @@ function PricingPage() {
         </div>
       </section>
 
-      {/* SEO & GEO AUDITS */}
+      {/* SEO & GEO AUDITS — PHASE 1 (3b) */}
       <Section surface>
         <div className="container-x">
-          <SectionHeading
-            eyebrow="SEO / GEO"
-            title="Website visibility audits"
-            intro="Score and fix how your website performs in Google search and AI answer engines."
-          />
+          <span className="chip">Phase 1 — Get found by AI</span>
+          <h2 className="mt-5 text-balance text-3xl font-bold text-navy sm:text-[2.5rem] sm:leading-[1.1]">
+            SEO + GEO Audit Pricing
+          </h2>
+          <p className="mt-3 max-w-2xl leading-relaxed text-muted">
+            Start here. Most clients complete Phase 1 before moving to Phase 2.
+          </p>
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
             {seoCards.map((c) => (
               <PriceCard key={c.key} entry={PRICING[c.key]} desc={c.desc} />
@@ -1683,14 +1950,25 @@ function PricingPage() {
         </div>
       </Section>
 
-      {/* ExO AI STRATEGY */}
+      {/* JOURNEY CALLOUT BETWEEN PHASES (3c) — dark navy band */}
+      <Section dark>
+        <div className="container-x">
+          <p className="mx-auto max-w-3xl text-balance text-center text-xl font-medium leading-relaxed sm:text-2xl">
+            The GEO audit tells you whether AI can find you. The disruption simulation tells you whether AI can replace you. Most clients find the GEO audit report is what convinces them Phase 2 is urgent.
+          </p>
+        </div>
+      </Section>
+
+      {/* ExO AI STRATEGY — PHASE 2 (3b) */}
       <Section>
         <div className="container-x">
-          <SectionHeading
-            eyebrow="AI Strategy"
-            title="Organisational AI readiness"
-            intro="Score how exposed your business is to AI-native competition — and what to build before they do."
-          />
+          <span className="chip">Phase 2 — Don't get replaced by AI</span>
+          <h2 className="mt-5 text-balance text-3xl font-bold text-navy sm:text-[2.5rem] sm:leading-[1.1]">
+            ExO AI Strategy Audit Pricing
+          </h2>
+          <p className="mt-3 max-w-2xl leading-relaxed text-muted">
+            Recommended after Phase 1. Sold independently — no Phase 1 required.
+          </p>
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
             {exoCards.map((c) => (
               <PriceCard key={c.key} entry={PRICING[c.key]} desc={c.desc} />
@@ -1700,6 +1978,15 @@ function PricingPage() {
             ExO AI Strategy services are based on the ExO 3.0 / Organizational Singularity framework by Salim Ismail and Peter Diamandis.{" "}
             <Link className="font-medium text-royal hover:text-accent" to="/ai-strategy">
               Learn more about ExO AI Strategy audits →
+            </Link>
+          </p>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
+            Not sure if Phase 2 is right for you yet?{" "}
+            <Link className="font-medium text-royal hover:text-accent" to="/ai-strategy#simulation">
+              See a sample disruption simulation →
+            </Link>{" "}
+            <Link className="font-medium text-royal hover:text-accent" to="/how-it-works">
+              Read how the journey works →
             </Link>
           </p>
         </div>
