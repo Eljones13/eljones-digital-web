@@ -1,4 +1,5 @@
 import type { Service } from "../data/services";
+import { StatBar } from "./StatBar";
 
 export function ServiceCard({ service }: { service: Service }) {
   return (
@@ -13,6 +14,18 @@ export function ServiceCard({ service }: { service: Service }) {
       <h3 className="text-lg font-bold leading-snug text-navy">{service.question}</h3>
 
       <p className="mt-3 text-[0.95rem] leading-relaxed text-muted">{service.value}</p>
+
+      {service.slug === "geo-drift-protection" && (
+        <div className="mt-5 rounded-lg border-l-4 border-[#e94560] bg-[#0f3460] p-4">
+          <p className="mb-3 font-mono text-[0.7rem] font-medium uppercase tracking-eyebrow text-white/60">
+            Why monthly matters
+          </p>
+          <StatBar label="AI model update cycle" value="every 5 weeks" percent={62} color="bg-[#e94560]" />
+          <p className="mt-3 text-xs leading-relaxed text-white/55">
+            Average AI model update cycle: every 5 weeks. Static optimisation drifts out of date before your next quarterly review.
+          </p>
+        </div>
+      )}
 
       <div className="mt-5 border-t border-line pt-5">
         <p className="eyebrow mb-3">How we do it</p>

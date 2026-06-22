@@ -5,6 +5,7 @@ import { CTA, Section, SectionHeading } from "./components/Section";
 import { Seo } from "./components/Seo";
 import { ServiceCard } from "./components/ServiceCard";
 import { ScoreGauge } from "./components/ScoreGauge";
+import { StatBar } from "./components/StatBar";
 import {
   BENEFITS,
   COMPARE,
@@ -450,6 +451,67 @@ function HomePage() {
         </div>
       </section>
 
+      {/* HOW WE COMPARE — STAT BARS (TASK 6) */}
+      <Section dark>
+        <div className="container-x">
+          <div className="mx-auto max-w-4xl rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+            <p className="eyebrow mb-7">How we compare</p>
+            <div className="space-y-7">
+              {[
+                {
+                  metric: "Audit delivery time",
+                  bars: [
+                    { label: "Traditional agency", value: "4–8 hours", percent: 90, color: "bg-red-400" },
+                    { label: "Eljones Digital", value: "15 min", percent: 3, color: "bg-emerald-400" },
+                  ],
+                },
+                {
+                  metric: "Tests run",
+                  bars: [
+                    { label: "Manual audit", value: "~50 checks", percent: 25, color: "bg-red-400" },
+                    { label: "AI audit", value: "271 tests", percent: 100, color: "bg-emerald-400" },
+                  ],
+                },
+                {
+                  metric: "Findings verified",
+                  bars: [
+                    { label: "Opinion-based", value: "Trust us", percent: 60, color: "bg-red-400" },
+                    { label: "Falsifiable", value: "Test it yourself", percent: 100, color: "bg-emerald-400" },
+                  ],
+                },
+                {
+                  metric: "Vendor lock-in",
+                  bars: [
+                    { label: "Traditional retainer", value: "Ongoing dependency", percent: 80, color: "bg-red-400" },
+                    { label: "Eljones Digital", value: "None", percent: 5, color: "bg-emerald-400" },
+                  ],
+                },
+              ].map((group) => (
+                <div key={group.metric}>
+                  <p className="mb-2.5 font-mono text-xs font-medium uppercase tracking-eyebrow text-white/55">
+                    {group.metric}
+                  </p>
+                  <div className="space-y-2.5">
+                    {group.bars.map((bar) => (
+                      <StatBar
+                        key={bar.label}
+                        label={bar.label}
+                        value={bar.value}
+                        percent={bar.percent}
+                        color={bar.color}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-7 border-t border-white/10 pt-5 text-sm text-white/55">
+              All findings include a verification check you can run yourself. No black box.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* TWO-PHASE JOURNEY (1b) — anchor target for the hero "journey" CTA */}
       <Section id="journey" className="scroll-mt-28">
         <div className="container-x">
@@ -747,6 +809,16 @@ function ServicesPage() {
           <p className="mt-3 max-w-2xl leading-relaxed text-muted">
             Score your site 0–100 across 24 dimensions. Every finding is falsifiable — you can verify every fix yourself.
           </p>
+          {/* ExO 3.0 IN ACTION — CALLOUT (TASK 4) */}
+          <div className="mt-8 rounded-lg border-l-4 border-[#e94560] bg-[#0f3460] p-6 text-white">
+            <p className="text-lg font-bold">You're witnessing ExO 3.0 in action.</p>
+            <p className="mt-3 leading-relaxed text-white/85">
+              Every SEO and GEO audit we deliver runs on the same AI-native architecture we describe in our ExO AI Strategy work — 25 specialist agents firing in parallel, zero organisational drag, findings delivered the same day. You're not just buying a report. You're seeing the organisational singularity in practice. That's why Phase 2 isn't a hard sell — by the time you've read your GEO report, you've already experienced it.
+            </p>
+            <Link className="mt-4 inline-block font-semibold text-azure-400 hover:text-white" to="/ai-strategy">
+              Learn about Phase 2 — ExO AI Strategy →
+            </Link>
+          </div>
         </div>
       </Section>
       {SERVICE_GROUPS.map((group) => (
@@ -1432,6 +1504,14 @@ const aiFaqs: { q: string; a: string }[] = [
     q: "How long does a full ExO AI readiness audit take to complete?",
     a: "A full ExO AI Readiness Audit takes three to five working days from receipt of your initial information. The faster ExO Quick Score is delivered in one day, and a standalone Disruption Risk Analysis takes about two days. Every output is delivered as plain documents you own — scorecards, reports, presentation decks and blueprints — with no retainer, no platform subscription and no ongoing dependency on us. There is no vendor lock-in: you keep everything and can act on it with your own team or developer. A 60-minute walkthrough call is included with both the Full Audit and the Disruption Risk Analysis, so we can present the findings directly to your leadership team and answer questions live. There is no obligation to continue beyond the delivered work.",
   },
+  {
+    q: "Could a traditional consulting firm run this same audit?",
+    a: "Yes — the underlying tools are open source and accessible to anyone, so a traditional firm could technically run the same audit. The difference is what it costs you. A firm with 10+ staff has a payroll to cover, so the efficiency it gains from AI gets absorbed by internal coordination rather than passed to the client. By the time a 15-minute AI audit has passed through account-manager review, senior-strategist sign-off, copywriter formatting and client-presentation prep, that same output has cost the agency two days of internal time — and you pay for all of it. Their overhead means they charge you for the hierarchy, not the intelligence. Eljones Digital carries zero organisational drag, so 100% of your fee goes into the audit itself. And a firm teaching you to eliminate drag while running a 50-person approval chain is a structural contradiction.",
+  },
+  {
+    q: "What tools does a 2-person AI startup actually use — and can they handle my data securely?",
+    a: "The full stack costs £50–200 per month. Claude API handles analysis and generation; open-source local models — Mistral and LLaMA variants — process sensitive data without it ever leaving the client's environment; Vercel or Netlify give instant deployment; Make or Zapier automate the workflow; and a vector database such as Chroma or Pinecone stores the knowledge base. Running the open-source models locally means proprietary IP never calls out to a public server. This isn't a reckless experiment — it's a closed-loop environment that an enterprise security team can audit and approve before anything goes near production. The same stack is exactly what the disruption simulation models for your business line: the total monthly cost for a two-person team replicating your service is under £200. That is the real number the simulation is built on — not a hypothetical, and not a sales figure.",
+  },
 ];
 
 function aiStrategyWebPageLd() {
@@ -1592,6 +1672,75 @@ function AiStrategyPage() {
           <p className="answer-block mt-8">
             An ExO AI Strategy Audit scores a company across seven dimensions — organisational drag, AI citizenship, MTP clarity, workflow documentation, intelligence stack readiness, governance framework and talent readiness — to measure how ready it is to operate as an AI-native business. Each dimension is scored from 1 to 10 with specific, falsifiable findings rather than vague opinion. The audit also runs a disruption simulation: it models how a 2-person team using Claude and open-source AI tools could replicate the company's most vulnerable, highest-margin business line in 60 to 90 days. The output is a prioritised action plan and a C-suite ready PDF report that tells leadership exactly where they are exposed and what to build at the edge first. It is based on the ExO 3.0 / Organizational Singularity framework developed by Salim Ismail and Peter Diamandis, applied with AI audit tooling for depth and rigour.
           </p>
+        </div>
+      </Section>
+
+      {/* WHY SOLO BEATS BLOATED — COMPARISON TABLE (TASK 2) */}
+      <Section>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Why solo beats bloated"
+            title="If you're paying a large firm to eliminate your organisational drag, who's eliminating theirs?"
+          />
+          <div className="mt-10 overflow-hidden rounded-lg border border-line">
+            <div className="grid grid-cols-1 sm:grid-cols-2">
+              <div className="border-b border-emerald-300 bg-emerald-50 p-5">
+                <p className="text-lg font-bold text-emerald-800">✅ Eljones Digital</p>
+                <p className="text-sm text-emerald-700">1 person + Claude</p>
+              </div>
+              <div className="border-b border-red-300 bg-red-50 p-5 sm:border-l sm:border-line">
+                <p className="text-lg font-bold text-red-900">❌ Traditional Consultancy</p>
+                <p className="text-sm text-red-800">10+ person team</p>
+              </div>
+            </div>
+            {[
+              {
+                label: "Audit delivery",
+                left: "Same day. 25 AI agents run 271 tests in 15 minutes.",
+                right: "4–8 weeks. Junior analysts, manager review, senior sign-off, PDF formatting.",
+              },
+              {
+                label: "Findings",
+                left: "Falsifiable. Every finding ships with a terminal command to verify it's real.",
+                right: "Opinion-based. \"Trust our senior partner's 20 years of experience.\"",
+              },
+              {
+                label: "Cost of coordination",
+                left: "Zero. No account manager layer, no stage-gate approval process.",
+                right: "40–60% of your retainer fee covers internal coordination, not your work.",
+              },
+              {
+                label: "Vendor lock-in",
+                left: "None. You own every document. No ongoing dependency required.",
+                right: "Reports often recommend the same firm's implementation services.",
+              },
+              {
+                label: "Proof of concept",
+                left: "We ARE the ExO model. One operator + AI agents delivering enterprise-grade output.",
+                right: "They teach you to be agile using a 50-person hierarchical structure.",
+              },
+            ].map((row) => (
+              <div key={row.label} className="grid grid-cols-1 border-t border-line sm:grid-cols-2">
+                <div className="bg-emerald-50/50 p-5">
+                  <p className="mb-1.5 font-mono text-[0.68rem] font-semibold uppercase tracking-eyebrow text-emerald-700">
+                    {row.label}
+                  </p>
+                  <p className="leading-relaxed text-emerald-900">{row.left}</p>
+                </div>
+                <div className="bg-red-50/50 p-5 sm:border-l sm:border-line">
+                  <p className="mb-1.5 font-mono text-[0.68rem] font-semibold uppercase tracking-eyebrow text-red-800">
+                    {row.label}
+                  </p>
+                  <p className="leading-relaxed text-red-900">{row.right}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 rounded-lg border-l-4 border-[#e94560] bg-[#0f3460] p-6 text-white sm:p-7">
+            <p className="text-lg leading-relaxed">
+              <span className="font-bold">The irony:</span> hiring a multi-layered consulting firm to teach you how to eliminate organisational drag is structurally incoherent. The medium IS the message.
+            </p>
+          </div>
         </div>
       </Section>
 
@@ -1799,6 +1948,69 @@ function AiStrategyPage() {
         </div>
       </Section>
 
+      {/* THE PLAYBOOK — 6-STEP REWRITE (TASK 3) */}
+      <Section>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="The playbook"
+            title="The 6-step AI transition that doesn't touch your existing revenue."
+            intro="The biggest fear in any AI transition is breaking what already works. The ExO 3.0 framework solves this with an edge-first approach: you never touch the legacy cash cow. You build an AI-native twin at the absolute edge of your organisation, run it in parallel, iterate until it's undeniably superior, and only then deprecate the old workflow. Your existing revenue is untouched throughout."
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+            {[
+              {
+                n: "01",
+                name: "Build at the Edge",
+                body: "Pick your highest-margin, most process-heavy workflow. Take 2–3 people and physically and digitally isolate them from the main business. No legacy passwords, no legacy approval chains. They operate like a startup inside a startup.",
+              },
+              {
+                n: "02",
+                name: "Fork the Data",
+                body: "Give the edge team a copy of the historical data for that workflow. They work from the fork — they never touch live production systems. The mothership keeps running normally. Zero disruption to current revenue.",
+              },
+              {
+                n: "03",
+                name: "Rebuild from Scratch",
+                body: "The edge team doesn't automate the old process. They rebuild it from zero using AI agents — reason, act, observe loops. Every step that took a human 3 days now takes an agent 14 seconds. They map the workflow for machines, not for humans.",
+              },
+              {
+                n: "04",
+                name: "Run in Parallel",
+                body: "Both systems process the same work simultaneously. The legacy team handles real client delivery. The AI twin handles the same jobs in the background. You compare outputs ruthlessly. The twin loses at first. That's expected.",
+              },
+              {
+                n: "05",
+                name: "Iterate Until the Twin Wins",
+                body: "Agent loops self-improve. Every failure is a prompt adjustment. Every gap in quality is a new instruction. You are not aiming for 10% improvement — you are aiming for 100× faster, 80% cheaper, equal or better quality. This takes weeks, not months.",
+              },
+              {
+                n: "06",
+                name: "Deprecate the Legacy",
+                body: "Only when the digital twin is undeniably, mathematically superior do you fold it back in as the new core. The legacy workflow is deprecated. Middle management coordination is replaced by orchestration agents. Your company just became AI-native — without a single day of disruption to your existing clients.",
+              },
+            ].map((step, i) => (
+              <article
+                key={step.n}
+                className={`flex h-full flex-col rounded-2xl border border-white/10 p-7 ${
+                  i % 2 === 0 ? "bg-[#0f3460]" : "bg-[#1a1a2e]"
+                }`}
+              >
+                <span className="grid h-11 w-11 flex-none place-items-center rounded-full bg-[#e94560] font-mono text-base font-bold text-white">
+                  {step.n}
+                </span>
+                <h3 className="mt-5 text-xl font-bold text-white">{step.name}</h3>
+                <p className="mt-3 leading-relaxed text-white/75">{step.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-8 rounded-lg border border-amber-300 bg-amber-50 p-6 text-amber-900 sm:p-7">
+            <p className="leading-relaxed">
+              <span className="font-bold">💡 This is how Nestlé built Nespresso.</span> Separate building. Different leadership. Different supply chain. Because the instant coffee executives would have killed it. You fund your own disruption — or someone else funds theirs.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* SECTION 10 — FAQ */}
       <Section surface>
         <div className="container-x">
@@ -1933,7 +2145,7 @@ function PricingPage() {
     seoSnapshot: { label: "SEO + GEO Snapshot", price: "£249", note: "single report" },
     fullAudit: { label: "Full SEO + GEO Audit", price: "£497", note: "report + fix plan" },
     auditWithFixes: { label: "Audit + Implementation", price: "£897", note: "audit + fixes applied" },
-    monthlyRetainer: { label: "Monthly Monitoring", price: "£197", note: "per month" },
+    monthlyRetainer: { label: "GEO Drift Protection", price: "£197", note: "per month" },
     exoQuickScore: { label: "ExO Quick Score", price: "£497", note: "1-page scorecard" },
     exoFullAudit: { label: "Full ExO AI Readiness Audit", price: "£1,497", note: "full report + presentation" },
     exoDisruption: { label: "Disruption Risk Analysis", price: "£997", note: "simulation + defender plan" },
@@ -1957,7 +2169,7 @@ function PricingPage() {
     },
     {
       key: "monthlyRetainer",
-      desc: "Ongoing weekly drift checks and a monthly GEO comparison so regressions are caught before they cost you traffic. Includes a monthly health-score report and priority fixes each cycle.",
+      desc: "AI answer engines update their crawler rules and citation weighting every 4–6 weeks — what earns you a citation today may not next month. GEO Drift Protection runs a monthly AI-visibility simulation, flags algorithmic drift, and updates your llms.txt, schema and citability blocks to stay ahead. Continuous algorithmic adaptation, not a traditional SEO retainer.",
     },
   ];
 
