@@ -145,7 +145,7 @@ function orgLd() {
     sameAs: SITE.sameAs,
     areaServed: "United Kingdom",
     description: SITE.shortDesc,
-    serviceType: SERVICES.map((s) => s.tag),
+    serviceType: [...new Set(SERVICES.map((s) => s.tag))],
   };
 }
 
@@ -510,7 +510,7 @@ function HomePage() {
             <div className="flex flex-col">
               <h3 className="text-xl font-bold text-navy">Your customers have already moved to AI search.</h3>
               <p className="answer-block mt-5 flex-1">
-                AI Overviews now reach more than 2 billion monthly users, while ChatGPT and Perplexity have together passed 1 billion users. These tools don't return a list of ten links for someone to work through — they synthesise a single answer and cite one source as the authority behind it. If your website isn't structured for AI citation, the engine quietly recommends a competitor instead, and you never even see the query. This isn't a shift coming in five years; it is happening right now, on the searches your customers run today. The GEO audit identifies every technical and content reason AI engines are skipping your site — from crawler access and schema gaps to vague, unquotable copy — and turns each one into a fix you can verify.
+                Google AI Overviews now reach over 1 billion users across more than 100 countries (Google I/O, May 2024), while ChatGPT crossed 200 million weekly active users by mid-2024 (OpenAI). These tools don't return a list of ten links for someone to work through — they synthesise a single answer and cite one source as the authority behind it. If your website isn't structured for AI citation, the engine quietly recommends a competitor instead, and you never even see the query. This isn't a shift coming in five years; it is happening right now, on the searches your customers run today. The GEO audit identifies every technical and content reason AI engines are skipping your site — from crawler access and schema gaps to vague, unquotable copy — and turns each one into a fix you can verify.
               </p>
               <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/how-it-works">
                 See how the GEO audit fixes this →
@@ -962,7 +962,7 @@ function AboutPage() {
   return (
     <>
       <Seo
-        title="About Eljones Digital"
+        title="About Eljones Digital | SEO & GEO Audit Specialist, UK"
         description="Learn how Eljones Digital uses AI-powered SEO and GEO audit workflows to give small and medium businesses clearer visibility fixes."
         path="/about"
         type="profile"
@@ -1041,6 +1041,26 @@ function AboutPage() {
   );
 }
 
+function contactPageLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${SITE.url}/contact#contactpage`,
+    name: "Contact Eljones Digital",
+    url: `${SITE.url}/contact`,
+    description:
+      "Contact Eljones Digital to request a same-day SEO and GEO audit with a 0-100 score and prioritised fix list.",
+    mainEntity: {
+      "@type": "ContactPoint",
+      contactType: "customer enquiries",
+      email: SITE.email,
+      availableLanguage: "English",
+      areaServed: "GB",
+      contactOption: "TollFree",
+    },
+  };
+}
+
 function ContactPage() {
   const crumbs = [
     { label: "Home", to: "/" },
@@ -1049,10 +1069,10 @@ function ContactPage() {
   return (
     <>
       <Seo
-        title="Contact Eljones Digital"
+        title="Contact Eljones Digital | Book Your SEO & GEO Audit"
         description="Contact Eljones Digital to request a same-day SEO and GEO audit with a 0-100 score and prioritised fix list."
         path="/contact"
-        jsonLd={[breadcrumbLd(crumbs)]}
+        jsonLd={[contactPageLd(), breadcrumbLd(crumbs)]}
       />
       <Breadcrumbs crumbs={crumbs} />
       <PageHero
@@ -1462,7 +1482,7 @@ function AiStrategyPage() {
     <>
       <Seo
         title="AI Strategy & Disruption Audit | ExO 3.0 Framework"
-        description="We audit your business against the ExO 3.0 Organizational Singularity framework — scoring AI readiness across 7 dimensions and identifying which of your business lines a 2-person AI startup could replicate in 90 days."
+        description="Score your business against the ExO 3.0 framework — 7 AI readiness dimensions, disruption risk by business line, and a 90-day action plan."
         path="/ai-strategy"
         jsonLd={[aiStrategyWebPageLd(), aiStrategyServiceLd(), aiStrategyFaqLd(), breadcrumbLd(crumbs)]}
       />
@@ -1837,6 +1857,68 @@ function pricingWebPageLd() {
   };
 }
 
+function pricingOfferCatalogLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "@id": `${SITE.url}/pricing#offercatalog`,
+    name: "Eljones Digital Audit Pricing",
+    url: `${SITE.url}/pricing`,
+    provider: { "@id": `${SITE.url}/#organization` },
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "GEO + SEO Full Audit",
+        description:
+          "Complete SEO and GEO audit scoring your website 0-100 across 24 dimensions with a prioritised fix plan and same-day delivery.",
+        price: "497",
+        priceCurrency: "GBP",
+        url: `${SITE.url}/pricing`,
+        seller: { "@id": `${SITE.url}/#organization` },
+        eligibleRegion: { "@type": "Country", name: "United Kingdom" },
+      },
+      {
+        "@type": "Offer",
+        name: "ExO AI Strategy Audit — Quick Score",
+        description:
+          "7-dimension ExO 3.0 AI readiness scorecard with written findings and a prioritised recommendation for your highest-risk business line.",
+        price: "497",
+        priceCurrency: "GBP",
+        url: `${SITE.url}/pricing`,
+        seller: { "@id": `${SITE.url}/#organization` },
+        eligibleRegion: { "@type": "Country", name: "United Kingdom" },
+      },
+      {
+        "@type": "Offer",
+        name: "ExO Full AI Strategy Audit",
+        description:
+          "Full ExO 3.0 audit across all 7 dimensions with 90-day backcasting roadmap, disruption simulation, and digital twin blueprint.",
+        price: "1497",
+        priceCurrency: "GBP",
+        url: `${SITE.url}/pricing`,
+        seller: { "@id": `${SITE.url}/#organization` },
+        eligibleRegion: { "@type": "Country", name: "United Kingdom" },
+      },
+      {
+        "@type": "Offer",
+        name: "GEO Drift Protection",
+        description:
+          "Monthly GEO monitoring and schema maintenance to prevent AI citation drift as algorithms update. Includes a monthly score check and fix report.",
+        price: "197",
+        priceCurrency: "GBP",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: "197",
+          priceCurrency: "GBP",
+          unitText: "month",
+        },
+        url: `${SITE.url}/pricing`,
+        seller: { "@id": `${SITE.url}/#organization` },
+      },
+    ],
+  };
+}
+
 function PricingPage() {
   const crumbs = [
     { label: "Home", to: "/" },
@@ -1924,7 +2006,7 @@ function PricingPage() {
         title="Pricing | SEO, GEO & AI Strategy Audits | Eljones Digital"
         description="Transparent pricing for SEO audits, GEO audits, and ExO AI Strategy audits. Solo operator, direct access, falsifiable findings. Based in the UK."
         path="/pricing"
-        jsonLd={[pricingWebPageLd(), breadcrumbLd(crumbs)]}
+        jsonLd={[pricingWebPageLd(), pricingOfferCatalogLd(), breadcrumbLd(crumbs)]}
       />
       <Breadcrumbs crumbs={crumbs} />
 
