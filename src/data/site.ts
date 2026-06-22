@@ -1,8 +1,10 @@
 // Single source of truth for global site metadata, navigation and shared copy.
+// Email lives here only — footer, /contact, mailto links and Organization
+// JSON-LD all read SITE.email, so swapping it is a one-line change.
 export const SITE = {
   name: "Eljones Digital",
   url: "https://eljonesdigital.com",
-  email: "jumpstartcareers.vem@gmail.com",
+  email: "info@eljonesdigital.com", // swap once Hostinger email is live
   tagline: "AI-Powered SEO & GEO Audits That Deliver a Real 0–100 Score",
   shortDesc:
     "Eljones Digital runs AI-powered SEO and GEO audits that score your website 0–100 across 24 dimensions, then hands you a prioritised, falsifiable action plan.",
