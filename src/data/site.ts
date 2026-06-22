@@ -25,6 +25,7 @@ export function mailto(subject: string, body?: string): string {
 export const NAV: { label: string; to: string }[] = [
   { label: "Home", to: "/" },
   { label: "Services", to: "/services" },
+  { label: "AI Strategy", to: "/ai-strategy" },
   { label: "AI Search", to: "/ai-search-optimization" },
   { label: "Proof", to: "/case-studies/sample-geo-audit" },
   { label: "How It Works", to: "/how-it-works" },
