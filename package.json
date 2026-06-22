@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite-react-ssg build",
-    "preview": "vite preview --host"
+    "preview": "vite preview --host",
+    "gen:assets": "node scripts/gen-og-image.mjs && node scripts/gen-founder-image.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
