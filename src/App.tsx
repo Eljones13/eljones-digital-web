@@ -185,18 +185,20 @@ function faqLd() {
   };
 }
 
-function howToLd() {
+// Google removed How-to rich results in September 2023, so the seven-step
+// process is published as an ItemList instead (still valid, AI-readable).
+function processItemListLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "HowTo",
+    "@type": "ItemList",
     "@id": `${SITE.url}/how-it-works#process`,
     name: "How Eljones Digital delivers an SEO and GEO audit",
-    description: "A seven step process for auditing, scoring, fixing and verifying a website.",
-    totalTime: "P1D",
-    step: PROCESS.map((step) => ({
-      "@type": "HowToStep",
+    description: "The seven step process Eljones Digital uses to audit, score, prioritise, fix and verify a website for search and AI visibility.",
+    itemListElement: PROCESS.map((step, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
       name: step.title,
-      text: step.what,
+      description: step.what,
     })),
   };
 }
@@ -705,7 +707,7 @@ function HowItWorksPage() {
         title="How the SEO and GEO Audit Works"
         description="A seven step breakdown of how Eljones Digital audits, scores, reports, fixes and verifies a website for SEO and AI search."
         path="/how-it-works"
-        jsonLd={[howToLd(), breadcrumbLd(crumbs)]}
+        jsonLd={[processItemListLd(), breadcrumbLd(crumbs)]}
       />
       <Breadcrumbs crumbs={crumbs} />
       <PageHero
