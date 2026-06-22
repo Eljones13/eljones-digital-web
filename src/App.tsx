@@ -34,13 +34,37 @@ const routeMeta = [
   { path: "/blog/what-is-geo-seo", label: "What Is GEO SEO?", priority: 0.65 },
 ];
 
-const blogCards = [
-  "What is GEO SEO and why does it matter in 2026?",
-  "How AI search optimization helps ChatGPT cite your business",
-  "What should a sample SEO and GEO audit report include?",
-  "How to make service pages more citable by AI search",
-  "What should a technical SEO audit include?",
-  "How schema markup helps Google and AI engines trust your site",
+const blogCards: { title: string; desc: string; to: string }[] = [
+  {
+    title: "What is GEO SEO and why does it matter in 2026?",
+    desc: "The difference between ranking on Google and being cited by ChatGPT or Perplexity — and why both matter for business visibility in 2026.",
+    to: "/blog/what-is-geo-seo",
+  },
+  {
+    title: "How AI search optimization helps ChatGPT cite your business",
+    desc: "How to structure your content so AI tools treat your pages as a trustworthy, citable source rather than ignoring them entirely.",
+    to: "/ai-search-optimization",
+  },
+  {
+    title: "What should a sample SEO and GEO audit report include?",
+    desc: "A walkthrough of what a real Eljones Digital audit report looks like — score breakdown, prioritised findings, and copy-paste fix examples.",
+    to: "/reports/example-seo-geo-audit",
+  },
+  {
+    title: "How to make service pages more citable by AI search",
+    desc: "Why 134–167 word self-contained answer blocks, question-based headings, and direct factual statements get picked up by AI tools.",
+    to: "/contact",
+  },
+  {
+    title: "What should a technical SEO audit include?",
+    desc: "The 9 technical checks that matter most — Core Web Vitals, crawlability, canonical chains, schema validation, and mobile performance.",
+    to: "/contact",
+  },
+  {
+    title: "How schema markup helps Google and AI engines trust your site",
+    desc: "Why structured data in JSON-LD format helps both Google rich results and AI citation engines identify what your business actually does.",
+    to: "/contact",
+  },
 ];
 
 const aiSearchMeasures = [
@@ -795,12 +819,19 @@ function AboutPage() {
         <div className="container-x">
           <SectionHeading eyebrow="Tools" title="What tools support the audit workflow?" />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {["claude-seo", "geo-seo-claude"].map((tool) => (
-              <article key={tool} className="card p-7">
-                <h3 className="font-mono text-2xl font-bold text-navy">{tool}</h3>
-                <p className="mt-3 leading-relaxed text-muted">
-                  Used to run structured audits, generate reports, inspect technical issues, build schema recommendations and turn findings into client-ready deliverables.
-                </p>
+            {[
+              {
+                name: "claude-seo",
+                desc: "Runs 25 specialist sub-skills in parallel covering technical SEO, content quality, schema validation, backlinks, local SEO, e-commerce, and international SEO. Produces a full audit report with a 0–100 score and a falsifiable priority list.",
+              },
+              {
+                name: "geo-seo-claude",
+                desc: "Runs 13 GEO-specific sub-skills focused on AI search visibility — citability scoring, AI crawler access, brand mention scanning across ChatGPT, Perplexity and Gemini, platform-specific optimisation, and llms.txt generation.",
+              },
+            ].map((tool) => (
+              <article key={tool.name} className="card p-7">
+                <h3 className="font-mono text-2xl font-bold text-navy">{tool.name}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{tool.desc}</p>
               </article>
             ))}
           </div>
@@ -874,17 +905,12 @@ function BlogPage() {
       />
       <Section surface>
         <div className="container-x grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {blogCards.map((title, i) => (
-            <article key={title} className="card flex min-h-60 flex-col p-7">
+          {blogCards.map((card, i) => (
+            <article key={card.title} className="card flex min-h-60 flex-col p-7">
               <p className="chip mb-5">Guide {String(i + 1).padStart(2, "0")}</p>
-              <h2 className="text-xl font-bold leading-snug text-navy">{title}</h2>
-              <p className="mt-3 flex-1 leading-relaxed text-muted">
-                A practical, plain-English explanation for business owners who want stronger search visibility.
-              </p>
-              <Link
-                className="mt-5 font-semibold text-royal hover:text-accent"
-                to={i === 0 ? "/blog/what-is-geo-seo" : i === 1 ? "/ai-search-optimization" : i === 2 ? "/reports/example-seo-geo-audit" : "/contact"}
-              >
+              <h2 className="text-xl font-bold leading-snug text-navy">{card.title}</h2>
+              <p className="mt-3 flex-1 leading-relaxed text-muted">{card.desc}</p>
+              <Link className="mt-5 font-semibold text-royal hover:text-accent" to={card.to}>
                 Read article
               </Link>
             </article>
