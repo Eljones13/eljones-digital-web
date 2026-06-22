@@ -8,6 +8,8 @@ export interface SeoProps {
   path: string;
   image?: string;
   type?: "website" | "article" | "profile";
+  /** When true, emit a noindex robots tag (e.g. the 404 page). */
+  noindex?: boolean;
   /** JSON-LD objects baked into the static HTML. */
   jsonLd?: Record<string, unknown>[];
 }
@@ -34,8 +36,9 @@ export function Seo({
   title,
   description,
   path,
-  image = "/og-image.svg",
+  image = "/og-image.png",
   type = "website",
+  noindex = false,
   jsonLd = [],
 }: SeoProps) {
   const url = canonical(path);
@@ -48,7 +51,14 @@ export function Seo({
         <title>{fullTitle}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={url} />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+        <meta
+          name="robots"
+          content={
+            noindex
+              ? "noindex, follow"
+              : "index, follow, max-image-preview:large, max-snippet:-1"
+          }
+        />
         <meta property="og:site_name" content={SITE.name} />
         <meta property="og:locale" content="en_GB" />
         <meta property="og:type" content={type} />

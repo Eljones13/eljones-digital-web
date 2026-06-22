@@ -1,3 +1,5 @@
+import { existsSync, copyFileSync, rmSync } from "node:fs";
+import { join } from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -15,5 +17,16 @@ export default defineConfig({
     entry: "src/main.tsx",
     dirStyle: "nested", // /services -> dist/services/index.html (clean URLs)
     formatting: "none",
+    // The "/404" route is prerendered (via includedRoutes in main.tsx) to
+    // dist/404/index.html. Apache's ErrorDocument needs a top-level 404.html,
+    // so promote it and drop the now-redundant directory.
+    onFinished() {
+      const out = join(process.cwd(), "dist");
+      const nested = join(out, "404", "index.html");
+      if (existsSync(nested)) {
+        copyFileSync(nested, join(out, "404.html"));
+        rmSync(join(out, "404"), { recursive: true, force: true });
+      }
+    },
   },
 });

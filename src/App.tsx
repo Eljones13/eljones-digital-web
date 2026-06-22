@@ -1001,6 +1001,44 @@ function ProofPage({
   );
 }
 
+function NotFoundPage() {
+  return (
+    <>
+      <Seo
+        title="Page not found"
+        description="The page you are looking for does not exist or has moved. Return to the Eljones Digital homepage to keep exploring our SEO and GEO audit services."
+        path="/404"
+        noindex
+      />
+      <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-navy text-white">
+        <div className="dotgrid absolute inset-0 opacity-50" aria-hidden="true" />
+        <div
+          className="absolute -right-32 top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-accent/20 blur-[120px]"
+          aria-hidden="true"
+        />
+        <div className="container-x relative py-24 text-center sm:py-28">
+          <p className="eyebrow mb-4">Error 404</p>
+          <p className="font-mono text-7xl font-bold text-accent sm:text-8xl">404</p>
+          <h1 className="mx-auto mt-6 max-w-2xl text-balance text-4xl font-bold leading-[1.05] sm:text-5xl">
+            Page not found
+          </h1>
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/70">
+            The link may be broken or the page may have moved. Head back to the homepage or jump straight to the services and contact pages.
+          </p>
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link className="btn-accent" to="/">
+              Back to homepage
+            </Link>
+            <Link className="btn-ghost" to="/services">
+              Browse services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 function PageHero({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) {
   return (
     <section className="bg-white pb-14 pt-10 sm:pb-20">
@@ -1074,6 +1112,9 @@ export const routes: RouteObject[] = [
       { path: "contact", element: <ContactPage /> },
       { path: "blog", element: <BlogPage /> },
       { path: "blog/what-is-geo-seo", element: <GeoSeoArticlePage /> },
+      // Catch-all: renders the styled 404 and is prerendered to /404.html
+      // (see includedRoutes in main.tsx + the onFinished hook in vite.config.ts).
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
 ];
