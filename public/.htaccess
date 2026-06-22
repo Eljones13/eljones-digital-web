@@ -19,3 +19,26 @@ ErrorDocument 404 /404.html
   # triggers the ErrorDocument above to render /404.html.
   RewriteRule ^ - [R=404,L]
 </IfModule>
+
+<IfModule mod_headers.c>
+  # HSTS — tell browsers to use HTTPS for 1 year; include subdomains
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Prevent MIME sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Limit referrer info to same origin for cross-origin requests
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Disable browser features not needed by this site
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Prevent clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Redirect www to apex (301)
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_HOST} ^www\.eljonesdigital\.com [NC]
+  RewriteRule ^ https://eljonesdigital.com%{REQUEST_URI} [L,R=301]
+</IfModule>
