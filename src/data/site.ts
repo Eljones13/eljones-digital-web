@@ -74,24 +74,28 @@ export const HIGHLIGHTS: { tag: string; title: string; body: string; to: string 
   },
 ];
 
-export const TESTIMONIALS: { quote: string; name: string; role: string }[] = [
+// Unattributed, illustrative scenarios — the type of problem an audit solves.
+// These replace the previous named testimonials (no real, attributable client
+// quotes exist yet) to stay within UK ASA/CAP advertising rules. Each card is
+// self-contained so it reads correctly if an AI engine lifts it out of context.
+export const SCENARIOS: { problem: string; detail: string }[] = [
   {
-    quote:
-      "The 0–100 score finally gave our board a number they understood. We actioned the three critical fixes and watched our AI Overview citations climb within the month.",
-    name: "Priya Nair",
-    role: "Head of Growth, fintech SaaS",
+    problem:
+      "A local business owner whose site stopped showing in Google Maps results after a redesign",
+    detail:
+      "An Eljones Digital audit checks the technical changes, local schema and Google Business Profile signals a redesign can quietly break, then lists the fixes that restore map-pack visibility.",
   },
   {
-    quote:
-      "We had paid agencies thousands for PDFs we never read. Eljones delivered more coverage in fifteen minutes — and every finding came with a check we could verify ourselves.",
-    name: "Marcus Bell",
-    role: "Founder, e-commerce homeware",
+    problem:
+      "An e-commerce store that cannot understand why competitors rank above it for the same products",
+    detail:
+      "The audit compares product schema, page speed, content depth and authority signals against those competitors, then shows which specific gaps are costing the store rankings.",
   },
   {
-    quote:
-      "Nobody else was even talking about GEO. Our products now show up in ChatGPT answers, and that traffic converts better than anything from classic search.",
-    name: "Sofia Almeida",
-    role: "Marketing Director, B2B manufacturer",
+    problem:
+      "A SaaS founder who wants to know whether ChatGPT and Perplexity will recommend their tool",
+    detail:
+      "A GEO audit scores citability, AI crawler access and brand mentions across the platforms AI models cite, then explains what to change so AI answers start including the product.",
   },
 ];
 

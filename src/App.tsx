@@ -12,9 +12,9 @@ import {
   HIGHLIGHTS,
   NAV,
   PROCESS,
+  SCENARIOS,
   SITE,
   STATS,
-  TESTIMONIALS,
   mailto,
 } from "./data/site";
 import { SERVICE_GROUPS, SERVICES } from "./data/services";
@@ -509,16 +509,18 @@ function HomePage() {
 
       <Section>
         <div className="container-x">
-          <SectionHeading eyebrow="Client reaction" title="What do businesses say after they see the score?" />
+          <SectionHeading
+            eyebrow="Common scenarios"
+            title="What clients typically need from an audit"
+            intro="Illustrative examples of the problems an Eljones Digital audit is built to diagnose and fix."
+          />
+          {/* TODO: replace with real client testimonial once available — e.g. from first paid audit engagement */}
           <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="card p-7">
-                <blockquote className="leading-relaxed text-ink/85">"{t.quote}"</blockquote>
-                <figcaption className="mt-5">
-                  <p className="font-bold text-navy">{t.name}</p>
-                  <p className="text-sm text-muted">{t.role}</p>
-                </figcaption>
-              </figure>
+            {SCENARIOS.map((s) => (
+              <article key={s.problem} className="card p-7">
+                <h3 className="text-lg font-bold leading-snug text-navy">{s.problem}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{s.detail}</p>
+              </article>
             ))}
           </div>
         </div>
