@@ -107,7 +107,7 @@ export const SERVICES: Service[] = [
     steps: [
       "Run /seo schema — detects all JSON-LD, Microdata, and RDFa on your site",
       "Validate against Google's Rich Results Test + Schema Markup Validator",
-      "Flag deprecated types (HowTo removed Sept 2023, FAQ restricted Aug 2023)",
+      "Flag deprecated rich-result types (How-to removed Sept 2023, FAQ restricted Aug 2023)",
       "Generate missing schema: Article, Product, LocalBusiness, FAQ, BreadcrumbList, etc.",
       "Deliver copy-paste JSON-LD blocks for each page type",
     ],

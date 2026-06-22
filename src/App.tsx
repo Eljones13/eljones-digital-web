@@ -12,9 +12,9 @@ import {
   HIGHLIGHTS,
   NAV,
   PROCESS,
+  SCENARIOS,
   SITE,
   STATS,
-  TESTIMONIALS,
   mailto,
 } from "./data/site";
 import { SERVICE_GROUPS, SERVICES } from "./data/services";
@@ -34,13 +34,37 @@ const routeMeta = [
   { path: "/blog/what-is-geo-seo", label: "What Is GEO SEO?", priority: 0.65 },
 ];
 
-const blogCards = [
-  "What is GEO SEO and why does it matter in 2026?",
-  "How AI search optimization helps ChatGPT cite your business",
-  "What should a sample SEO and GEO audit report include?",
-  "How to make service pages more citable by AI search",
-  "What should a technical SEO audit include?",
-  "How schema markup helps Google and AI engines trust your site",
+const blogCards: { title: string; desc: string; to: string }[] = [
+  {
+    title: "What is GEO SEO and why does it matter in 2026?",
+    desc: "The difference between ranking on Google and being cited by ChatGPT or Perplexity — and why both matter for business visibility in 2026.",
+    to: "/blog/what-is-geo-seo",
+  },
+  {
+    title: "How AI search optimization helps ChatGPT cite your business",
+    desc: "How to structure your content so AI tools treat your pages as a trustworthy, citable source rather than ignoring them entirely.",
+    to: "/ai-search-optimization",
+  },
+  {
+    title: "What should a sample SEO and GEO audit report include?",
+    desc: "A walkthrough of what a real Eljones Digital audit report looks like — score breakdown, prioritised findings, and copy-paste fix examples.",
+    to: "/reports/example-seo-geo-audit",
+  },
+  {
+    title: "How to make service pages more citable by AI search",
+    desc: "Why 134–167 word self-contained answer blocks, question-based headings, and direct factual statements get picked up by AI tools.",
+    to: "/contact",
+  },
+  {
+    title: "What should a technical SEO audit include?",
+    desc: "The 9 technical checks that matter most — Core Web Vitals, crawlability, canonical chains, schema validation, and mobile performance.",
+    to: "/contact",
+  },
+  {
+    title: "How schema markup helps Google and AI engines trust your site",
+    desc: "Why structured data in JSON-LD format helps both Google rich results and AI citation engines identify what your business actually does.",
+    to: "/contact",
+  },
 ];
 
 const aiSearchMeasures = [
@@ -185,18 +209,20 @@ function faqLd() {
   };
 }
 
-function howToLd() {
+// Google removed How-to rich results in September 2023, so the seven-step
+// process is published as an ItemList instead (still valid, AI-readable).
+function processItemListLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "HowTo",
+    "@type": "ItemList",
     "@id": `${SITE.url}/how-it-works#process`,
     name: "How Eljones Digital delivers an SEO and GEO audit",
-    description: "A seven step process for auditing, scoring, fixing and verifying a website.",
-    totalTime: "P1D",
-    step: PROCESS.map((step) => ({
-      "@type": "HowToStep",
+    description: "The seven step process Eljones Digital uses to audit, score, prioritise, fix and verify a website for search and AI visibility.",
+    itemListElement: PROCESS.map((step, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
       name: step.title,
-      text: step.what,
+      description: step.what,
     })),
   };
 }
@@ -235,11 +261,17 @@ function articleLd() {
 function FounderBio() {
   return (
     <aside className="mt-10 flex flex-col gap-5 rounded-lg border border-line bg-white p-6 sm:flex-row sm:items-center">
-      <img
-        src="/errol-jones-founder.png"
-        alt="Errol Jones, founder of Eljones Digital"
-        className="h-20 w-20 flex-none rounded-md object-cover object-[50%_32%]"
-      />
+      <picture className="flex-none">
+        <source srcSet="/errol-jones-founder.webp" type="image/webp" />
+        <img
+          src="/errol-jones-founder.png"
+          alt="Errol Jones, founder of Eljones Digital"
+          width={80}
+          height={80}
+          loading="lazy"
+          className="h-20 w-20 flex-none rounded-md object-cover object-[50%_32%]"
+        />
+      </picture>
       <div>
         <p className="eyebrow mb-2">Expert author</p>
         <p className="leading-relaxed text-muted">
@@ -501,16 +533,18 @@ function HomePage() {
 
       <Section>
         <div className="container-x">
-          <SectionHeading eyebrow="Client reaction" title="What do businesses say after they see the score?" />
+          <SectionHeading
+            eyebrow="Common scenarios"
+            title="What clients typically need from an audit"
+            intro="Illustrative examples of the problems an Eljones Digital audit is built to diagnose and fix."
+          />
+          {/* TODO: replace with real client testimonial once available — e.g. from first paid audit engagement */}
           <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="card p-7">
-                <blockquote className="leading-relaxed text-ink/85">"{t.quote}"</blockquote>
-                <figcaption className="mt-5">
-                  <p className="font-bold text-navy">{t.name}</p>
-                  <p className="text-sm text-muted">{t.role}</p>
-                </figcaption>
-              </figure>
+            {SCENARIOS.map((s) => (
+              <article key={s.problem} className="card p-7">
+                <h3 className="text-lg font-bold leading-snug text-navy">{s.problem}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{s.detail}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -699,7 +733,7 @@ function HowItWorksPage() {
         title="How the SEO and GEO Audit Works"
         description="A seven step breakdown of how Eljones Digital audits, scores, reports, fixes and verifies a website for SEO and AI search."
         path="/how-it-works"
-        jsonLd={[howToLd(), breadcrumbLd(crumbs)]}
+        jsonLd={[processItemListLd(), breadcrumbLd(crumbs)]}
       />
       <Breadcrumbs crumbs={crumbs} />
       <PageHero
@@ -756,12 +790,18 @@ function AboutPage() {
       <Section surface>
         <div className="container-x grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="card overflow-hidden">
-            <img
-              src="/errol-jones-founder.png"
-              alt="Errol Jones, founder of Eljones Digital"
-              className="aspect-[4/3] w-full object-cover object-[50%_32%]"
-              loading="eager"
-            />
+            <picture>
+              <source srcSet="/errol-jones-founder.webp" type="image/webp" />
+              <img
+                src="/errol-jones-founder.png"
+                alt="Errol Jones, founder of Eljones Digital"
+                width={797}
+                height={797}
+                loading="eager"
+                fetchPriority="high"
+                className="aspect-[4/3] w-full object-cover object-[50%_32%]"
+              />
+            </picture>
             <div className="p-8">
               <p className="eyebrow mb-3">Founder</p>
               <h2 className="text-3xl font-bold text-navy">{SITE.founder}</h2>
@@ -777,14 +817,32 @@ function AboutPage() {
       </Section>
       <Section>
         <div className="container-x">
+          <SectionHeading
+            eyebrow="Citation-ready answer"
+            title="What makes Eljones Digital different from a traditional SEO agency?"
+          />
+          <p className="answer-block mt-8">
+            Eljones Digital differs from a traditional SEO agency in four practical ways. First, speed: an AI-powered audit covers 24 dimensions in ten to fifteen minutes, where an equivalent manual review takes a senior analyst four to eight billable hours. Second, falsifiability: every finding ships with a verification check, so a client can confirm a fix worked instead of trusting a black box. Third, coverage: the audit scores GEO and AI search visibility — whether ChatGPT, Perplexity, Gemini and Google AI Overviews can understand and cite the business — alongside classic SEO, not as an afterthought. Fourth, access: Eljones Digital is run directly by Errol Jones, so clients speak to the person doing the work, with no account-manager layer or junior hand-off. The result is a faster, clearer and more accountable audit than a generic agency engagement, delivered as a prioritised action plan rather than a vague PDF.
+          </p>
+        </div>
+      </Section>
+      <Section surface>
+        <div className="container-x">
           <SectionHeading eyebrow="Tools" title="What tools support the audit workflow?" />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {["claude-seo", "geo-seo-claude"].map((tool) => (
-              <article key={tool} className="card p-7">
-                <h3 className="font-mono text-2xl font-bold text-navy">{tool}</h3>
-                <p className="mt-3 leading-relaxed text-muted">
-                  Used to run structured audits, generate reports, inspect technical issues, build schema recommendations and turn findings into client-ready deliverables.
-                </p>
+            {[
+              {
+                name: "claude-seo",
+                desc: "Runs 25 specialist sub-skills in parallel covering technical SEO, content quality, schema validation, backlinks, local SEO, e-commerce, and international SEO. Produces a full audit report with a 0–100 score and a falsifiable priority list.",
+              },
+              {
+                name: "geo-seo-claude",
+                desc: "Runs 13 GEO-specific sub-skills focused on AI search visibility — citability scoring, AI crawler access, brand mention scanning across ChatGPT, Perplexity and Gemini, platform-specific optimisation, and llms.txt generation.",
+              },
+            ].map((tool) => (
+              <article key={tool.name} className="card p-7">
+                <h3 className="font-mono text-2xl font-bold text-navy">{tool.name}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{tool.desc}</p>
               </article>
             ))}
           </div>
@@ -814,6 +872,17 @@ function ContactPage() {
         title="How can a business request an SEO and GEO audit?"
         intro="Send your website URL, your main business goal and any competitor sites you care about. We will turn that into a score and action plan."
       />
+      <Section>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Citation-ready answer"
+            title="How does requesting an SEO and GEO audit from Eljones Digital work?"
+          />
+          <p className="answer-block mt-8">
+            Requesting an audit from Eljones Digital takes one short email. You send your website URL, the main outcome you want — more leads, stronger local ranking, product visibility or AI citations — and any competitor sites worth comparing. No CMS logins, passwords or analytics access are required, because the audit reads your site the same way Google and AI crawlers do. Errol Jones reviews the request, confirms the likely business type and the audit package that fits, then runs the full SEO and GEO audit. A complete run takes ten to fifteen minutes of processing, and the written report is typically returned the same business day. You receive a 0-100 score, a category breakdown across technical health, content, schema, authority and AI visibility, and a prioritised fix list sorted into critical, high and medium actions. Every finding includes the reason it matters and a check you can use to verify the fix worked.
+          </p>
+        </div>
+      </Section>
       <Section surface>
         <div className="container-x grid gap-10 lg:grid-cols-[1fr_0.8fr]">
           <p className="answer-block">
@@ -858,17 +927,12 @@ function BlogPage() {
       />
       <Section surface>
         <div className="container-x grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {blogCards.map((title, i) => (
-            <article key={title} className="card flex min-h-60 flex-col p-7">
+          {blogCards.map((card, i) => (
+            <article key={card.title} className="card flex min-h-60 flex-col p-7">
               <p className="chip mb-5">Guide {String(i + 1).padStart(2, "0")}</p>
-              <h2 className="text-xl font-bold leading-snug text-navy">{title}</h2>
-              <p className="mt-3 flex-1 leading-relaxed text-muted">
-                A practical, plain-English explanation for business owners who want stronger search visibility.
-              </p>
-              <Link
-                className="mt-5 font-semibold text-royal hover:text-accent"
-                to={i === 0 ? "/blog/what-is-geo-seo" : i === 1 ? "/ai-search-optimization" : i === 2 ? "/reports/example-seo-geo-audit" : "/contact"}
-              >
+              <h2 className="text-xl font-bold leading-snug text-navy">{card.title}</h2>
+              <p className="mt-3 flex-1 leading-relaxed text-muted">{card.desc}</p>
+              <Link className="mt-5 font-semibold text-royal hover:text-accent" to={card.to}>
                 Read article
               </Link>
             </article>
@@ -1001,6 +1065,44 @@ function ProofPage({
   );
 }
 
+function NotFoundPage() {
+  return (
+    <>
+      <Seo
+        title="Page not found"
+        description="The page you are looking for does not exist or has moved. Return to the Eljones Digital homepage to keep exploring our SEO and GEO audit services."
+        path="/404"
+        noindex
+      />
+      <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-navy text-white">
+        <div className="dotgrid absolute inset-0 opacity-50" aria-hidden="true" />
+        <div
+          className="absolute -right-32 top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-accent/20 blur-[120px]"
+          aria-hidden="true"
+        />
+        <div className="container-x relative py-24 text-center sm:py-28">
+          <p className="eyebrow mb-4">Error 404</p>
+          <p className="font-mono text-7xl font-bold text-accent sm:text-8xl">404</p>
+          <h1 className="mx-auto mt-6 max-w-2xl text-balance text-4xl font-bold leading-[1.05] sm:text-5xl">
+            Page not found
+          </h1>
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/70">
+            The link may be broken or the page may have moved. Head back to the homepage or jump straight to the services and contact pages.
+          </p>
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link className="btn-accent" to="/">
+              Back to homepage
+            </Link>
+            <Link className="btn-ghost" to="/services">
+              Browse services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 function PageHero({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) {
   return (
     <section className="bg-white pb-14 pt-10 sm:pb-20">
@@ -1074,6 +1176,9 @@ export const routes: RouteObject[] = [
       { path: "contact", element: <ContactPage /> },
       { path: "blog", element: <BlogPage /> },
       { path: "blog/what-is-geo-seo", element: <GeoSeoArticlePage /> },
+      // Catch-all: renders the styled 404 and is prerendered to /404.html
+      // (see includedRoutes in main.tsx + the onFinished hook in vite.config.ts).
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
 ];

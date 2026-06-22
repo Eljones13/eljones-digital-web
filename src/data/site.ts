@@ -1,8 +1,10 @@
 // Single source of truth for global site metadata, navigation and shared copy.
+// Email lives here only — footer, /contact, mailto links and Organization
+// JSON-LD all read SITE.email, so swapping it is a one-line change.
 export const SITE = {
   name: "Eljones Digital",
   url: "https://eljonesdigital.com",
-  email: "jumpstartcareers.vem@gmail.com",
+  email: "info@eljonesdigital.com", // swap once Hostinger email is live
   tagline: "AI-Powered SEO & GEO Audits That Deliver a Real 0–100 Score",
   shortDesc:
     "Eljones Digital runs AI-powered SEO and GEO audits that score your website 0–100 across 24 dimensions, then hands you a prioritised, falsifiable action plan.",
@@ -74,24 +76,28 @@ export const HIGHLIGHTS: { tag: string; title: string; body: string; to: string 
   },
 ];
 
-export const TESTIMONIALS: { quote: string; name: string; role: string }[] = [
+// Unattributed, illustrative scenarios — the type of problem an audit solves.
+// These replace the previous named testimonials (no real, attributable client
+// quotes exist yet) to stay within UK ASA/CAP advertising rules. Each card is
+// self-contained so it reads correctly if an AI engine lifts it out of context.
+export const SCENARIOS: { problem: string; detail: string }[] = [
   {
-    quote:
-      "The 0–100 score finally gave our board a number they understood. We actioned the three critical fixes and watched our AI Overview citations climb within the month.",
-    name: "Priya Nair",
-    role: "Head of Growth, fintech SaaS",
+    problem:
+      "A local business owner whose site stopped showing in Google Maps results after a redesign",
+    detail:
+      "An Eljones Digital audit checks the technical changes, local schema and Google Business Profile signals a redesign can quietly break, then lists the fixes that restore map-pack visibility.",
   },
   {
-    quote:
-      "We had paid agencies thousands for PDFs we never read. Eljones delivered more coverage in fifteen minutes — and every finding came with a check we could verify ourselves.",
-    name: "Marcus Bell",
-    role: "Founder, e-commerce homeware",
+    problem:
+      "An e-commerce store that cannot understand why competitors rank above it for the same products",
+    detail:
+      "The audit compares product schema, page speed, content depth and authority signals against those competitors, then shows which specific gaps are costing the store rankings.",
   },
   {
-    quote:
-      "Nobody else was even talking about GEO. Our products now show up in ChatGPT answers, and that traffic converts better than anything from classic search.",
-    name: "Sofia Almeida",
-    role: "Marketing Director, B2B manufacturer",
+    problem:
+      "A SaaS founder who wants to know whether ChatGPT and Perplexity will recommend their tool",
+    detail:
+      "A GEO audit scores citability, AI crawler access and brand mentions across the platforms AI models cite, then explains what to change so AI answers start including the product.",
   },
 ];
 
@@ -105,49 +111,49 @@ export const PROCESS: {
   {
     step: "01",
     title: "Discovery",
-    what: "You share your website URL and tell us your main goal — more traffic, AI citations, local ranking or rich results.",
+    what: "You share your website URL and tell us the main goal — more traffic, AI citations, local ranking or rich results. That single input is enough to scope the right audit, because the tools read your live site the same way Google and AI crawlers do.",
     time: "5 minutes",
     input: "URL + goal",
   },
   {
     step: "02",
     title: "Audit run",
-    what: "We run the appropriate audit command. 25 sub-skills fire in parallel, covering every dimension of your site.",
+    what: "We run the appropriate audit command and 25 sub-skills fire in parallel, covering technical health, content, schema, speed, mobile, links and AI visibility. Running them together is what makes full-site coverage possible in minutes rather than days.",
     time: "10–15 minutes",
     input: "None",
   },
   {
     step: "03",
     title: "Score & prioritisation",
-    what: "AI agents cross-check findings and sort them: Critical (this week) → High (this month) → Medium (this quarter).",
+    what: "AI agents cross-check the findings and sort them into Critical (this week), High (this month) and Medium (this quarter). Each item is ranked by business impact, so you always know what to fix first and why it matters.",
     time: "Instant",
     input: "None",
   },
   {
     step: "04",
     title: "Report delivery",
-    what: "You receive a full markdown report, a PDF summary and a prioritised action plan — all the same day.",
+    what: "You receive a full markdown report, a PDF summary and a prioritised action plan, all on the same day. The report is written for three readers at once — a business owner, a marketer and a developer — so nobody is left guessing.",
     time: "Same day",
     input: "None",
   },
   {
     step: "05",
     title: "Walkthrough call",
-    what: "We walk through the top three critical findings, explain the root cause, and agree the fix plan together.",
+    what: "We walk through the top three critical findings, explain the root cause of each and agree the fix plan together. The call keeps the work practical and makes sure the priorities match your commercial goals.",
     time: "30 minutes",
     input: "Your team",
   },
   {
     step: "06",
     title: "Fix implementation",
-    what: "We implement the fixes — technical changes, schema code, content rewrites — or hand off to your dev team.",
+    what: "We implement the fixes — technical changes, schema code and content rewrites — or hand a clear brief to your own dev team. Either way, each change maps back to a specific finding in the report so nothing is done blindly.",
     time: "1–5 days",
     input: "Optional",
   },
   {
     step: "07",
     title: "Verification",
-    what: "We re-run the audit after fixes to confirm the score improved and close out each finding.",
+    what: "We re-run the audit after the fixes to confirm the score improved and close out each finding. This verification step is what turns the audit from a one-off opinion into a measurable, repeatable result.",
     time: "Same day",
     input: "None",
   },

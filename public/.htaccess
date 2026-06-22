@@ -1,10 +1,21 @@
 Options -Indexes
 
+# Serve a real, styled 404 (not the homepage) for unknown URLs.
+# Resolves the soft-404: every route is prerendered to its own .html, so there
+# is no need for an SPA fallback to /index.html (which returned HTTP 200 for
+# broken links and made Google treat every bad URL as a valid page).
+ErrorDocument 404 /404.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+
+  # Let real files and directories (e.g. /about/ -> /about/index.html) resolve.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Anything else genuinely does not exist: return a proper 404 status, which
+  # triggers the ErrorDocument above to render /404.html.
+  RewriteRule ^ - [R=404,L]
 </IfModule>
