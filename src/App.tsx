@@ -22,6 +22,7 @@ import { SERVICE_GROUPS, SERVICES } from "./data/services";
 const routeMeta = [
   { path: "/", label: "Home", priority: 1 },
   { path: "/services", label: "Services", priority: 0.95 },
+  { path: "/ai-strategy", label: "AI Strategy Audit", priority: 0.8 },
   { path: "/ai-search-optimization", label: "AI Search Optimization", priority: 0.96 },
   { path: "/case-studies/sample-geo-audit", label: "Sample GEO Audit Case Study", priority: 0.72 },
   { path: "/reports/example-seo-geo-audit", label: "Example SEO GEO Audit Report", priority: 0.72 },
@@ -624,6 +625,20 @@ function ServicesPage() {
           </div>
         </div>
       </Section>
+      <Section>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Premium tier"
+            title="Is your business prepared for AI disruption beyond your website?"
+          />
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted">
+            SEO and GEO audits improve how your website performs in search. But search visibility is only one piece of the picture. If your company's core service can be replicated by a 2-person AI-native team in 90 days, a higher-ranking website won't protect your revenue. Our ExO AI Strategy Audit — based on the ExO 3.0 Organizational Singularity framework by Salim Ismail and Peter Diamandis — scores your entire organisation's AI readiness and tells you exactly where your exposure is.
+          </p>
+          <Link className="btn-outline mt-8" to="/ai-strategy">
+            Learn about ExO AI Strategy Audits →
+          </Link>
+        </div>
+      </Section>
       <CTA />
     </>
   );
@@ -1103,6 +1118,422 @@ function NotFoundPage() {
   );
 }
 
+// --- /ai-strategy (ExO 3.0 AI readiness audit) page data ---------------------
+// Premium tier, separate buyer (CEOs/founders) from the SEO/GEO audit line.
+// Based on the ExO 3.0 / Organizational Singularity framework by Salim Ismail
+// and Peter Diamandis (OpenExO). Kept as page-local data, mirroring the other
+// page arrays above.
+
+const aiDimensions: { n: string; name: string; desc: string }[] = [
+  {
+    n: "01",
+    name: "Organisational Drag",
+    desc: "How many approval layers does it take to get something done? Companies with 5+ approval steps for standard decisions score low — every layer is a workflow an AI-native competitor doesn't have.",
+  },
+  {
+    n: "02",
+    name: "AI Citizenship",
+    desc: "Is AI a bolt-on tool or a first-class participant in how work gets done? We look for evidence of a Chief AI Officer role, AI in standard workflows, and active agent deployment — not just a ChatGPT subscription.",
+  },
+  {
+    n: "03",
+    name: "MTP Clarity",
+    desc: "Does the company have a Massive Transformative Purpose clear enough for an AI agent to act on it? Vague mission statements can't guide autonomous systems.",
+  },
+  {
+    n: "04",
+    name: "Workflow Documentation",
+    desc: "Are your core revenue-generating workflows written down prescriptively, or is the knowledge entirely in people's heads? Undocumented workflows can't be automated — they can only be replaced.",
+  },
+  {
+    n: "05",
+    name: "Intelligence Stack Readiness",
+    desc: "Do you have a data lake, clean API architecture, and structured outputs — or are you running siloed ERP systems and manual Excel exports? The gap here determines how fast an AI-native twin could be built.",
+  },
+  {
+    n: "06",
+    name: "Governance Framework",
+    desc: "When an AI agent makes a mistake, can you roll it back? Do you have agent passports, audit logs, and a human review queue? Governance isn't bureaucracy — it's what lets you deploy agents with confidence.",
+  },
+  {
+    n: "07",
+    name: "Talent Readiness",
+    desc: "Are your people being retrained for oversight, exception handling, and apprenticeship roles — or are they still doing work AI can do faster and cheaper? The score here predicts your transition risk over the next 24 months.",
+  },
+];
+
+const aiServices: { name: string; tag: string; desc: string; receive: string }[] = [
+  {
+    name: "ExO Quick Score",
+    tag: "Quick Score",
+    desc: "The fastest way to see where your company stands. We score all 7 dimensions in a single session and return a 1–10 on each with 3 prioritised actions per dimension. No preparation required — just your website, LinkedIn, and 45 minutes of your time.",
+    receive: "1-page scorecard PDF with dimension scores and priority actions.",
+  },
+  {
+    name: "Full ExO AI Readiness Audit",
+    tag: "Full Audit",
+    desc: "A deep audit across all 7 dimensions grounded in observable signals — your website, public filings, LinkedIn, job listings, and news — plus a structured interview with your leadership team. Every finding is scored honestly with a falsifiability check.",
+    receive: "Full audit report (20–30 pages), 0–10 score per dimension, prioritised action plan, and C-suite presentation deck.",
+  },
+  {
+    name: "Disruption Risk Analysis",
+    tag: "Disruption",
+    desc: "We identify which of your business lines a 2-person team with Claude and open-source AI could replicate in 60–90 days. Includes a week-by-week build simulation, a Day 90 product description, Month 6 projection, and a threat score per business line.",
+    receive: "Disruption scenario report with defender response window and recommended countermeasures.",
+  },
+  {
+    name: "Digital Twin Blueprint",
+    tag: "Blueprint",
+    desc: "A full technical and operational plan for building an AI-native twin of your highest-risk business line at the edge — before a competitor does. Covers tech stack, migration sequence, governance model, and 90-day sprint plan.",
+    receive: "Digital twin architecture document and Claude Code kickoff prompt ready to hand to a developer.",
+  },
+  {
+    name: "90-Day AI Roadmap",
+    tag: "Roadmap",
+    desc: "We work backwards from your AI-native future state to a concrete 90-day first sprint. Identifies the single highest-leverage workflow to automate first, the tools required, the team changes needed, and the metrics that prove it worked.",
+    receive: "Backcasting roadmap document with weekly milestones and a decision framework for every tradeoff.",
+  },
+  {
+    name: "Executive Pitch & Briefing Pack",
+    tag: "Report",
+    desc: "Translates any ExO audit output into plain language for a board, investors, or a leadership team that hasn't read the Organizational Singularity framework. Includes a word-for-word presentation script, pre-meeting brief, and objection handling.",
+    receive: "Slide deck (10–12 slides), speaker script, and objection guide.",
+  },
+];
+
+const aiDisruptionPoints: string[] = [
+  "The cost of building software, running analysis and delivering professional services has dropped to near-zero with AI. What used to take a 10-person team now takes 2 people and a £50/month Claude subscription. That shift changes what a small team can build — and how fast they can build it.",
+  "The companies most at risk are the ones with high-margin, process-heavy services built around human coordination — consulting, recruitment, auditing, legal, finance and marketing. These are exactly the workflows AI can execute in parallel. Where the value is mostly knowledge, documentation and coordination, it can be replicated.",
+  "The audit doesn't tell you to fear this. It tells you exactly which of your business lines are exposed, how long you have before a competitor moves, and what to build at the edge before someone else does. The point is direction, not alarm.",
+];
+
+const aiGoodFit: string[] = [
+  "Companies with 10–500 employees facing competitive pressure from AI-native startups",
+  "Professional services firms — consulting, recruitment, legal, finance and marketing",
+  "Founders who want to know how exposed their highest-margin service line is",
+  "Leadership teams preparing an AI strategy for a board presentation",
+  "Companies that have adopted AI tools but haven't redesigned their workflows around them",
+];
+
+const aiNotFit: string[] = [
+  "Businesses looking for website SEO fixes — see our SEO and GEO audit services instead",
+  "Pre-revenue startups with no established workflows to audit",
+  "Companies that only want reassurance rather than honest disruption scoring",
+  "Teams looking for a generic “AI readiness” tick-box exercise with no action plan",
+];
+
+const aiFaqs: { q: string; a: string }[] = [
+  {
+    q: "How is an ExO AI strategy audit different from a standard digital transformation report?",
+    a: "An ExO AI strategy audit differs from standard digital transformation reports in three ways. First, every finding includes a falsifiability check — a specific test you can run to verify the finding is real, not a consultant's opinion. Second, it runs a live disruption simulation modelling how a 2-person AI-native team could replicate your most vulnerable business line in 60–90 days, with a week-by-week build plan. Third, it is grounded in the ExO 3.0 Organizational Singularity framework by Salim Ismail and Peter Diamandis, the same framework used by Singularity University and Fortune 500 strategy teams. It is delivered in days not months, costs a fraction of a traditional consulting engagement, and produces plain documents you own — no vendor lock-in, no ongoing dependency.",
+  },
+  {
+    q: "Does my company need to have already adopted AI to benefit from this audit?",
+    a: "No — an ExO AI strategy audit is most valuable before full AI adoption, because it prevents building the wrong things. If your Intelligence Stack Readiness scores low, we identify exactly which data infrastructure gaps to fix before spending money on AI agents. If your Organisational Drag score is high, we show which approval layers to cut before automation creates new bottlenecks. Companies that have already deployed AI tools benefit from the audit too — it assesses whether those tools are genuinely embedded in workflows or just cosmetic additions. The 7-dimension scoring works at any stage of AI adoption and produces a prioritised action plan regardless of your starting point.",
+  },
+  {
+    q: "What makes the disruption simulation realistic rather than just theoretical?",
+    a: "The disruption simulation is realistic because it is grounded in tools and costs that exist today, not hypotheticals. It uses the actual AI stack available right now — Claude, open-source models and no-code platforms — and real cost data, typically £50 to £200 per month for the full toolset. Timelines come from observed AI-native builds rather than optimistic guesses, and the work is broken down week by week so you can see what a competitor would ship and when. The simulation ends with a Day 90 product description written as if the replica already exists, plus a Month 6 projection. The goal is to make the threat concrete and actionable: you see which business line is exposed, how long your defender response window is, and which countermeasures to deploy first. It is designed to direct action, not to alarm you without a plan.",
+  },
+  {
+    q: "How long does a full ExO AI readiness audit take to complete?",
+    a: "A full ExO AI Readiness Audit takes three to five working days from receipt of your initial information. The faster ExO Quick Score is delivered in one day, and a standalone Disruption Risk Analysis takes about two days. Every output is delivered as plain documents you own — scorecards, reports, presentation decks and blueprints — with no retainer, no platform subscription and no ongoing dependency on us. There is no vendor lock-in: you keep everything and can act on it with your own team or developer. A 60-minute walkthrough call is included with both the Full Audit and the Disruption Risk Analysis, so we can present the findings directly to your leadership team and answer questions live. There is no obligation to continue beyond the delivered work.",
+  },
+];
+
+function aiStrategyWebPageLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE.url}/ai-strategy#webpage`,
+    url: `${SITE.url}/ai-strategy`,
+    name: "AI Strategy & Disruption Audit | ExO 3.0 Framework | Eljones Digital",
+    description:
+      "ExO 3.0 AI readiness audits for businesses. 7-dimension scoring, disruption risk simulation, digital twin blueprints, and C-suite PDF reports.",
+    isPartOf: { "@id": `${SITE.url}/#website` },
+  };
+}
+
+function aiStrategyServiceLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE.url}/ai-strategy#service`,
+    name: "ExO AI Strategy & Disruption Audit",
+    provider: { "@id": `${SITE.url}/#organization` },
+    description:
+      "AI organisational readiness audits based on the ExO 3.0 Organizational Singularity framework by Salim Ismail and Peter Diamandis. Covers 7 scoring dimensions, disruption risk simulation, digital twin blueprints, and 90-day roadmaps.",
+    areaServed: "Worldwide",
+    serviceType: "AI Strategy Consulting",
+  };
+}
+
+function aiStrategyFaqLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: aiFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+function AiStrategyPage() {
+  const crumbs = [
+    { label: "Home", to: "/" },
+    { label: "AI Strategy Audit", to: "/ai-strategy" },
+  ];
+  return (
+    <>
+      <Seo
+        title="AI Strategy & Disruption Audit | ExO 3.0 Framework"
+        description="We audit your business against the ExO 3.0 Organizational Singularity framework — scoring AI readiness across 7 dimensions and identifying which of your business lines a 2-person AI startup could replicate in 90 days."
+        path="/ai-strategy"
+        jsonLd={[aiStrategyWebPageLd(), aiStrategyServiceLd(), aiStrategyFaqLd(), breadcrumbLd(crumbs)]}
+      />
+
+      {/* HERO — navy, premium tier. Breadcrumb rendered inline (light) so the
+          section sits flush under the fixed header without a white seam. */}
+      <section className="relative overflow-hidden bg-navy pt-32 text-white sm:pt-36">
+        <div className="dotgrid absolute inset-0 opacity-40" aria-hidden="true" />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_15%_18%,rgba(233,69,96,0.20),transparent_30%),radial-gradient(circle_at_85%_12%,rgba(47,123,237,0.18),transparent_30%)]"
+          aria-hidden="true"
+        />
+        <div className="container-x relative pb-20 sm:pb-24">
+          <nav aria-label="Breadcrumb">
+            <ol className="flex flex-wrap items-center gap-2 font-mono text-[0.72rem] text-white/55">
+              <li>
+                <Link to="/" className="transition-colors hover:text-white">
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-white/30">
+                /
+              </li>
+              <li>
+                <span aria-current="page" className="text-accent">
+                  AI Strategy Audit
+                </span>
+              </li>
+            </ol>
+          </nav>
+          <div className="mt-10 max-w-3xl animate-fade-up">
+            <p className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-[0.72rem] font-medium uppercase tracking-eyebrow text-azure-400">
+              AI Strategy Audit
+            </p>
+            <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.04] sm:text-6xl">
+              How exposed is your business to a 2-person AI startup?
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72">
+              We score your company against the ExO 3.0 Organizational Singularity framework — 7 dimensions, an honest 1–10 score, and a week-by-week simulation of how a lean AI-native team could replicate your highest-margin service in 90 days.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              {["7 Scoring Dimensions", "90-Day Disruption Simulation", "C-Suite Ready PDF Report"].map((stat) => (
+                <span
+                  key={stat}
+                  className="rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 font-mono text-sm text-white/80"
+                >
+                  {stat}
+                </span>
+              ))}
+            </div>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link className="btn-accent" to="/contact">
+                Request your ExO audit →
+              </Link>
+              <a className="btn-ghost" href="#audit-services">
+                See the 6 audit services
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 — Citability block (AI citation target) */}
+      <Section surface>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Citation-ready answer"
+            title="What is an ExO AI Strategy Audit and what does a business get from one?"
+          />
+          <p className="answer-block mt-8">
+            An ExO AI Strategy Audit scores a company across seven dimensions — organisational drag, AI citizenship, MTP clarity, workflow documentation, intelligence stack readiness, governance framework and talent readiness — to measure how ready it is to operate as an AI-native business. Each dimension is scored from 1 to 10 with specific, falsifiable findings rather than vague opinion. The audit also runs a disruption simulation: it models how a 2-person team using Claude and open-source AI tools could replicate the company's most vulnerable, highest-margin business line in 60 to 90 days. The output is a prioritised action plan and a C-suite ready PDF report that tells leadership exactly where they are exposed and what to build at the edge first. It is based on the ExO 3.0 / Organizational Singularity framework developed by Salim Ismail and Peter Diamandis, applied with AI audit tooling for speed and depth.
+          </p>
+        </div>
+      </Section>
+
+      {/* SECTION 5 — Disruption risk framing */}
+      <Section>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Disruption risk"
+            title="Why does it only take 2 people and Claude to replicate your business?"
+          />
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {aiDisruptionPoints.map((para, i) => (
+              <article key={i} className="card p-7">
+                <p className="font-mono text-sm font-bold text-accent">{String(i + 1).padStart(2, "0")}</p>
+                <p className="mt-3 leading-relaxed text-muted">{para}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* SECTION 6 — The 7 scoring dimensions */}
+      <Section surface>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="The 7 dimensions"
+            title="What does an ExO AI readiness score measure?"
+            intro="Each dimension is scored from 1 to 10 with a specific, falsifiable finding — so leadership can see exactly where the organisation is exposed."
+          />
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {aiDimensions.map((d) => (
+              <article key={d.n} className="card p-7">
+                <p className="font-mono text-sm font-bold text-accent">{d.n}</p>
+                <h3 className="mt-3 text-xl font-bold text-navy">{d.name}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{d.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* SECTION 7 — The 6 audit services */}
+      <Section id="audit-services">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Audit services"
+            title="Which ExO AI strategy service does your business need?"
+            intro="Six services, from a 45-minute Quick Score to a full Digital Twin Blueprint. Every output is a plain document you own."
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+            {aiServices.map((s, i) => (
+              <article key={s.name} className="card flex h-full flex-col p-7">
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <span className="chip">{s.tag}</span>
+                  <span className="font-mono text-xs text-muted/70">{String(i + 1).padStart(2, "0")}</span>
+                </div>
+                <h3 className="text-xl font-bold leading-snug text-navy">{s.name}</h3>
+                <p className="mt-3 flex-1 leading-relaxed text-muted">{s.desc}</p>
+                <div className="mt-5 border-t border-line pt-5">
+                  <p className="eyebrow mb-2">What you receive</p>
+                  <p className="text-[0.9rem] leading-relaxed text-ink/80">{s.receive}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* SECTION 8 — Framework attribution (required) */}
+      <Section surface>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Framework"
+            title="What is the ExO 3.0 Organizational Singularity framework?"
+          />
+          <p className="answer-block mt-8">
+            ExO 3.0 is the third evolution of the Exponential Organizations framework developed by Salim Ismail and Peter Diamandis. First published in 2014, the framework was updated as ExO 2.0 in 2023 and evolved into ExO 3.0, the Organizational Singularity, in 2026. It defines how organisations transition from human-centred coordination models — where work moves through meetings, approvals and knowledge held in people's heads — to AI-native intelligence systems where agents execute and humans supervise. The framework is used by Singularity University, Fortune 500 strategy teams and independent consultants certified through OpenExO. It treats AI not as a bolt-on tool but as a first-class participant in how an organisation thinks, decides and delivers. Eljones Digital applies the ExO 3.0 framework using AI audit tooling to deliver the same depth of analysis as a traditional consulting engagement, at a fraction of the cost and in days rather than months.
+          </p>
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted">
+            ExO 3.0 / Organizational Singularity framework developed by Salim Ismail and Peter Diamandis. Published through{" "}
+            <a
+              href="https://openexo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-royal underline decoration-accent/40 underline-offset-2 hover:text-accent"
+            >
+              OpenExO (openexo.com)
+            </a>
+            . Eljones Digital is an independent practitioner of this framework and is not affiliated with or endorsed by OpenExO.
+          </p>
+        </div>
+      </Section>
+
+      {/* SECTION 9 — Who this is for */}
+      <Section>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Who this is for"
+            title="Which businesses benefit most from an ExO AI strategy audit?"
+          />
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="card p-7">
+              <h3 className="text-2xl font-bold text-navy">✅ Good fit</h3>
+              <ul className="mt-5 space-y-3">
+                {aiGoodFit.map((item) => (
+                  <li key={item} className="flex gap-3 leading-relaxed text-muted">
+                    <span className="mt-2 h-2 w-2 flex-none rounded-full bg-accent" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="card p-7 opacity-80">
+              <h3 className="text-2xl font-bold text-navy">❌ Not the right service</h3>
+              <ul className="mt-5 space-y-3">
+                {aiNotFit.map((item) => (
+                  <li key={item} className="flex gap-3 leading-relaxed text-muted">
+                    <span className="mt-2 h-2 w-2 flex-none rounded-full bg-line" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* SECTION 10 — FAQ */}
+      <Section surface>
+        <div className="container-x">
+          <SectionHeading eyebrow="FAQ" title="Questions about the ExO AI strategy audit" />
+          <div className="mt-10 grid gap-5">
+            {aiFaqs.map((f) => (
+              <article key={f.q} className="card p-7">
+                <h3 className="text-xl font-bold text-navy">{f.q}</h3>
+                <p className="mt-3 leading-relaxed text-muted">{f.a}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* SECTION 11 — CTA (custom band; mirrors the shared CTA styling but with
+          this page's specified buttons: /contact + /services). */}
+      <section className="relative overflow-hidden bg-navy text-white">
+        <div className="dotgrid absolute inset-0 opacity-60" aria-hidden="true" />
+        <div
+          className="absolute -right-32 top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-accent/20 blur-[120px]"
+          aria-hidden="true"
+        />
+        <div className="container-x relative py-20 text-center sm:py-24">
+          <p className="eyebrow mb-4">Start your audit</p>
+          <h2 className="mx-auto max-w-2xl text-balance text-3xl font-bold sm:text-[2.6rem] sm:leading-[1.1]">
+            Ready to see how exposed your business really is?
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/70">
+            Share your website and we'll run the ExO Quick Score in 24 hours — 7 dimension scores and 3 priority actions per dimension, no preparation needed.
+          </p>
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link className="btn-accent" to="/contact">
+              Request your ExO audit →
+            </Link>
+            <Link className="btn-ghost" to="/services">
+              See all SEO services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 function PageHero({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) {
   return (
     <section className="bg-white pb-14 pt-10 sm:pb-20">
@@ -1122,6 +1553,7 @@ export const routes: RouteObject[] = [
     children: [
       { index: true, element: <HomePage /> },
       { path: "services", element: <ServicesPage /> },
+      { path: "ai-strategy", element: <AiStrategyPage /> },
       { path: "ai-search-optimization", element: <AiSearchOptimizationPage /> },
       {
         path: "case-studies/sample-geo-audit",
