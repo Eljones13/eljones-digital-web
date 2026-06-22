@@ -1339,7 +1339,7 @@ const aiServices: { name: string; tag: string; desc: string; receive: string }[]
   {
     name: "ExO Quick Score",
     tag: "Quick Score",
-    desc: "The fastest way to see where your company stands. We score all 7 dimensions in a single session and return a 1–10 on each with 3 prioritised actions per dimension. No preparation required — just your website, LinkedIn, and 45 minutes of your time.",
+    desc: "A clear, prioritised read on where your company stands. We score all 7 dimensions in a single session and return a 1–10 on each with 3 prioritised actions per dimension. No preparation required — just your website, LinkedIn, and 45 minutes of your time.",
     receive: "1-page scorecard PDF with dimension scores and priority actions.",
   },
   {
@@ -1521,7 +1521,7 @@ function AiStrategyPage() {
               How exposed is your business to a 2-person AI startup?
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72">
-              We score your company against the ExO 3.0 Organizational Singularity framework — 7 dimensions, an honest 1–10 score, and a week-by-week simulation of how a lean AI-native team could replicate your highest-margin service in 90 days.
+              We score your company against the ExO 3.0 Organizational Singularity framework and hand your leadership team a C-suite-ready report: an honest 1–10 score across 7 dimensions, a prioritised action plan, and a week-by-week simulation of how a lean AI-native team could replicate your highest-margin service in 90 days.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               {["7 Scoring Dimensions", "90-Day Disruption Simulation", "C-Suite Ready PDF Report"].map((stat) => (
@@ -1545,6 +1545,23 @@ function AiStrategyPage() {
         </div>
       </section>
 
+      {/* RED TEAM CALLOUT (TASK 2) — immediately after the hero */}
+      <Section>
+        <div className="container-x">
+          <div className="rounded-lg border-l-4 border-[#e94560] bg-[#0f3460] p-6 text-white sm:p-8">
+            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 font-mono text-[0.72rem] font-medium uppercase tracking-eyebrow text-white/90">
+              Red team approach
+            </span>
+            <h2 className="mt-4 text-balance text-2xl font-bold leading-snug sm:text-3xl">
+              You are being audited by the exact setup that threatens to disrupt you.
+            </h2>
+            <p className="mt-4 max-w-3xl leading-relaxed text-white/85">
+              This audit is not delivered by a traditional consulting firm with 50 account managers and a six-month timeline. It is delivered by a solo operator running the same AI-native stack — Claude, open-source models, parallel agents — that a 2-person startup would use to replicate your highest-margin service line in 90 days. That is not a limitation. That is the point. You are not buying a McKinsey report. You are buying a live-fire simulation conducted by the exact type of lean, AI-native operation you are most at risk from.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* SECTION 4 — Citability block (AI citation target) */}
       <Section surface>
         <div className="container-x">
@@ -1553,7 +1570,7 @@ function AiStrategyPage() {
             title="What is an ExO AI Strategy Audit and what does a business get from one?"
           />
           <p className="answer-block mt-8">
-            An ExO AI Strategy Audit scores a company across seven dimensions — organisational drag, AI citizenship, MTP clarity, workflow documentation, intelligence stack readiness, governance framework and talent readiness — to measure how ready it is to operate as an AI-native business. Each dimension is scored from 1 to 10 with specific, falsifiable findings rather than vague opinion. The audit also runs a disruption simulation: it models how a 2-person team using Claude and open-source AI tools could replicate the company's most vulnerable, highest-margin business line in 60 to 90 days. The output is a prioritised action plan and a C-suite ready PDF report that tells leadership exactly where they are exposed and what to build at the edge first. It is based on the ExO 3.0 / Organizational Singularity framework developed by Salim Ismail and Peter Diamandis, applied with AI audit tooling for speed and depth.
+            An ExO AI Strategy Audit scores a company across seven dimensions — organisational drag, AI citizenship, MTP clarity, workflow documentation, intelligence stack readiness, governance framework and talent readiness — to measure how ready it is to operate as an AI-native business. Each dimension is scored from 1 to 10 with specific, falsifiable findings rather than vague opinion. The audit also runs a disruption simulation: it models how a 2-person team using Claude and open-source AI tools could replicate the company's most vulnerable, highest-margin business line in 60 to 90 days. The output is a prioritised action plan and a C-suite ready PDF report that tells leadership exactly where they are exposed and what to build at the edge first. It is based on the ExO 3.0 / Organizational Singularity framework developed by Salim Ismail and Peter Diamandis, applied with AI audit tooling for depth and rigour.
           </p>
         </div>
       </Section>
@@ -1685,7 +1702,14 @@ function AiStrategyPage() {
                   <span className="font-mono text-xs text-muted/70">{String(i + 1).padStart(2, "0")}</span>
                 </div>
                 <h3 className="text-xl font-bold leading-snug text-navy">{s.name}</h3>
-                <p className="mt-3 flex-1 leading-relaxed text-muted">{s.desc}</p>
+                <div className="mt-3 flex-1">
+                  <p className="leading-relaxed text-muted">{s.desc}</p>
+                  {s.tag === "Disruption" && (
+                    <a href="#simulation" className="mt-3 inline-block text-[#e94560] underline text-sm">
+                      See a sample disruption simulation ↓
+                    </a>
+                  )}
+                </div>
                 <div className="mt-5 border-t border-line pt-5">
                   <p className="eyebrow mb-2">What you receive</p>
                   <p className="text-[0.9rem] leading-relaxed text-ink/80">{s.receive}</p>
@@ -1858,7 +1882,7 @@ function PricingPage() {
   const exoCards: { key: PriceKey; desc: string }[] = [
     {
       key: "exoQuickScore",
-      desc: "All 7 ExO readiness dimensions scored 1–10 in a single session, with 3 prioritised actions per dimension. The fastest way to see how exposed your organisation is — no preparation required.",
+      desc: "All 7 ExO readiness dimensions scored 1–10 in a single session, with 3 prioritised actions per dimension. A clear, prioritised read on exactly how exposed your organisation is — no preparation required.",
     },
     {
       key: "exoFullAudit",
@@ -1974,6 +1998,9 @@ function PricingPage() {
               <PriceCard key={c.key} entry={PRICING[c.key]} desc={c.desc} />
             ))}
           </div>
+          <p className="mt-6 max-w-3xl text-sm italic leading-relaxed text-muted">
+            ExO AI strategy engagements include a structured leadership interview, bespoke strategic synthesis, and a 60-minute findings walkthrough with your leadership team — not just an automated report.
+          </p>
           <p className="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
             ExO AI Strategy services are based on the ExO 3.0 / Organizational Singularity framework by Salim Ismail and Peter Diamandis.{" "}
             <Link className="font-medium text-royal hover:text-accent" to="/ai-strategy">
