@@ -22,4 +22,7 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
+User-agent: Bytespider
+Allow: /
+
 Sitemap: https://eljonesdigital.com/sitemap.xml
