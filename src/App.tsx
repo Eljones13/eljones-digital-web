@@ -22,6 +22,7 @@ import { SERVICE_GROUPS, SERVICES } from "./data/services";
 const routeMeta = [
   { path: "/", label: "Home", priority: 1 },
   { path: "/services", label: "Services", priority: 0.95 },
+  { path: "/pricing", label: "Pricing", priority: 0.7 },
   { path: "/ai-strategy", label: "AI Strategy Audit", priority: 0.8 },
   { path: "/ai-search-optimization", label: "AI Search Optimization", priority: 0.96 },
   { path: "/case-studies/sample-geo-audit", label: "Sample GEO Audit Case Study", priority: 0.72 },
@@ -1534,6 +1535,228 @@ function AiStrategyPage() {
   );
 }
 
+function pricingWebPageLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE.url}/pricing#webpage`,
+    url: `${SITE.url}/pricing`,
+    name: "Pricing | SEO, GEO & AI Strategy Audits | Eljones Digital",
+    description:
+      "Transparent pricing for SEO audits, GEO audits, and ExO AI Strategy audits. Solo operator, direct access, falsifiable findings. Based in the UK.",
+    isPartOf: { "@id": `${SITE.url}/#website` },
+  };
+}
+
+function PricingPage() {
+  const crumbs = [
+    { label: "Home", to: "/" },
+    { label: "Pricing", to: "/pricing" },
+  ];
+
+  // SINGLE SOURCE OF TRUTH FOR ALL PRICES.
+  // These are sample/indicative figures to be confirmed after competitor
+  // research — changing one later is a one-line edit here, nowhere else.
+  // No price string is hardcoded anywhere else on the page.
+  const PRICING = {
+    seoSnapshot: { label: "SEO + GEO Snapshot", price: "£249", note: "single report" },
+    fullAudit: { label: "Full SEO + GEO Audit", price: "£497", note: "report + fix plan" },
+    auditWithFixes: { label: "Audit + Implementation", price: "£897", note: "audit + fixes applied" },
+    monthlyRetainer: { label: "Monthly Monitoring", price: "£197", note: "per month" },
+    exoQuickScore: { label: "ExO Quick Score", price: "£497", note: "1-page scorecard" },
+    exoFullAudit: { label: "Full ExO AI Readiness Audit", price: "£1,497", note: "full report + presentation" },
+    exoDisruption: { label: "Disruption Risk Analysis", price: "£997", note: "simulation + defender plan" },
+    exoRoadmap: { label: "90-Day AI Roadmap", price: "£1,197", note: "roadmap + weekly milestones" },
+  };
+
+  type PriceKey = keyof typeof PRICING;
+
+  const seoCards: { key: PriceKey; desc: string }[] = [
+    {
+      key: "seoSnapshot",
+      desc: "A fast, single-pass score of your site's SEO and GEO health with the most important issues called out. Ideal if you want a quick read on where you stand before committing to a full audit.",
+    },
+    {
+      key: "fullAudit",
+      desc: "A complete 0–100 audit across all 24 dimensions with a prioritised Critical → High → Medium fix list. You get the full report plus a clear action plan your team can implement.",
+    },
+    {
+      key: "auditWithFixes",
+      desc: "Everything in the full audit, plus the priority fixes implemented for you — technical changes, schema and content rewrites. The fastest route from finding to a measurable score improvement.",
+    },
+    {
+      key: "monthlyRetainer",
+      desc: "Ongoing weekly drift checks and a monthly GEO comparison so regressions are caught before they cost you traffic. Includes a monthly health-score report and priority fixes each cycle.",
+    },
+  ];
+
+  const exoCards: { key: PriceKey; desc: string }[] = [
+    {
+      key: "exoQuickScore",
+      desc: "All 7 ExO readiness dimensions scored 1–10 in a single session, with 3 prioritised actions per dimension. The fastest way to see how exposed your organisation is — no preparation required.",
+    },
+    {
+      key: "exoFullAudit",
+      desc: "A deep audit across all 7 dimensions grounded in observable signals plus a leadership interview, every finding scored with a falsifiability check. Includes the full report and a C-suite presentation deck.",
+    },
+    {
+      key: "exoDisruption",
+      desc: "We model how a 2-person team with Claude could replicate your highest-margin business line in 60–90 days, week by week. You receive a threat score per business line and a defender response plan.",
+    },
+    {
+      key: "exoRoadmap",
+      desc: "We work backwards from your AI-native future state to a concrete 90-day first sprint with weekly milestones. Identifies the highest-leverage workflow to automate first and the metrics that prove it worked.",
+    },
+  ];
+
+  const included: { title: string; body: string }[] = [
+    { title: "Direct access to Errol", body: "No account manager layer and no junior hand-off — you work directly with the person doing the audit." },
+    { title: "Falsifiable findings", body: "Every issue ships with a verification check you can run yourself, so you never take a finding on trust." },
+    { title: "Plain-language report", body: "No jargon. Written for business owners, not developers — clear enough to act on, with the technical detail there when you need it." },
+  ];
+
+  const PriceCard = ({ entry, desc }: { entry: { label: string; price: string; note: string }; desc: string }) => (
+    <article className="card flex h-full flex-col p-7">
+      <h3 className="text-xl font-bold leading-snug text-navy">{entry.label}</h3>
+      <div className="mt-4 flex items-baseline gap-2">
+        <span className="font-mono text-4xl font-bold text-navy">{entry.price}</span>
+        <span className="text-sm text-muted">{entry.note}</span>
+      </div>
+      <p className="mt-4 flex-1 leading-relaxed text-muted">{desc}</p>
+      <Link className="btn-outline mt-6 self-start" to="/contact">
+        Get a quote →
+      </Link>
+    </article>
+  );
+
+  return (
+    <>
+      <Seo
+        title="Pricing | SEO, GEO & AI Strategy Audits | Eljones Digital"
+        description="Transparent pricing for SEO audits, GEO audits, and ExO AI Strategy audits. Solo operator, direct access, falsifiable findings. Based in the UK."
+        path="/pricing"
+        jsonLd={[pricingWebPageLd(), breadcrumbLd(crumbs)]}
+      />
+      <Breadcrumbs crumbs={crumbs} />
+
+      {/* HERO + amber indicative-pricing banner */}
+      <section className="bg-white pb-12 pt-10 sm:pb-16">
+        <div className="container-x">
+          <p className="eyebrow mb-4">Pricing</p>
+          <h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1.05] text-navy sm:text-6xl">
+            Simple, transparent pricing
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+            Every audit is delivered by Errol directly — no account managers, no hidden fees.
+          </p>
+          <div
+            role="note"
+            className="mt-8 flex max-w-2xl items-start gap-3 rounded-xl border border-amber-300 bg-amber-50 px-5 py-4 text-amber-900"
+          >
+            <svg viewBox="0 0 20 20" fill="currentColor" className="mt-0.5 h-5 w-5 flex-none" aria-hidden="true">
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 11-2 0 1 1 0 012 0zm-1 3a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p className="text-sm font-medium leading-relaxed">
+              Prices shown are indicative and will be confirmed before any work begins.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO & GEO AUDITS */}
+      <Section surface>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="SEO / GEO"
+            title="Website visibility audits"
+            intro="Score and fix how your website performs in Google search and AI answer engines."
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+            {seoCards.map((c) => (
+              <PriceCard key={c.key} entry={PRICING[c.key]} desc={c.desc} />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ExO AI STRATEGY */}
+      <Section>
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="AI Strategy"
+            title="Organisational AI readiness"
+            intro="Score how exposed your business is to AI-native competition — and what to build before they do."
+          />
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+            {exoCards.map((c) => (
+              <PriceCard key={c.key} entry={PRICING[c.key]} desc={c.desc} />
+            ))}
+          </div>
+          <p className="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
+            ExO AI Strategy services are based on the ExO 3.0 / Organizational Singularity framework by Salim Ismail and Peter Diamandis.{" "}
+            <Link className="font-medium text-royal hover:text-accent" to="/ai-strategy">
+              Learn more about ExO AI Strategy audits →
+            </Link>
+          </p>
+        </div>
+      </Section>
+
+      {/* WHAT'S ALWAYS INCLUDED */}
+      <Section surface>
+        <div className="container-x">
+          <SectionHeading eyebrow="What's included" title="Every engagement includes" />
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {included.map((item) => (
+              <article key={item.title} className="card p-7">
+                <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full bg-accent/10 text-accent">
+                  <svg viewBox="0 0 20 20" fill="none" className="h-5 w-5" aria-hidden="true">
+                    <path
+                      d="M5 10.5l3.2 3.2L15 7"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <h3 className="mt-5 text-lg font-bold text-navy">{item.title}</h3>
+                <p className="mt-2 leading-relaxed text-muted">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* CTA — mirrors the shared CTA band styling, with this page's button. */}
+      <section className="relative overflow-hidden bg-navy text-white">
+        <div className="dotgrid absolute inset-0 opacity-60" aria-hidden="true" />
+        <div
+          className="absolute -right-32 top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-accent/20 blur-[120px]"
+          aria-hidden="true"
+        />
+        <div className="container-x relative py-20 text-center sm:py-24">
+          <p className="eyebrow mb-4">Start here</p>
+          <h2 className="mx-auto max-w-2xl text-balance text-3xl font-bold sm:text-[2.6rem] sm:leading-[1.1]">
+            Not sure which audit you need?
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/70">
+            Share your website and I'll recommend the right starting point — no commitment required.
+          </p>
+          <div className="mt-9 flex items-center justify-center">
+            <Link className="btn-accent" to="/contact">
+              Get a recommendation →
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 function PageHero({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) {
   return (
     <section className="bg-white pb-14 pt-10 sm:pb-20">
@@ -1553,6 +1776,7 @@ export const routes: RouteObject[] = [
     children: [
       { index: true, element: <HomePage /> },
       { path: "services", element: <ServicesPage /> },
+      { path: "pricing", element: <PricingPage /> },
       { path: "ai-strategy", element: <AiStrategyPage /> },
       { path: "ai-search-optimization", element: <AiSearchOptimizationPage /> },
       {
