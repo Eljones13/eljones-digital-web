@@ -9,6 +9,7 @@ Purpose: AI-powered SEO and GEO audits for small and medium businesses, ecommerc
 
 - /: Home page explaining the 0-100 SEO and GEO audit score, core value proposition and client outcomes.
 - /services: Complete list of 24 SEO and GEO audit services, including technical SEO, AI search optimisation, schema, local SEO, reporting and retainers.
+- /pricing: Indicative pricing for SEO and GEO audits (snapshot, full audit, audit plus implementation, monthly monitoring) and ExO AI Strategy audits (quick score, full readiness audit, disruption risk analysis, 90-day roadmap). Solo operator, direct access, falsifiable findings.
 - /ai-strategy: Premium ExO 3.0 AI readiness and disruption audit for CEOs and founders — 7-dimension scoring, a 60-90 day disruption simulation, digital twin blueprint and C-suite PDF report. Separate from the SEO/GEO audit line.
 - /ai-search-optimization: Dedicated AI Search Optimization page explaining how Eljones Digital audits ChatGPT, Perplexity, Gemini, Copilot and Google AI Overview visibility.
 - /case-studies/sample-geo-audit: Sample case study showing how audit findings become score improvements and implementation actions.
