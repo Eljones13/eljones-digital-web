@@ -73,6 +73,7 @@ export function Seo({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={img} />
         <meta name="google-site-verification" content="E64w5COpjMkMG6EFuFPo-h4gVw8Hnt3ovzIHIykrNwc" />
+        <meta name="msvalidate.01" content="F780DC335DF0DB5622D8E0E309835DF6" />
       </Head>
       {jsonLd.map((data, i) => (
         <JsonLd key={i} data={data} />
