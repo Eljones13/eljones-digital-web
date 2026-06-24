@@ -1,5 +1,5 @@
 // Single source of truth for global site metadata, navigation and shared copy.
-// Email lives here only — footer, /contact, mailto links and Organization
+// Email lives here only: footer, /contact, mailto links and Organization
 // JSON-LD all read SITE.email, so swapping it is a one-line change.
 export const SITE = {
   name: "Eljones Digital",
@@ -45,7 +45,7 @@ export const STATS: { num: string; label: string }[] = [
 export const BENEFITS: { title: string; body: string }[] = [
   {
     title: "A real 0–100 score, not a vague grade",
-    body: "Every audit returns a weighted composite score across AI citability, brand authority, content quality, technical foundations and schema — so you know exactly where you stand and where you lose points.",
+    body: "Every audit returns a weighted composite score across AI citability, brand authority, content quality, technical foundations and schema, so you know exactly where you stand and where you lose points.",
   },
   {
     title: "GEO + SEO in a single audit",
@@ -61,7 +61,7 @@ export const HIGHLIGHTS: { tag: string; title: string; body: string; to: string 
   {
     tag: "Full SEO Audit",
     title: "Audit your whole site across 24 dimensions",
-    body: "25 specialist sub-skills run in parallel — technical health, content, schema, speed, mobile, links and AI visibility — producing a prioritised Critical → High → Medium fix list.",
+    body: "25 specialist sub-skills run in parallel: technical health, content, schema, speed, mobile, links and AI visibility, producing a prioritised Critical → High → Medium fix list.",
     to: "/services",
   },
   {
@@ -73,12 +73,12 @@ export const HIGHLIGHTS: { tag: string; title: string; body: string; to: string 
   {
     tag: "Schema & Technical",
     title: "Win rich results and fix Core Web Vitals",
-    body: "We generate copy-paste JSON-LD for rich results and hand you exact code fixes for LCP, INP and CLS bottlenecks — most clients improve within 48 hours.",
+    body: "We generate copy-paste JSON-LD for rich results and hand you exact code fixes for LCP, INP and CLS bottlenecks. Most clients improve within 48 hours.",
     to: "/services",
   },
 ];
 
-// Unattributed, illustrative scenarios — the type of problem an audit solves.
+// Unattributed, illustrative scenarios, the type of problem an audit solves.
 // These replace the previous named testimonials (no real, attributable client
 // quotes exist yet) to stay within UK ASA/CAP advertising rules. Each card is
 // self-contained so it reads correctly if an AI engine lifts it out of context.
@@ -113,7 +113,7 @@ export const PROCESS: {
   {
     step: "01",
     title: "Discovery",
-    what: "You share your website URL and tell us the main goal — more traffic, AI citations, local ranking or rich results. That single input is enough to scope the right audit, because the tools read your live site the same way Google and AI crawlers do.",
+    what: "You share your website URL and tell us the main goal: more traffic, AI citations, local ranking or rich results. That single input is enough to scope the right audit, because the tools read your live site the same way Google and AI crawlers do.",
     time: "5 minutes",
     input: "URL + goal",
   },
@@ -134,7 +134,7 @@ export const PROCESS: {
   {
     step: "04",
     title: "Report delivery",
-    what: "You receive a full markdown report, a PDF summary and a prioritised action plan, all on the same day. The report is written for three readers at once — a business owner, a marketer and a developer — so nobody is left guessing.",
+    what: "You receive a full markdown report, a PDF summary and a prioritised action plan, all on the same day. The report is written for three readers at once: a business owner, a marketer and a developer, so nobody is left guessing.",
     time: "Same day",
     input: "None",
   },
@@ -148,7 +148,7 @@ export const PROCESS: {
   {
     step: "06",
     title: "Fix implementation",
-    what: "We implement the fixes — technical changes, schema code and content rewrites — or hand a clear brief to your own dev team. Either way, each change maps back to a specific finding in the report so nothing is done blindly.",
+    what: "We implement the fixes: technical changes, schema code and content rewrites, or hand a clear brief to your own dev team. Either way, each change maps back to a specific finding in the report so nothing is done blindly.",
     time: "1–5 days",
     input: "Optional",
   },
@@ -164,11 +164,11 @@ export const PROCESS: {
 export const FAQS: { q: string; a: string }[] = [
   {
     q: "What is a GEO audit and how is it different from a standard SEO audit?",
-    a: "A GEO (Generative Engine Optimization) audit measures how likely your website is to be cited by AI tools like ChatGPT, Perplexity, Gemini and Google AI Overviews. A standard SEO audit focuses on Google rankings through traditional signals: technical health, backlinks and content relevance. A combined GEO + SEO audit covers both simultaneously. AI Overviews are grounded in the same indexation and ranking systems as traditional search, which means that fixing your SEO improves your AI search visibility too. The additional GEO-specific checks — citability scoring, AI crawler access, brand mention scanning and platform-specific optimisation — sit on top of standard SEO work and are included in our full audit.",
+    a: "A GEO (Generative Engine Optimization) audit measures how likely your website is to be cited by AI tools like ChatGPT, Perplexity, Gemini and Google AI Overviews. A standard SEO audit focuses on Google rankings through traditional signals: technical health, backlinks and content relevance. A combined GEO + SEO audit covers both simultaneously. AI Overviews are grounded in the same indexation and ranking systems as traditional search, which means that fixing your SEO improves your AI search visibility too. The additional GEO-specific checks: citability scoring, AI crawler access, brand mention scanning and platform-specific optimisation, sit on top of standard SEO work and are included in our full audit.",
   },
   {
     q: "How long does a full website audit take to complete?",
-    a: "A full AI-powered audit using our tool suite takes 10–15 minutes to run from the moment you share your URL to receiving a complete report. This includes 25 sub-skills executing in parallel: technical SEO, content quality, schema validation, AI citability scoring, crawler access, backlink analysis, local SEO signals, Core Web Vitals and image optimisation. By comparison, a senior SEO analyst performing a manual audit of the same depth takes 4–8 billable hours — and typically covers fewer dimensions. We deliver the audit as a full markdown report and professional PDF the same day. For multi-site or enterprise audits covering 50+ pages, turnaround is still same-day, and verification re-audits after fixes are typically completed within an hour.",
+    a: "A full AI-powered audit using our tool suite takes 10–15 minutes to run from the moment you share your URL to receiving a complete report. This includes 25 sub-skills executing in parallel: technical SEO, content quality, schema validation, AI citability scoring, crawler access, backlink analysis, local SEO signals, Core Web Vitals and image optimisation. By comparison, a senior SEO analyst performing a manual audit of the same depth takes 4–8 billable hours, and typically covers fewer dimensions. We deliver the audit as a full markdown report and professional PDF the same day. For multi-site or enterprise audits covering 50+ pages, turnaround is still same-day, and verification re-audits after fixes are typically completed within an hour.",
   },
   {
     q: "What does the 0–100 audit score mean and how is it calculated?",
@@ -176,11 +176,11 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Do I need to give you access to my website backend or Google account?",
-    a: "No access to your backend or CMS is required to run a full audit. Our tools analyse your website from the outside — the same way Google and AI crawlers see it. We fetch pages, parse HTML and structured data, check robots.txt and sitemaps, measure load performance, and scan for schema markup without needing any login credentials. If you want deeper data — such as Google Search Console click data, GA4 organic traffic, or Core Web Vitals field data from real users — we can connect Google APIs using your own credentials. These are optional enrichments. The base audit runs with zero access and still covers 271 individual tests. For implementing fixes, your developer will need access to the codebase — but we never require it ourselves.",
+    a: "No access to your backend or CMS is required to run a full audit. Our tools analyse your website from the outside, the same way Google and AI crawlers see it. We fetch pages, parse HTML and structured data, check robots.txt and sitemaps, measure load performance, and scan for schema markup without needing any login credentials. If you want deeper data: such as Google Search Console click data, GA4 organic traffic, or Core Web Vitals field data from real users, we can connect Google APIs using your own credentials. These are optional enrichments. The base audit runs with zero access and still covers 271 individual tests. For implementing fixes, your developer will need access to the codebase, but we never require it ourselves.",
   },
   {
     q: "How is brand mention scanning different from backlink analysis?",
-    a: "Backlink analysis tracks hyperlinks pointing to your site. Brand mention scanning tracks where your business name appears online — with or without a link. Brand mentions correlate far more strongly with AI search visibility than backlinks do, because AI tools like ChatGPT and Perplexity build their knowledge of your business from text sources — Wikipedia, Reddit, YouTube, LinkedIn and Quora — not just link graphs. A business with strong backlinks but no Reddit discussions, no YouTube mentions and no Wikipedia presence will still be invisible to AI tools. Our brand scan covers seven or more AI-cited platforms, assessing both the volume and quality of brand mentions, entity recognition strength, and the gap between your brand presence and your top competitors.",
+    a: "Backlink analysis tracks hyperlinks pointing to your site. Brand mention scanning tracks where your business name appears online, with or without a link. Brand mentions correlate far more strongly with AI search visibility than backlinks do, because AI tools like ChatGPT and Perplexity build their knowledge of your business from text sources: Wikipedia, Reddit, YouTube, LinkedIn and Quora, not just link graphs. A business with strong backlinks but no Reddit discussions, no YouTube mentions and no Wikipedia presence will still be invisible to AI tools. Our brand scan covers seven or more AI-cited platforms, assessing both the volume and quality of brand mentions, entity recognition strength, and the gap between your brand presence and your top competitors.",
   },
 ];
 
@@ -193,11 +193,11 @@ export const COMPARE: { ours: string[]; theirs: string[] } = {
     "Every finding has a falsifiability check",
     "GEO + SEO covered in one audit",
     "Same-day PDF report delivery",
-    "No vendor lock-in — you own all files",
+    "No vendor lock-in: you own all files",
   ],
   theirs: [
     "4–8 hours senior SEO time per audit",
-    "Manual checklist — coverage varies by analyst",
+    "Manual checklist: coverage varies by analyst",
     "$2,000–$15,000+ per engagement",
     "1–3 weeks turnaround",
     "Recommendations rarely falsifiable",

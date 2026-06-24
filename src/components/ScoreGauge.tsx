@@ -7,7 +7,7 @@ interface Props {
 }
 
 /**
- * Circular 0–100 score gauge — the signature brand motif.
+ * Circular 0–100 score gauge, the signature brand motif.
  * Renders the final value into the static HTML (good for no-JS crawlers),
  * then sweeps the ring and counts the number up on the client.
  */
