@@ -134,8 +134,8 @@ export const PROCESS: {
   {
     step: "04",
     title: "Report delivery",
-    what: "You receive a full markdown report, a PDF summary and a prioritised action plan, all on the same day. The report is written for three readers at once: a business owner, a marketer and a developer, so nobody is left guessing.",
-    time: "Same day",
+    what: "You receive a full markdown report, a PDF summary and a prioritised action plan, all within 24–48 hours. The report is written for three readers at once: a business owner, a marketer and a developer, so nobody is left guessing.",
+    time: "24–48 hours",
     input: "None",
   },
   {
@@ -156,7 +156,7 @@ export const PROCESS: {
     step: "07",
     title: "Verification",
     what: "We re-run the audit after the fixes to confirm the score improved and close out each finding. This verification step is what turns the audit from a one-off opinion into a measurable, repeatable result.",
-    time: "Same day",
+    time: "24–48 hours",
     input: "None",
   },
 ];
@@ -168,7 +168,7 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How long does a full website audit take to complete?",
-    a: "A full AI-powered audit using our tool suite takes 10–15 minutes to run from the moment you share your URL to receiving a complete report. This includes 25 sub-skills executing in parallel: technical SEO, content quality, schema validation, AI citability scoring, crawler access, backlink analysis, local SEO signals, Core Web Vitals and image optimisation. By comparison, a senior SEO analyst performing a manual audit of the same depth takes 4–8 billable hours, and typically covers fewer dimensions. We deliver the audit as a full markdown report and professional PDF the same day. For multi-site or enterprise audits covering 50+ pages, turnaround is still same-day, and verification re-audits after fixes are typically completed within an hour.",
+    a: "A full AI-powered audit using our tool suite takes 10–15 minutes of processing to run from the moment you share your URL. This includes 25 sub-skills executing in parallel: technical SEO, content quality, schema validation, AI citability scoring, crawler access, backlink analysis, local SEO signals, Core Web Vitals and image optimisation. By comparison, a senior SEO analyst performing a manual audit of the same depth takes 4–8 billable hours, and typically covers fewer dimensions. Errol Jones then reviews and prioritises every finding before the report ships, so you receive the finished markdown report and professional PDF within 24–48 hours. Multi-site and enterprise audits covering 50+ pages follow the same 24–48 hour delivery, and verification re-audits after fixes are turned around within 24–48 hours too.",
   },
   {
     q: "What does the 0–100 audit score mean and how is it calculated?",
@@ -192,7 +192,7 @@ export const COMPARE: { ours: string[]; theirs: string[] } = {
     "Real 0–100 score with explanation",
     "Every finding has a falsifiability check",
     "GEO + SEO covered in one audit",
-    "Same-day PDF report delivery",
+    "PDF report delivered within 24–48 hours",
     "No vendor lock-in: you own all files",
   ],
   theirs: [

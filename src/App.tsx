@@ -525,7 +525,7 @@ function HomePage() {
               <h3 className="mt-5 text-2xl font-bold text-navy">Get found by AI</h3>
               <p className="mt-1 font-mono text-sm font-bold text-accent">from £497</p>
               <p className="mt-4 flex-1 leading-relaxed text-muted">
-                AI search engines: ChatGPT, Perplexity, Google AI Overviews, have already replaced traditional search for millions of users. If your website isn't structured for AI citation, you're invisible to the tools your customers now use first. The GEO + SEO audit scores your site across 24 dimensions and gives you a prioritised fix plan, delivered the same day.
+                AI search engines: ChatGPT, Perplexity, Google AI Overviews, have already replaced traditional search for millions of users. If your website isn't structured for AI citation, you're invisible to the tools your customers now use first. The GEO + SEO audit scores your site across 24 dimensions and gives you a prioritised fix plan, delivered within 24–48 hours.
               </p>
               <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/services">
                 See what the audit covers →
@@ -702,7 +702,7 @@ function HomePage() {
               {
                 n: "1",
                 title: "GEO + SEO Audit",
-                body: "Score your site's AI visibility across 24 dimensions. Get a prioritised fix list the same day.",
+                body: "Score your site's AI visibility across 24 dimensions. Get a prioritised fix list within 24–48 hours.",
                 link: "Start here →",
                 to: "/contact",
               },
@@ -813,7 +813,7 @@ function ServicesPage() {
           <div className="mt-8 rounded-lg border-l-4 border-[#e94560] bg-[#0f3460] p-6 text-white">
             <p className="text-lg font-bold">You're witnessing ExO 3.0 in action.</p>
             <p className="mt-3 leading-relaxed text-white/85">
-              Every SEO and GEO audit we deliver runs on the same AI-native architecture we describe in our ExO AI Strategy work: 25 specialist agents firing in parallel, zero organisational drag, findings delivered the same day. You're not just buying a report. You're seeing the organisational singularity in practice. That's why Phase 2 isn't a hard sell: by the time you've read your GEO report, you've already experienced it.
+              Every SEO and GEO audit we deliver runs on the same AI-native architecture we describe in our ExO AI Strategy work: 25 specialist agents firing in parallel, zero organisational drag, findings reviewed and delivered within 24–48 hours. You're not just buying a report. You're seeing the organisational singularity in practice. That's why Phase 2 isn't a hard sell: by the time you've read your GEO report, you've already experienced it.
             </p>
             <Link className="mt-4 inline-block font-semibold text-azure-400 hover:text-white" to="/ai-strategy">
               Learn about Phase 2: ExO AI Strategy →
@@ -1121,7 +1121,7 @@ function contactPageLd() {
     name: "Contact Eljones Digital",
     url: `${SITE.url}/contact`,
     description:
-      "Contact Eljones Digital to request a same-day SEO and GEO audit with a 0-100 score and prioritised fix list.",
+      "Contact Eljones Digital to request an SEO and GEO audit with a 0-100 score and prioritised fix list, delivered within 24–48 hours.",
     mainEntity: {
       "@type": "ContactPoint",
       contactType: "customer enquiries",
@@ -1142,7 +1142,7 @@ function ContactPage() {
     <>
       <Seo
         title="Contact Eljones Digital | Book Your SEO & GEO Audit"
-        description="Contact Eljones Digital to request a same-day SEO and GEO audit with a 0-100 score and prioritised fix list."
+        description="Contact Eljones Digital to request an SEO and GEO audit with a 0-100 score and prioritised fix list, delivered within 24–48 hours."
         path="/contact"
         jsonLd={[contactPageLd(), breadcrumbLd(crumbs)]}
       />
@@ -1159,7 +1159,7 @@ function ContactPage() {
             title="How does requesting an SEO and GEO audit from Eljones Digital work?"
           />
           <p className="answer-block mt-8">
-            Requesting an audit from Eljones Digital takes one short email. You send your website URL, the main outcome you want: more leads, stronger local ranking, product visibility or AI citations, and any competitor sites worth comparing. No CMS logins, passwords or analytics access are required, because the audit reads your site the same way Google and AI crawlers do. Errol Jones reviews the request, confirms the likely business type and the audit package that fits, then runs the full SEO and GEO audit. A complete run takes ten to fifteen minutes of processing, and the written report is typically returned the same business day. You receive a 0-100 score, a category breakdown across technical health, content, schema, authority and AI visibility, and a prioritised fix list sorted into critical, high and medium actions. Every finding includes the reason it matters and a check you can use to verify the fix worked.
+            Requesting an audit from Eljones Digital takes one short email. You send your website URL, the main outcome you want: more leads, stronger local ranking, product visibility or AI citations, and any competitor sites worth comparing. No CMS logins, passwords or analytics access are required, because the audit reads your site the same way Google and AI crawlers do. Errol Jones reviews the request, confirms the likely business type and the audit package that fits, then runs the full SEO and GEO audit. A complete run takes ten to fifteen minutes of processing. Errol Jones then reviews every finding, prioritises it against your specific goals, and returns the finished written report within 24–48 hours. You receive a 0-100 score, a category breakdown across technical health, content, schema, authority and AI visibility, and a prioritised fix list sorted into critical, high and medium actions. Every finding includes the reason it matters and a check you can use to verify the fix worked.
           </p>
         </div>
       </Section>
@@ -1696,7 +1696,7 @@ function AiStrategyPage() {
             {[
               {
                 label: "Audit delivery",
-                left: "Same day. 25 AI agents run 271 tests in 15 minutes.",
+                left: "24–48 hours. 25 AI agents run 271 tests in 15 minutes. Then Errol reviews and prioritises every finding.",
                 right: "4–8 weeks. Junior analysts, manager review, senior sign-off, PDF formatting.",
               },
               {
@@ -2082,7 +2082,7 @@ function pricingOfferCatalogLd() {
         "@type": "Offer",
         name: "GEO + SEO Full Audit",
         description:
-          "Complete SEO and GEO audit scoring your website 0-100 across 24 dimensions with a prioritised fix plan and same-day delivery.",
+          "Complete SEO and GEO audit scoring your website 0-100 across 24 dimensions with a prioritised fix plan, delivered within 24–48 hours.",
         price: "497",
         priceCurrency: "GBP",
         url: `${SITE.url}/pricing`,

@@ -353,13 +353,13 @@ export const SERVICES: Service[] = [
     tag: "Reporting",
     question: "How do we produce professional audit reports you can hand directly to your clients or board?",
     value:
-      "We turn a full audit into a branded, client-ready PDF: executive summary, 0–100 score breakdown, charts and action plan, delivered the same day.",
+      "We turn a full audit into a branded, client-ready PDF: executive summary, 0–100 score breakdown, charts and action plan, delivered within 24–48 hours.",
     steps: [
       "Run the full audit suite across your site",
       "Generate branded PDF report outputs",
       "Report includes: executive summary, 0–100 score breakdown, charts, action plan",
       "Customise cover page with your company logo and branding",
-      "Deliver to client or board: same day, ready to present",
+      "Deliver to client or board within 24–48 hours, ready to present",
     ],
   },
   {

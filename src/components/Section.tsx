@@ -68,7 +68,7 @@ export function SectionHeading({
 /** Conversion band reused at the foot of most pages. */
 export function CTA({
   heading = "Ready to see your real SEO score?",
-  sub = "Share your URL and we will run a full audit, 271 tests across 24 dimensions, and deliver your score and action plan the same day.",
+  sub = "Share your URL and we will run a full audit, 271 tests across 24 dimensions, and deliver your score and action plan within 24–48 hours.",
 }: {
   heading?: string;
   sub?: string;
