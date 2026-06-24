@@ -38,7 +38,7 @@ export const NAV: { label: string; to: string }[] = [
 export const STATS: { num: string; label: string }[] = [
   { num: "24", label: "Audit dimensions" },
   { num: "271", label: "Individual tests per audit" },
-  { num: "10–15m", label: "Full audit turnaround" },
+  { num: "24–48h", label: "Full audit turnaround" },
   { num: "0–100", label: "Verified score per site" },
 ];
 
@@ -61,7 +61,7 @@ export const HIGHLIGHTS: { tag: string; title: string; body: string; to: string 
   {
     tag: "Full SEO Audit",
     title: "Audit your whole site across 24 dimensions",
-    body: "25 specialist sub-skills run in parallel: technical health, content, schema, speed, mobile, links and AI visibility, producing a prioritised Critical → High → Medium fix list.",
+    body: "25 specialist agents run in parallel: technical health, content, schema, speed, mobile, links and AI visibility, producing a prioritised Critical → High → Medium fix list.",
     to: "/services",
   },
   {
@@ -120,8 +120,8 @@ export const PROCESS: {
   {
     step: "02",
     title: "Audit run",
-    what: "We run the appropriate audit command and 25 sub-skills fire in parallel, covering technical health, content, schema, speed, mobile, links and AI visibility. Running them together is what makes full-site coverage possible in minutes rather than days.",
-    time: "10–15 minutes",
+    what: "We run the full audit and 25 specialist agents fire in parallel, covering technical health, content, schema, speed, mobile, links and AI visibility. Running them together covers your whole site in a single pass, not over days of manual review.",
+    time: "Automated",
     input: "None",
   },
   {
@@ -168,7 +168,7 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How long does a full website audit take to complete?",
-    a: "A full AI-powered audit using our tool suite takes 10–15 minutes of processing to run from the moment you share your URL. This includes 25 sub-skills executing in parallel: technical SEO, content quality, schema validation, AI citability scoring, crawler access, backlink analysis, local SEO signals, Core Web Vitals and image optimisation. By comparison, a senior SEO analyst performing a manual audit of the same depth takes 4–8 billable hours, and typically covers fewer dimensions. Errol Jones then reviews and prioritises every finding before the report ships, so you receive the finished markdown report and professional PDF within 24–48 hours. Multi-site and enterprise audits covering 50+ pages follow the same 24–48 hour delivery, and verification re-audits after fixes are turned around within 24–48 hours too.",
+    a: "A full AI-powered audit runs 25 specialist agents in parallel across 271 tests and 24 dimensions: technical SEO, content quality, schema validation, AI citability scoring, crawler access, backlink analysis, local SEO signals, Core Web Vitals and image optimisation. By comparison, a senior SEO analyst performing a manual audit of the same depth takes 4–8 billable hours, and typically covers fewer dimensions. Errol Jones then reviews and prioritises every finding before the report ships, so you receive the finished markdown report and professional PDF within 24–48 hours. Multi-site and enterprise audits covering 50+ pages follow the same 24–48 hour delivery, including the verification re-audit after fixes.",
   },
   {
     q: "What does the 0–100 audit score mean and how is it calculated?",
@@ -186,13 +186,12 @@ export const FAQS: { q: string; a: string }[] = [
 
 export const COMPARE: { ours: string[]; theirs: string[] } = {
   ours: [
-    "Full audit in 10–15 minutes",
+    "Full audit delivered within 24–48 hours",
     "271 individual tests per audit",
-    "25 specialist sub-skills run in parallel",
+    "25 specialist agents run in parallel",
     "Real 0–100 score with explanation",
     "Every finding has a falsifiability check",
     "GEO + SEO covered in one audit",
-    "PDF report delivered within 24–48 hours",
     "No vendor lock-in: you own all files",
   ],
   theirs: [

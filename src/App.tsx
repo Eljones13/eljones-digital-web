@@ -462,7 +462,7 @@ function HomePage() {
                   metric: "Audit delivery time",
                   bars: [
                     { label: "Traditional agency", value: "4–8 hours", percent: 90, color: "bg-red-400" },
-                    { label: "Eljones Digital", value: "15 min", percent: 3, color: "bg-emerald-400" },
+                    { label: "Eljones Digital", value: "24–48 hours", percent: 3, color: "bg-emerald-400" },
                   ],
                 },
                 {
@@ -1082,7 +1082,7 @@ function AboutPage() {
             title="What makes Eljones Digital different from a traditional SEO agency?"
           />
           <p className="answer-block mt-8">
-            Eljones Digital differs from a traditional SEO agency in four practical ways. First, speed: an AI-powered audit covers 24 dimensions in ten to fifteen minutes, where an equivalent manual review takes a senior analyst four to eight billable hours. Second, falsifiability: every finding ships with a verification check, so a client can confirm a fix worked instead of trusting a black box. Third, coverage: the audit scores GEO and AI search visibility: whether ChatGPT, Perplexity, Gemini and Google AI Overviews can understand and cite the business: alongside classic SEO, not as an afterthought. Fourth, access: Eljones Digital is run directly by Errol Jones, so clients speak to the person doing the work, with no account-manager layer or junior hand-off. The result is a faster, clearer and more accountable audit than a generic agency engagement, delivered as a prioritised action plan rather than a vague PDF.
+            Eljones Digital differs from a traditional SEO agency in four practical ways. First, turnaround: a full audit covers 24 dimensions and 271 tests and is delivered within 24–48 hours, where an equivalent manual review takes a senior analyst four to eight billable hours spread across days or weeks of agency scheduling. Second, falsifiability: every finding ships with a verification check, so a client can confirm a fix worked instead of trusting a black box. Third, coverage: the audit scores GEO and AI search visibility: whether ChatGPT, Perplexity, Gemini and Google AI Overviews can understand and cite the business: alongside classic SEO, not as an afterthought. Fourth, access: Eljones Digital is run directly by Errol Jones, so clients speak to the person doing the work, with no account-manager layer or junior hand-off. The result is a faster, clearer and more accountable audit than a generic agency engagement, delivered as a prioritised action plan rather than a vague PDF.
           </p>
         </div>
       </Section>
@@ -1092,12 +1092,12 @@ function AboutPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {[
               {
-                name: "claude-seo",
-                desc: "Runs 25 specialist sub-skills in parallel covering technical SEO, content quality, schema validation, backlinks, local SEO, e-commerce, and international SEO. Produces a full audit report with a 0–100 score and a falsifiable priority list.",
+                name: "SEO Audit Engine",
+                desc: "Runs 25 specialist agents in parallel covering technical SEO, content quality, schema validation, backlinks, local SEO, e-commerce, and international SEO. Produces a full audit report with a 0–100 score and a falsifiable priority list.",
               },
               {
-                name: "geo-seo-claude",
-                desc: "Runs 13 GEO-specific sub-skills focused on AI search visibility: citability scoring, AI crawler access, brand mention scanning across ChatGPT, Perplexity and Gemini, platform-specific optimisation, and llms.txt generation.",
+                name: "GEO Audit Engine",
+                desc: "Runs 13 GEO-specific agents focused on AI search visibility: citability scoring, AI crawler access, brand mention scanning across ChatGPT, Perplexity and Gemini, platform-specific optimisation, and llms.txt generation.",
               },
             ].map((tool) => (
               <article key={tool.name} className="card p-7">
@@ -1159,7 +1159,7 @@ function ContactPage() {
             title="How does requesting an SEO and GEO audit from Eljones Digital work?"
           />
           <p className="answer-block mt-8">
-            Requesting an audit from Eljones Digital takes one short email. You send your website URL, the main outcome you want: more leads, stronger local ranking, product visibility or AI citations, and any competitor sites worth comparing. No CMS logins, passwords or analytics access are required, because the audit reads your site the same way Google and AI crawlers do. Errol Jones reviews the request, confirms the likely business type and the audit package that fits, then runs the full SEO and GEO audit. A complete run takes ten to fifteen minutes of processing. Errol Jones then reviews every finding, prioritises it against your specific goals, and returns the finished written report within 24–48 hours. You receive a 0-100 score, a category breakdown across technical health, content, schema, authority and AI visibility, and a prioritised fix list sorted into critical, high and medium actions. Every finding includes the reason it matters and a check you can use to verify the fix worked.
+            Requesting an audit from Eljones Digital takes one short email. You send your website URL, the main outcome you want: more leads, stronger local ranking, product visibility or AI citations, and any competitor sites worth comparing. No CMS logins, passwords or analytics access are required, because the audit reads your site the same way Google and AI crawlers do. Errol Jones reviews the request, confirms the likely business type and the audit package that fits, then runs the full SEO and GEO audit across 24 dimensions and 271 tests. Every finding is reviewed and prioritised before the finished written report is returned within 24–48 hours. You receive a 0-100 score, a category breakdown across technical health, content, schema, authority and AI visibility, and a prioritised fix list sorted into critical, high and medium actions. Every finding includes the reason it matters and a check you can use to verify the fix worked.
           </p>
         </div>
       </Section>
@@ -1686,7 +1686,7 @@ function AiStrategyPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2">
               <div className="border-b border-emerald-300 bg-emerald-50 p-5">
                 <p className="text-lg font-bold text-emerald-800">✅ Eljones Digital</p>
-                <p className="text-sm text-emerald-700">1 person + Claude</p>
+                <p className="text-sm text-emerald-700">1 person, AI-native workflow</p>
               </div>
               <div className="border-b border-red-300 bg-red-50 p-5 sm:border-l sm:border-line">
                 <p className="text-lg font-bold text-red-900">❌ Traditional Consultancy</p>
@@ -1696,7 +1696,7 @@ function AiStrategyPage() {
             {[
               {
                 label: "Audit delivery",
-                left: "24–48 hours. 25 AI agents run 271 tests in 15 minutes. Then Errol reviews and prioritises every finding.",
+                left: "24–48 hours. 25 AI agents run 271 tests across 24 dimensions. Then Errol reviews and prioritises every finding.",
                 right: "4–8 weeks. Junior analysts, manager review, senior sign-off, PDF formatting.",
               },
               {

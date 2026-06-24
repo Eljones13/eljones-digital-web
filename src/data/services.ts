@@ -36,7 +36,7 @@ export const SERVICES: Service[] = [
       "We run 25 specialist checks across your entire site in parallel: technical health, content quality, schema, speed, mobile, AI visibility and backlinks, producing a 0–100 score and a prioritised fix list. This replaces a 4–8 hour manual audit and delivers more coverage at a fraction of the cost.",
     steps: [
       "You share your website URL",
-      "25 specialist sub-skills fire simultaneously across your site",
+      "25 specialist agents fire simultaneously across your site",
       "AI agents cross-check findings and prioritise: Critical → High → Medium",
       "You receive a full markdown + PDF report with a real 0–100 score",
       "We walk you through the top 3 critical fixes to action first",
