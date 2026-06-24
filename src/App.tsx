@@ -461,8 +461,8 @@ function HomePage() {
                 {
                   metric: "Audit delivery time",
                   bars: [
-                    { label: "Traditional agency", value: "4–8 hours", percent: 90, color: "bg-red-400" },
-                    { label: "Eljones Digital", value: "24–48 hours", percent: 3, color: "bg-emerald-400" },
+                    { label: "Traditional agency", value: "1–3 weeks", percent: 90, color: "bg-red-400" },
+                    { label: "Eljones Digital", value: "24–48 hours", percent: 10, color: "bg-emerald-400" },
                   ],
                 },
                 {
@@ -1450,7 +1450,7 @@ const aiServices: { name: string; tag: string; desc: string; receive: string }[]
     name: "Digital Twin Blueprint",
     tag: "Blueprint",
     desc: "A full technical and operational plan for building an AI-native twin of your highest-risk business line at the edge, before a competitor does. Covers tech stack, migration sequence, governance model, and 90-day sprint plan.",
-    receive: "Digital twin architecture document and Claude Code kickoff prompt ready to hand to a developer.",
+    receive: "Digital twin architecture document and a developer-ready build specification.",
   },
   {
     name: "90-Day AI Roadmap",
@@ -1510,7 +1510,7 @@ const aiFaqs: { q: string; a: string }[] = [
   },
   {
     q: "What tools does a 2-person AI startup actually use, and can they handle my data securely?",
-    a: "The full stack costs £50–200 per month. Claude API handles analysis and generation; open-source local models, Mistral and LLaMA variants, process sensitive data without it ever leaving the client's environment; Vercel or Netlify give instant deployment; Make or Zapier automate the workflow; and a vector database such as Chroma or Pinecone stores the knowledge base. Running the open-source models locally means proprietary IP never calls out to a public server. This isn't a reckless experiment. It's a closed-loop environment that an enterprise security team can audit and approve before anything goes near production. The same stack is exactly what the disruption simulation models for your business line: the total monthly cost for a two-person team replicating your service is under £200. That is the real number the simulation is built on: not a hypothetical, and not a sales figure.",
+    a: "The full stack costs £50–200 per month. a hosted AI model handles analysis and generation; open-source local models, Mistral and LLaMA variants, process sensitive data without it ever leaving the client's environment; Vercel or Netlify give instant deployment; Make or Zapier automate the workflow; and a vector database such as Chroma or Pinecone stores the knowledge base. Running the open-source models locally means proprietary IP never calls out to a public server. This isn't a reckless experiment. It's a closed-loop environment that an enterprise security team can audit and approve before anything goes near production. The same stack is exactly what the disruption simulation models for your business line: the total monthly cost for a two-person team replicating your service is under £200. That is the real number the simulation is built on: not a hypothetical, and not a sales figure.",
   },
 ];
 
@@ -1701,7 +1701,7 @@ function AiStrategyPage() {
               },
               {
                 label: "Findings",
-                left: "Falsifiable. Every finding ships with a terminal command to verify it's real.",
+                left: "Falsifiable. Every finding includes a verification check you can run yourself.",
                 right: "Opinion-based. \"Trust our senior partner's 20 years of experience.\"",
               },
               {

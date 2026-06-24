@@ -375,7 +375,7 @@ export const SERVICES: Service[] = [
       "We analyse business type, user behaviour, and revenue model",
       "Classify: Type A (service), B (content), C (member), or D (operational)",
       "Produce a client-ready strategy document: build recommendation + reasoning",
-      "If yes: deliver a complete Claude Code app build specification",
+      "If yes: deliver a complete developer-ready app build specification",
     ],
   },
   {
