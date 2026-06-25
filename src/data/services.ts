@@ -209,7 +209,7 @@ export const SERVICES: Service[] = [
     tag: "International",
     question: "How do we fix hreflang errors stopping your global site from ranking in each country?",
     value:
-      "We find and fix the hreflang errors that quietly stop your global pages from ranking in the right country and language, and verify the fix after deployment.",
+      "We find every hreflang error and deliver a corrected sitemap or tag implementation your developer can deploy directly, then re-audit to confirm it's live and working.",
     steps: [
       "Audit all language and country variants for hreflang errors",
       "Detect: missing return tags, incorrect language codes, self-referencing errors",
@@ -262,7 +262,7 @@ export const SERVICES: Service[] = [
       "Analyse your current sitemap state",
       "Check: non-canonical URLs, noindex pages, blocked resources, oversized files",
       "Generate a clean, production-ready XML sitemap with industry-standard structure",
-      "Submit to Google Search Console and verify indexation status",
+      "Your team submits the corrected sitemap to Google Search Console",
       "Re-check coverage after Google recrawls to confirm pages are indexed",
     ],
   },
