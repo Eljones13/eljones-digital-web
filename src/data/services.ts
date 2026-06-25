@@ -36,7 +36,7 @@ export const SERVICES: Service[] = [
       "We run 25 specialist checks across your entire site in parallel: technical health, content quality, schema, speed, mobile, AI visibility and backlinks, producing a 0–100 score and a prioritised fix list. This replaces a 4–8 hour manual audit and delivers more coverage at a fraction of the cost.",
     steps: [
       "You share your website URL",
-      "25 specialist sub-skills fire simultaneously across your site",
+      "25 specialist agents fire simultaneously across your site",
       "AI agents cross-check findings and prioritise: Critical → High → Medium",
       "You receive a full markdown + PDF report with a real 0–100 score",
       "We walk you through the top 3 critical fixes to action first",
@@ -353,13 +353,13 @@ export const SERVICES: Service[] = [
     tag: "Reporting",
     question: "How do we produce professional audit reports you can hand directly to your clients or board?",
     value:
-      "We turn a full audit into a branded, client-ready PDF: executive summary, 0–100 score breakdown, charts and action plan, delivered the same day.",
+      "We turn a full audit into a branded, client-ready PDF: executive summary, 0–100 score breakdown, charts and action plan, delivered within 24–48 hours.",
     steps: [
       "Run the full audit suite across your site",
       "Generate branded PDF report outputs",
       "Report includes: executive summary, 0–100 score breakdown, charts, action plan",
       "Customise cover page with your company logo and branding",
-      "Deliver to client or board: same day, ready to present",
+      "Deliver to client or board within 24–48 hours, ready to present",
     ],
   },
   {
@@ -375,7 +375,7 @@ export const SERVICES: Service[] = [
       "We analyse business type, user behaviour, and revenue model",
       "Classify: Type A (service), B (content), C (member), or D (operational)",
       "Produce a client-ready strategy document: build recommendation + reasoning",
-      "If yes: deliver a complete Claude Code app build specification",
+      "If yes: deliver a complete developer-ready app build specification",
     ],
   },
   {

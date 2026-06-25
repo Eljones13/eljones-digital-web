@@ -40,7 +40,7 @@ const routeMeta = [
 const blogCards: { title: string; desc: string; to: string }[] = [
   {
     title: "What is GEO SEO and why does it matter in 2026?",
-    desc: "The difference between ranking on Google and being cited by ChatGPT or Perplexity — and why both matter for business visibility in 2026.",
+    desc: "The difference between ranking on Google and being cited by ChatGPT or Perplexity, and why both matter for business visibility in 2026.",
     to: "/blog/what-is-geo-seo",
   },
   {
@@ -50,7 +50,7 @@ const blogCards: { title: string; desc: string; to: string }[] = [
   },
   {
     title: "What should a sample SEO and GEO audit report include?",
-    desc: "A walkthrough of what a real Eljones Digital audit report looks like — score breakdown, prioritised findings, and copy-paste fix examples.",
+    desc: "A walkthrough of what a real Eljones Digital audit report looks like: score breakdown, prioritised findings, and copy-paste fix examples.",
     to: "/reports/example-seo-geo-audit",
   },
   {
@@ -60,7 +60,7 @@ const blogCards: { title: string; desc: string; to: string }[] = [
   },
   {
     title: "What should a technical SEO audit include?",
-    desc: "The 9 technical checks that matter most — Core Web Vitals, crawlability, canonical chains, schema validation, and mobile performance.",
+    desc: "The 9 technical checks that matter most: Core Web Vitals, crawlability, canonical chains, schema validation, and mobile performance.",
     to: "/contact",
   },
   {
@@ -426,11 +426,11 @@ function HomePage() {
               AI is threatening your business from two directions at once.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72">
-              AI search engines are replacing the websites they used to recommend. And AI-native startups are replicating the services that used to require a full team. We audit both threats — and give you a falsifiable action plan for each.
+              AI search engines are replacing the websites they used to recommend. And AI-native startups are replicating the services that used to require a full team. We audit both threats, and give you a falsifiable action plan for each.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link className="btn-accent" to="/services">
-                Start with Phase 1 — Get found by AI →
+                Start with Phase 1: Get found by AI →
               </Link>
               <a className="btn-ghost" href="#journey">
                 See how the journey works ↓
@@ -451,7 +451,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* HOW WE COMPARE — STAT BARS (TASK 6) */}
+      {/* HOW WE COMPARE, STAT BARS (TASK 6) */}
       <Section dark>
         <div className="container-x">
           <div className="mx-auto max-w-4xl rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
@@ -461,8 +461,8 @@ function HomePage() {
                 {
                   metric: "Audit delivery time",
                   bars: [
-                    { label: "Traditional agency", value: "4–8 hours", percent: 90, color: "bg-red-400" },
-                    { label: "Eljones Digital", value: "15 min", percent: 3, color: "bg-emerald-400" },
+                    { label: "Traditional agency", value: "1–3 weeks", percent: 90, color: "bg-red-400" },
+                    { label: "Eljones Digital", value: "24–48 hours", percent: 10, color: "bg-emerald-400" },
                   ],
                 },
                 {
@@ -512,7 +512,7 @@ function HomePage() {
         </div>
       </Section>
 
-      {/* TWO-PHASE JOURNEY (1b) — anchor target for the hero "journey" CTA */}
+      {/* TWO-PHASE JOURNEY (1b), anchor target for the hero "journey" CTA */}
       <Section id="journey" className="scroll-mt-28">
         <div className="container-x">
           <SectionHeading
@@ -525,7 +525,7 @@ function HomePage() {
               <h3 className="mt-5 text-2xl font-bold text-navy">Get found by AI</h3>
               <p className="mt-1 font-mono text-sm font-bold text-accent">from £497</p>
               <p className="mt-4 flex-1 leading-relaxed text-muted">
-                AI search engines — ChatGPT, Perplexity, Google AI Overviews — have already replaced traditional search for millions of users. If your website isn't structured for AI citation, you're invisible to the tools your customers now use first. The GEO + SEO audit scores your site across 24 dimensions and gives you a prioritised fix plan, delivered the same day.
+                AI search engines: ChatGPT, Perplexity, Google AI Overviews, have already replaced traditional search for millions of users. If your website isn't structured for AI citation, you're invisible to the tools your customers now use first. The GEO + SEO audit scores your site across 24 dimensions and gives you a prioritised fix plan, delivered within 24–48 hours.
               </p>
               <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/services">
                 See what the audit covers →
@@ -542,7 +542,7 @@ function HomePage() {
               <h3 className="mt-5 text-2xl font-bold text-navy">Don't get replaced by AI</h3>
               <p className="mt-1 font-mono text-sm font-bold text-accent">from £497</p>
               <p className="mt-4 flex-1 leading-relaxed text-muted">
-                Fixing your website visibility is Phase 1. Phase 2 is the harder question: could a 2-person team with a £50/month Claude subscription replicate your highest-margin service in 90 days? For most professional services firms, the honest answer is yes. The ExO AI Strategy Audit shows you exactly which business lines are exposed — and what to build at the edge before someone else does.
+                Fixing your website visibility is Phase 1. Phase 2 is the harder question: could a 2-person team with a £50/month Claude subscription replicate your highest-margin service in 90 days? For most professional services firms, the honest answer is yes. The ExO AI Strategy Audit shows you exactly which business lines are exposed, and what to build at the edge before someone else does.
               </p>
               <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/ai-strategy">
                 See the disruption simulation →
@@ -572,7 +572,7 @@ function HomePage() {
             <div className="flex flex-col">
               <h3 className="text-xl font-bold text-navy">Your customers have already moved to AI search.</h3>
               <p className="answer-block mt-5 flex-1">
-                Google AI Overviews now reach over 1 billion users across more than 100 countries (Google I/O, May 2024), while ChatGPT crossed 200 million weekly active users by mid-2024 (OpenAI). These tools don't return a list of ten links for someone to work through — they synthesise a single answer and cite one source as the authority behind it. If your website isn't structured for AI citation, the engine quietly recommends a competitor instead, and you never even see the query. This isn't a shift coming in five years; it is happening right now, on the searches your customers run today. The GEO audit identifies every technical and content reason AI engines are skipping your site — from crawler access and schema gaps to vague, unquotable copy — and turns each one into a fix you can verify.
+                Google AI Overviews now reach over 1 billion users across more than 100 countries (Google I/O, May 2024), while ChatGPT crossed 200 million weekly active users by mid-2024 (OpenAI). These tools don't return a list of ten links for someone to work through, they synthesise a single answer and cite one source as the authority behind it. If your website isn't structured for AI citation, the engine quietly recommends a competitor instead, and you never even see the query. This isn't a shift coming in five years; it is happening right now, on the searches your customers run today. The GEO audit identifies every technical and content reason AI engines are skipping your site: from crawler access and schema gaps to vague, unquotable copy, and turns each one into a fix you can verify.
               </p>
               <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/how-it-works">
                 See how the GEO audit fixes this →
@@ -581,7 +581,7 @@ function HomePage() {
             <div className="flex flex-col">
               <h3 className="text-xl font-bold text-navy">A 2-person team with Claude can replicate your service in 90 days.</h3>
               <p className="answer-block mt-5 flex-1">
-                The cost of coordinating human labour inside a company has collapsed towards zero. The professional services built on that coordination — consulting, legal, recruitment, marketing and finance — are the most exposed, because their value is mostly knowledge, documentation and hand-offs that AI can now execute in parallel. A 2-person team with Claude, open-source models and no-code automation can deliver what used to need a 5-person team: the same output, in less time, at around 40% lower price. The ExO 3.0 framework by Salim Ismail and Peter Diamandis maps this transition precisely, dimension by dimension. The ExO audit runs a live disruption simulation on your specific business — modelling, week by week, how a lean competitor would rebuild your highest-margin line.
+                The cost of coordinating human labour inside a company has collapsed towards zero. The professional services built on that coordination: consulting, legal, recruitment, marketing and finance, are the most exposed, because their value is mostly knowledge, documentation and hand-offs that AI can now execute in parallel. A 2-person team with Claude, open-source models and no-code automation can deliver what used to need a 5-person team: the same output, in less time, at around 40% lower price. The ExO 3.0 framework by Salim Ismail and Peter Diamandis maps this transition precisely, dimension by dimension. The ExO audit runs a live disruption simulation on your specific business: modelling, week by week, how a lean competitor would rebuild your highest-margin line.
               </p>
               <Link className="mt-6 inline-block font-semibold text-royal hover:text-accent" to="/ai-strategy">
                 See a sample disruption simulation →
@@ -681,7 +681,7 @@ function HomePage() {
             title="What clients typically need from an audit"
             intro="Illustrative examples of the problems an Eljones Digital audit is built to diagnose and fix."
           />
-          {/* TODO: replace with real client testimonial once available — e.g. from first paid audit engagement */}
+          {/* TODO: replace with real client testimonial once available, e.g. from first paid audit engagement */}
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {SCENARIOS.map((s) => (
               <article key={s.problem} className="card p-7">
@@ -693,7 +693,7 @@ function HomePage() {
         </div>
       </Section>
 
-      {/* PHASE TRANSITION TIMELINE (1d) — sits above the closing CTA */}
+      {/* PHASE TRANSITION TIMELINE (1d), sits above the closing CTA */}
       <Section surface>
         <div className="container-x">
           <SectionHeading eyebrow="The journey" title="Where do most businesses start?" />
@@ -702,14 +702,14 @@ function HomePage() {
               {
                 n: "1",
                 title: "GEO + SEO Audit",
-                body: "Score your site's AI visibility across 24 dimensions. Get a prioritised fix list the same day.",
+                body: "Score your site's AI visibility across 24 dimensions. Get a prioritised fix list within 24–48 hours.",
                 link: "Start here →",
                 to: "/contact",
               },
               {
                 n: "2",
                 title: "Fix Implementation",
-                body: "Action the critical fixes from the report — either yourself, your developer, or with our implementation service.",
+                body: "Action the critical fixes from the report: either yourself, your developer, or with our implementation service.",
                 link: "See what's included →",
                 to: "/services",
               },
@@ -734,7 +734,7 @@ function HomePage() {
             ))}
           </ol>
           <p className="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
-            Some clients start directly at Phase 2 if they already have an SEO agency. Either entry point is fine — the audits are independent.
+            Some clients start directly at Phase 2 if they already have an SEO agency. Either entry point is fine. The audits are independent.
           </p>
         </div>
       </Section>
@@ -785,10 +785,10 @@ function ServicesPage() {
           <SectionHeading title="Two phases. One question: is your business ready for the AI transition?" />
           <div className="mt-6 grid max-w-4xl gap-5 text-lg leading-relaxed text-muted">
             <p>
-              Phase 1 is about external visibility — ensuring AI search engines can read, understand, and cite your business. Every service in Phase 1 improves the score your website receives from AI crawlers and answer engines.
+              Phase 1 is about external visibility: ensuring AI search engines can read, understand, and cite your business. Every service in Phase 1 improves the score your website receives from AI crawlers and answer engines.
             </p>
             <p>
-              Phase 2 is about internal resilience — ensuring your core service model isn't being replicated by a leaner AI-native competitor while you focus on the website. Phase 2 services are linked at the bottom of this page.
+              Phase 2 is about internal resilience, ensuring your core service model isn't being replicated by a leaner AI-native competitor while you focus on the website. Phase 2 services are linked at the bottom of this page.
             </p>
           </div>
         </div>
@@ -804,19 +804,19 @@ function ServicesPage() {
       {/* PHASE 1 LABEL (2b) */}
       <Section>
         <div className="container-x">
-          <span className="chip">Phase 1 — Get found by AI</span>
+          <span className="chip">Phase 1: Get found by AI</span>
           <h3 className="mt-5 text-2xl font-bold text-navy sm:text-3xl">SEO + GEO Audit Services</h3>
           <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-            Score your site 0–100 across 24 dimensions. Every finding is falsifiable — you can verify every fix yourself.
+            Score your site 0–100 across 24 dimensions. Every finding is falsifiable. You can verify every fix yourself.
           </p>
-          {/* ExO 3.0 IN ACTION — CALLOUT (TASK 4) */}
+          {/* ExO 3.0 IN ACTION, CALLOUT (TASK 4) */}
           <div className="mt-8 rounded-lg border-l-4 border-[#e94560] bg-[#0f3460] p-6 text-white">
             <p className="text-lg font-bold">You're witnessing ExO 3.0 in action.</p>
             <p className="mt-3 leading-relaxed text-white/85">
-              Every SEO and GEO audit we deliver runs on the same AI-native architecture we describe in our ExO AI Strategy work — 25 specialist agents firing in parallel, zero organisational drag, findings delivered the same day. You're not just buying a report. You're seeing the organisational singularity in practice. That's why Phase 2 isn't a hard sell — by the time you've read your GEO report, you've already experienced it.
+              Every SEO and GEO audit we deliver runs on the same AI-native architecture we describe in our ExO AI Strategy work: 25 specialist agents firing in parallel, zero organisational drag, findings reviewed and delivered within 24–48 hours. You're not just buying a report. You're seeing the organisational singularity in practice. That's why Phase 2 isn't a hard sell: by the time you've read your GEO report, you've already experienced it.
             </p>
             <Link className="mt-4 inline-block font-semibold text-azure-400 hover:text-white" to="/ai-strategy">
-              Learn about Phase 2 — ExO AI Strategy →
+              Learn about Phase 2: ExO AI Strategy →
             </Link>
           </div>
         </div>
@@ -851,15 +851,15 @@ function ServicesPage() {
       {/* PHASE 2 CROSS-SELL (2c) */}
       <Section surface>
         <div className="container-x">
-          <span className="chip">Phase 2 — Don't get replaced by AI</span>
+          <span className="chip">Phase 2: Don't get replaced by AI</span>
           <h2 className="mt-5 text-balance text-3xl font-bold text-navy sm:text-[2.5rem] sm:leading-[1.1]">
             You've fixed the visibility. Now audit the deeper threat.
           </h2>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-            Most clients come to us for the GEO audit. But the GEO audit answers one question: can AI find you? There is a second question most businesses haven't asked yet: can AI replace you? If your core service runs on human coordination — research, analysis, reporting, consulting, recruitment — a 2-person team with Claude can replicate it in 90 days. The ExO AI Strategy Audit, based on the ExO 3.0 framework by Salim Ismail and Peter Diamandis, scores your entire organisation's AI exposure and tells you exactly what to build at the edge before someone else does.
+            Most clients come to us for the GEO audit. But the GEO audit answers one question: can AI find you? There is a second question most businesses haven't asked yet: can AI replace you? If your core service runs on human coordination: research, analysis, reporting, consulting, recruitment, a 2-person team with Claude can replicate it in 90 days. The ExO AI Strategy Audit, based on the ExO 3.0 framework by Salim Ismail and Peter Diamandis, scores your entire organisation's AI exposure and tells you exactly what to build at the edge before someone else does.
           </p>
           <Link className="btn-accent mt-8" to="/ai-strategy">
-            Explore Phase 2 — ExO AI Strategy Audit →
+            Explore Phase 2: ExO AI Strategy Audit →
           </Link>
           <p className="mt-4 text-sm text-muted">Recommended after completing Phase 1. Sold separately.</p>
         </div>
@@ -1001,7 +1001,7 @@ function HowItWorksPage() {
           </div>
         </div>
       </Section>
-      {/* WHAT COMES NEXT — PHASE 2 CALLOUT (TASK 5) */}
+      {/* WHAT COMES NEXT, PHASE 2 CALLOUT (TASK 5) */}
       <Section surface>
         <div className="container-x">
           <SectionHeading
@@ -1009,7 +1009,7 @@ function HowItWorksPage() {
             title="Phase 1 is your foundation. Phase 2 is your defence."
           />
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-            Once your GEO and SEO fixes are in place, the next question is whether your core business model is as exposed as your website was. For most professional services firms, the answer is yes. The ExO AI Strategy Audit picks up where the GEO audit ends — auditing your organisation's internal AI readiness and running a live disruption simulation on your most vulnerable business line.
+            Once your GEO and SEO fixes are in place, the next question is whether your core business model is as exposed as your website was. For most professional services firms, the answer is yes. The ExO AI Strategy Audit picks up where the GEO audit ends, auditing your organisation's internal AI readiness and running a live disruption simulation on your most vulnerable business line.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link className="btn-accent" to="/ai-strategy">
@@ -1082,7 +1082,7 @@ function AboutPage() {
             title="What makes Eljones Digital different from a traditional SEO agency?"
           />
           <p className="answer-block mt-8">
-            Eljones Digital differs from a traditional SEO agency in four practical ways. First, speed: an AI-powered audit covers 24 dimensions in ten to fifteen minutes, where an equivalent manual review takes a senior analyst four to eight billable hours. Second, falsifiability: every finding ships with a verification check, so a client can confirm a fix worked instead of trusting a black box. Third, coverage: the audit scores GEO and AI search visibility — whether ChatGPT, Perplexity, Gemini and Google AI Overviews can understand and cite the business — alongside classic SEO, not as an afterthought. Fourth, access: Eljones Digital is run directly by Errol Jones, so clients speak to the person doing the work, with no account-manager layer or junior hand-off. The result is a faster, clearer and more accountable audit than a generic agency engagement, delivered as a prioritised action plan rather than a vague PDF.
+            Eljones Digital differs from a traditional SEO agency in four practical ways. First, turnaround: a full audit covers 24 dimensions and 271 tests and is delivered within 24–48 hours, where an equivalent manual review takes a senior analyst four to eight billable hours spread across days or weeks of agency scheduling. Second, falsifiability: every finding ships with a verification check, so a client can confirm a fix worked instead of trusting a black box. Third, coverage: the audit scores GEO and AI search visibility: whether ChatGPT, Perplexity, Gemini and Google AI Overviews can understand and cite the business: alongside classic SEO, not as an afterthought. Fourth, access: Eljones Digital is run directly by Errol Jones, so clients speak to the person doing the work, with no account-manager layer or junior hand-off. The result is a faster, clearer and more accountable audit than a generic agency engagement, delivered as a prioritised action plan rather than a vague PDF.
           </p>
         </div>
       </Section>
@@ -1092,12 +1092,12 @@ function AboutPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {[
               {
-                name: "claude-seo",
-                desc: "Runs 25 specialist sub-skills in parallel covering technical SEO, content quality, schema validation, backlinks, local SEO, e-commerce, and international SEO. Produces a full audit report with a 0–100 score and a falsifiable priority list.",
+                name: "SEO Audit Engine",
+                desc: "Runs 25 specialist agents in parallel covering technical SEO, content quality, schema validation, backlinks, local SEO, e-commerce, and international SEO. Produces a full audit report with a 0–100 score and a falsifiable priority list.",
               },
               {
-                name: "geo-seo-claude",
-                desc: "Runs 13 GEO-specific sub-skills focused on AI search visibility — citability scoring, AI crawler access, brand mention scanning across ChatGPT, Perplexity and Gemini, platform-specific optimisation, and llms.txt generation.",
+                name: "GEO Audit Engine",
+                desc: "Runs 13 GEO-specific agents focused on AI search visibility: citability scoring, AI crawler access, brand mention scanning across ChatGPT, Perplexity and Gemini, platform-specific optimisation, and llms.txt generation.",
               },
             ].map((tool) => (
               <article key={tool.name} className="card p-7">
@@ -1121,7 +1121,7 @@ function contactPageLd() {
     name: "Contact Eljones Digital",
     url: `${SITE.url}/contact`,
     description:
-      "Contact Eljones Digital to request a same-day SEO and GEO audit with a 0-100 score and prioritised fix list.",
+      "Contact Eljones Digital to request an SEO and GEO audit with a 0-100 score and prioritised fix list, delivered within 24–48 hours.",
     mainEntity: {
       "@type": "ContactPoint",
       contactType: "customer enquiries",
@@ -1142,7 +1142,7 @@ function ContactPage() {
     <>
       <Seo
         title="Contact Eljones Digital | Book Your SEO & GEO Audit"
-        description="Contact Eljones Digital to request a same-day SEO and GEO audit with a 0-100 score and prioritised fix list."
+        description="Contact Eljones Digital to request an SEO and GEO audit with a 0-100 score and prioritised fix list, delivered within 24–48 hours."
         path="/contact"
         jsonLd={[contactPageLd(), breadcrumbLd(crumbs)]}
       />
@@ -1159,7 +1159,7 @@ function ContactPage() {
             title="How does requesting an SEO and GEO audit from Eljones Digital work?"
           />
           <p className="answer-block mt-8">
-            Requesting an audit from Eljones Digital takes one short email. You send your website URL, the main outcome you want — more leads, stronger local ranking, product visibility or AI citations — and any competitor sites worth comparing. No CMS logins, passwords or analytics access are required, because the audit reads your site the same way Google and AI crawlers do. Errol Jones reviews the request, confirms the likely business type and the audit package that fits, then runs the full SEO and GEO audit. A complete run takes ten to fifteen minutes of processing, and the written report is typically returned the same business day. You receive a 0-100 score, a category breakdown across technical health, content, schema, authority and AI visibility, and a prioritised fix list sorted into critical, high and medium actions. Every finding includes the reason it matters and a check you can use to verify the fix worked.
+            Requesting an audit from Eljones Digital takes one short email. You send your website URL, the main outcome you want: more leads, stronger local ranking, product visibility or AI citations, and any competitor sites worth comparing. No CMS logins, passwords or analytics access are required, because the audit reads your site the same way Google and AI crawlers do. Errol Jones reviews the request, confirms the likely business type and the audit package that fits, then runs the full SEO and GEO audit across 24 dimensions and 271 tests. Every finding is reviewed and prioritised before the finished written report is returned within 24–48 hours. You receive a 0-100 score, a category breakdown across technical health, content, schema, authority and AI visibility, and a prioritised fix list sorted into critical, high and medium actions. Every finding includes the reason it matters and a check you can use to verify the fix worked.
           </p>
         </div>
       </Section>
@@ -1393,12 +1393,12 @@ const aiDimensions: { n: string; name: string; desc: string }[] = [
   {
     n: "01",
     name: "Organisational Drag",
-    desc: "How many approval layers does it take to get something done? Companies with 5+ approval steps for standard decisions score low — every layer is a workflow an AI-native competitor doesn't have.",
+    desc: "How many approval layers does it take to get something done? Companies with 5+ approval steps for standard decisions score low. Every layer is a workflow an AI-native competitor doesn't have.",
   },
   {
     n: "02",
     name: "AI Citizenship",
-    desc: "Is AI a bolt-on tool or a first-class participant in how work gets done? We look for evidence of a Chief AI Officer role, AI in standard workflows, and active agent deployment — not just a ChatGPT subscription.",
+    desc: "Is AI a bolt-on tool or a first-class participant in how work gets done? We look for evidence of a Chief AI Officer role, AI in standard workflows, and active agent deployment, not just a ChatGPT subscription.",
   },
   {
     n: "03",
@@ -1408,22 +1408,22 @@ const aiDimensions: { n: string; name: string; desc: string }[] = [
   {
     n: "04",
     name: "Workflow Documentation",
-    desc: "Are your core revenue-generating workflows written down prescriptively, or is the knowledge entirely in people's heads? Undocumented workflows can't be automated — they can only be replaced.",
+    desc: "Are your core revenue-generating workflows written down prescriptively, or is the knowledge entirely in people's heads? Undocumented workflows can't be automated. They can only be replaced.",
   },
   {
     n: "05",
     name: "Intelligence Stack Readiness",
-    desc: "Do you have a data lake, clean API architecture, and structured outputs — or are you running siloed ERP systems and manual Excel exports? The gap here determines how fast an AI-native twin could be built.",
+    desc: "Do you have a data lake, clean API architecture, and structured outputs, or are you running siloed ERP systems and manual Excel exports? The gap here determines how fast an AI-native twin could be built.",
   },
   {
     n: "06",
     name: "Governance Framework",
-    desc: "When an AI agent makes a mistake, can you roll it back? Do you have agent passports, audit logs, and a human review queue? Governance isn't bureaucracy — it's what lets you deploy agents with confidence.",
+    desc: "When an AI agent makes a mistake, can you roll it back? Do you have agent passports, audit logs, and a human review queue? Governance isn't bureaucracy. It's what lets you deploy agents with confidence.",
   },
   {
     n: "07",
     name: "Talent Readiness",
-    desc: "Are your people being retrained for oversight, exception handling, and apprenticeship roles — or are they still doing work AI can do faster and cheaper? The score here predicts your transition risk over the next 24 months.",
+    desc: "Are your people being retrained for oversight, exception handling, and apprenticeship roles, or are they still doing work AI can do faster and cheaper? The score here predicts your transition risk over the next 24 months.",
   },
 ];
 
@@ -1431,13 +1431,13 @@ const aiServices: { name: string; tag: string; desc: string; receive: string }[]
   {
     name: "ExO Quick Score",
     tag: "Quick Score",
-    desc: "A clear, prioritised read on where your company stands. We score all 7 dimensions in a single session and return a 1–10 on each with 3 prioritised actions per dimension. No preparation required — just your website, LinkedIn, and 45 minutes of your time.",
+    desc: "A clear, prioritised read on where your company stands. We score all 7 dimensions in a single session and return a 1–10 on each with 3 prioritised actions per dimension. No preparation required: just your website, LinkedIn, and 45 minutes of your time.",
     receive: "1-page scorecard PDF with dimension scores and priority actions.",
   },
   {
     name: "Full ExO AI Readiness Audit",
     tag: "Full Audit",
-    desc: "A deep audit across all 7 dimensions grounded in observable signals — your website, public filings, LinkedIn, job listings, and news — plus a structured interview with your leadership team. Every finding is scored honestly with a falsifiability check.",
+    desc: "A deep audit across all 7 dimensions grounded in observable signals: your website, public filings, LinkedIn, job listings, and news, plus a structured interview with your leadership team. Every finding is scored honestly with a falsifiability check.",
     receive: "Full audit report (20–30 pages), 0–10 score per dimension, prioritised action plan, and C-suite presentation deck.",
   },
   {
@@ -1449,8 +1449,8 @@ const aiServices: { name: string; tag: string; desc: string; receive: string }[]
   {
     name: "Digital Twin Blueprint",
     tag: "Blueprint",
-    desc: "A full technical and operational plan for building an AI-native twin of your highest-risk business line at the edge — before a competitor does. Covers tech stack, migration sequence, governance model, and 90-day sprint plan.",
-    receive: "Digital twin architecture document and Claude Code kickoff prompt ready to hand to a developer.",
+    desc: "A full technical and operational plan for building an AI-native twin of your highest-risk business line at the edge, before a competitor does. Covers tech stack, migration sequence, governance model, and 90-day sprint plan.",
+    receive: "Digital twin architecture document and a developer-ready build specification.",
   },
   {
     name: "90-Day AI Roadmap",
@@ -1467,21 +1467,21 @@ const aiServices: { name: string; tag: string; desc: string; receive: string }[]
 ];
 
 const aiDisruptionPoints: string[] = [
-  "The cost of building software, running analysis and delivering professional services has dropped to near-zero with AI. What used to take a 10-person team now takes 2 people and a £50/month Claude subscription. That shift changes what a small team can build — and how fast they can build it.",
-  "The companies most at risk are the ones with high-margin, process-heavy services built around human coordination — consulting, recruitment, auditing, legal, finance and marketing. These are exactly the workflows AI can execute in parallel. Where the value is mostly knowledge, documentation and coordination, it can be replicated.",
+  "The cost of building software, running analysis and delivering professional services has dropped to near-zero with AI. What used to take a 10-person team now takes 2 people and a £50/month Claude subscription. That shift changes what a small team can build, and how fast they can build it.",
+  "The companies most at risk are the ones with high-margin, process-heavy services built around human coordination: consulting, recruitment, auditing, legal, finance and marketing. These are exactly the workflows AI can execute in parallel. Where the value is mostly knowledge, documentation and coordination, it can be replicated.",
   "The audit doesn't tell you to fear this. It tells you exactly which of your business lines are exposed, how long you have before a competitor moves, and what to build at the edge before someone else does. The point is direction, not alarm.",
 ];
 
 const aiGoodFit: string[] = [
   "Companies with 10–500 employees facing competitive pressure from AI-native startups",
-  "Professional services firms — consulting, recruitment, legal, finance and marketing",
+  "Professional services firms: consulting, recruitment, legal, finance and marketing",
   "Founders who want to know how exposed their highest-margin service line is",
   "Leadership teams preparing an AI strategy for a board presentation",
   "Companies that have adopted AI tools but haven't redesigned their workflows around them",
 ];
 
 const aiNotFit: string[] = [
-  "Businesses looking for website SEO fixes — see our SEO and GEO audit services instead",
+  "Businesses looking for website SEO fixes: see our SEO and GEO audit services instead",
   "Pre-revenue startups with no established workflows to audit",
   "Companies that only want reassurance rather than honest disruption scoring",
   "Teams looking for a generic “AI readiness” tick-box exercise with no action plan",
@@ -1490,27 +1490,27 @@ const aiNotFit: string[] = [
 const aiFaqs: { q: string; a: string }[] = [
   {
     q: "How is an ExO AI strategy audit different from a standard digital transformation report?",
-    a: "An ExO AI strategy audit differs from standard digital transformation reports in three ways. First, every finding includes a falsifiability check — a specific test you can run to verify the finding is real, not a consultant's opinion. Second, it runs a live disruption simulation modelling how a 2-person AI-native team could replicate your most vulnerable business line in 60–90 days, with a week-by-week build plan. Third, it is grounded in the ExO 3.0 Organizational Singularity framework by Salim Ismail and Peter Diamandis, the same framework used by Singularity University and Fortune 500 strategy teams. It is delivered in days not months, costs a fraction of a traditional consulting engagement, and produces plain documents you own — no vendor lock-in, no ongoing dependency.",
+    a: "An ExO AI strategy audit differs from standard digital transformation reports in three ways. First, every finding includes a falsifiability check: a specific test you can run to verify the finding is real, not a consultant's opinion. Second, it runs a live disruption simulation modelling how a 2-person AI-native team could replicate your most vulnerable business line in 60–90 days, with a week-by-week build plan. Third, it is grounded in the ExO 3.0 Organizational Singularity framework by Salim Ismail and Peter Diamandis, the same framework used by Singularity University and Fortune 500 strategy teams. It is delivered in days not months, costs a fraction of a traditional consulting engagement, and produces plain documents you own: no vendor lock-in, no ongoing dependency.",
   },
   {
     q: "Does my company need to have already adopted AI to benefit from this audit?",
-    a: "No — an ExO AI strategy audit is most valuable before full AI adoption, because it prevents building the wrong things. If your Intelligence Stack Readiness scores low, we identify exactly which data infrastructure gaps to fix before spending money on AI agents. If your Organisational Drag score is high, we show which approval layers to cut before automation creates new bottlenecks. Companies that have already deployed AI tools benefit from the audit too — it assesses whether those tools are genuinely embedded in workflows or just cosmetic additions. The 7-dimension scoring works at any stage of AI adoption and produces a prioritised action plan regardless of your starting point.",
+    a: "No. An ExO AI strategy audit is most valuable before full AI adoption, because it prevents building the wrong things. If your Intelligence Stack Readiness scores low, we identify exactly which data infrastructure gaps to fix before spending money on AI agents. If your Organisational Drag score is high, we show which approval layers to cut before automation creates new bottlenecks. Companies that have already deployed AI tools benefit from the audit too, it assesses whether those tools are genuinely embedded in workflows or just cosmetic additions. The 7-dimension scoring works at any stage of AI adoption and produces a prioritised action plan regardless of your starting point.",
   },
   {
     q: "What makes the disruption simulation realistic rather than just theoretical?",
-    a: "The disruption simulation is realistic because it is grounded in tools and costs that exist today, not hypotheticals. It uses the actual AI stack available right now — Claude, open-source models and no-code platforms — and real cost data, typically £50 to £200 per month for the full toolset. Timelines come from observed AI-native builds rather than optimistic guesses, and the work is broken down week by week so you can see what a competitor would ship and when. The simulation ends with a Day 90 product description written as if the replica already exists, plus a Month 6 projection. The goal is to make the threat concrete and actionable: you see which business line is exposed, how long your defender response window is, and which countermeasures to deploy first. It is designed to direct action, not to alarm you without a plan.",
+    a: "The disruption simulation is realistic because it is grounded in tools and costs that exist today, not hypotheticals. It uses the actual AI stack available right now: Claude, open-source models and no-code platforms, and real cost data, typically £50 to £200 per month for the full toolset. Timelines come from observed AI-native builds rather than optimistic guesses, and the work is broken down week by week so you can see what a competitor would ship and when. The simulation ends with a Day 90 product description written as if the replica already exists, plus a Month 6 projection. The goal is to make the threat concrete and actionable: you see which business line is exposed, how long your defender response window is, and which countermeasures to deploy first. It is designed to direct action, not to alarm you without a plan.",
   },
   {
     q: "How long does a full ExO AI readiness audit take to complete?",
-    a: "A full ExO AI Readiness Audit takes three to five working days from receipt of your initial information. The faster ExO Quick Score is delivered in one day, and a standalone Disruption Risk Analysis takes about two days. Every output is delivered as plain documents you own — scorecards, reports, presentation decks and blueprints — with no retainer, no platform subscription and no ongoing dependency on us. There is no vendor lock-in: you keep everything and can act on it with your own team or developer. A 60-minute walkthrough call is included with both the Full Audit and the Disruption Risk Analysis, so we can present the findings directly to your leadership team and answer questions live. There is no obligation to continue beyond the delivered work.",
+    a: "A full ExO AI Readiness Audit takes three to five working days from receipt of your initial information. The faster ExO Quick Score is delivered in one day, and a standalone Disruption Risk Analysis takes about two days. Every output is delivered as plain documents you own: scorecards, reports, presentation decks and blueprints, with no retainer, no platform subscription and no ongoing dependency on us. There is no vendor lock-in: you keep everything and can act on it with your own team or developer. A 60-minute walkthrough call is included with both the Full Audit and the Disruption Risk Analysis, so we can present the findings directly to your leadership team and answer questions live. There is no obligation to continue beyond the delivered work.",
   },
   {
     q: "Could a traditional consulting firm run this same audit?",
-    a: "Yes — the underlying tools are open source and accessible to anyone, so a traditional firm could technically run the same audit. The difference is what it costs you. A firm with 10+ staff has a payroll to cover, so the efficiency it gains from AI gets absorbed by internal coordination rather than passed to the client. By the time a 15-minute AI audit has passed through account-manager review, senior-strategist sign-off, copywriter formatting and client-presentation prep, that same output has cost the agency two days of internal time — and you pay for all of it. Their overhead means they charge you for the hierarchy, not the intelligence. Eljones Digital carries zero organisational drag, so 100% of your fee goes into the audit itself. And a firm teaching you to eliminate drag while running a 50-person approval chain is a structural contradiction.",
+    a: "Yes. The underlying tools are open source and accessible to anyone, so a traditional firm could technically run the same audit. The difference is what it costs you. A firm with 10+ staff has a payroll to cover, so the efficiency it gains from AI gets absorbed by internal coordination rather than passed to the client. By the time a 15-minute AI audit has passed through account-manager review, senior-strategist sign-off, copywriter formatting and client-presentation prep, that same output has cost the agency two days of internal time, and you pay for all of it. Their overhead means they charge you for the hierarchy, not the intelligence. Eljones Digital carries zero organisational drag, so 100% of your fee goes into the audit itself. And a firm teaching you to eliminate drag while running a 50-person approval chain is a structural contradiction.",
   },
   {
-    q: "What tools does a 2-person AI startup actually use — and can they handle my data securely?",
-    a: "The full stack costs £50–200 per month. Claude API handles analysis and generation; open-source local models — Mistral and LLaMA variants — process sensitive data without it ever leaving the client's environment; Vercel or Netlify give instant deployment; Make or Zapier automate the workflow; and a vector database such as Chroma or Pinecone stores the knowledge base. Running the open-source models locally means proprietary IP never calls out to a public server. This isn't a reckless experiment — it's a closed-loop environment that an enterprise security team can audit and approve before anything goes near production. The same stack is exactly what the disruption simulation models for your business line: the total monthly cost for a two-person team replicating your service is under £200. That is the real number the simulation is built on — not a hypothetical, and not a sales figure.",
+    q: "What tools does a 2-person AI startup actually use, and can they handle my data securely?",
+    a: "The full stack costs £50–200 per month. a hosted AI model handles analysis and generation; open-source local models, Mistral and LLaMA variants, process sensitive data without it ever leaving the client's environment; Vercel or Netlify give instant deployment; Make or Zapier automate the workflow; and a vector database such as Chroma or Pinecone stores the knowledge base. Running the open-source models locally means proprietary IP never calls out to a public server. This isn't a reckless experiment. It's a closed-loop environment that an enterprise security team can audit and approve before anything goes near production. The same stack is exactly what the disruption simulation models for your business line: the total monthly cost for a two-person team replicating your service is under £200. That is the real number the simulation is built on: not a hypothetical, and not a sales figure.",
   },
 ];
 
@@ -1562,12 +1562,12 @@ function AiStrategyPage() {
     <>
       <Seo
         title="AI Strategy & Disruption Audit | ExO 3.0 Framework"
-        description="Score your business against the ExO 3.0 framework — 7 AI readiness dimensions, disruption risk by business line, and a 90-day action plan."
+        description="Score your business against the ExO 3.0 framework: 7 AI readiness dimensions, disruption risk by business line, and a 90-day action plan."
         path="/ai-strategy"
         jsonLd={[aiStrategyWebPageLd(), aiStrategyServiceLd(), aiStrategyFaqLd(), breadcrumbLd(crumbs)]}
       />
 
-      {/* HERO — navy, premium tier. Breadcrumb rendered inline (light) so the
+      {/* HERO: navy, premium tier. Breadcrumb rendered inline (light) so the
           section sits flush under the fixed header without a white seam. */}
       <section className="relative overflow-hidden bg-navy pt-32 text-white sm:pt-36">
         <div className="dotgrid absolute inset-0 opacity-40" aria-hidden="true" />
@@ -1645,7 +1645,7 @@ function AiStrategyPage() {
         </div>
       </section>
 
-      {/* RED TEAM CALLOUT (TASK 2) — immediately after the hero */}
+      {/* RED TEAM CALLOUT (TASK 2), immediately after the hero */}
       <Section>
         <div className="container-x">
           <div className="rounded-lg border-l-4 border-[#e94560] bg-[#0f3460] p-6 text-white sm:p-8">
@@ -1656,13 +1656,13 @@ function AiStrategyPage() {
               You are being audited by the exact setup that threatens to disrupt you.
             </h2>
             <p className="mt-4 max-w-3xl leading-relaxed text-white/85">
-              This audit is not delivered by a traditional consulting firm with 50 account managers and a six-month timeline. It is delivered by a solo operator running the same AI-native stack — Claude, open-source models, parallel agents — that a 2-person startup would use to replicate your highest-margin service line in 90 days. That is not a limitation. That is the point. You are not buying a McKinsey report. You are buying a live-fire simulation conducted by the exact type of lean, AI-native operation you are most at risk from.
+              This audit is not delivered by a traditional consulting firm with 50 account managers and a six-month timeline. It is delivered by a solo operator running the same AI-native stack: Claude, open-source models, parallel agents, that a 2-person startup would use to replicate your highest-margin service line in 90 days. That is not a limitation. That is the point. You are not buying a McKinsey report. You are buying a live-fire simulation conducted by the exact type of lean, AI-native operation you are most at risk from.
             </p>
           </div>
         </div>
       </Section>
 
-      {/* SECTION 4 — Citability block (AI citation target) */}
+      {/* SECTION 4: Citability block (AI citation target) */}
       <Section surface>
         <div className="container-x">
           <SectionHeading
@@ -1670,12 +1670,12 @@ function AiStrategyPage() {
             title="What is an ExO AI Strategy Audit and what does a business get from one?"
           />
           <p className="answer-block mt-8">
-            An ExO AI Strategy Audit scores a company across seven dimensions — organisational drag, AI citizenship, MTP clarity, workflow documentation, intelligence stack readiness, governance framework and talent readiness — to measure how ready it is to operate as an AI-native business. Each dimension is scored from 1 to 10 with specific, falsifiable findings rather than vague opinion. The audit also runs a disruption simulation: it models how a 2-person team using Claude and open-source AI tools could replicate the company's most vulnerable, highest-margin business line in 60 to 90 days. The output is a prioritised action plan and a C-suite ready PDF report that tells leadership exactly where they are exposed and what to build at the edge first. It is based on the ExO 3.0 / Organizational Singularity framework developed by Salim Ismail and Peter Diamandis, applied with AI audit tooling for depth and rigour.
+            An ExO AI Strategy Audit scores a company across seven dimensions: organisational drag, AI citizenship, MTP clarity, workflow documentation, intelligence stack readiness, governance framework and talent readiness, to measure how ready it is to operate as an AI-native business. Each dimension is scored from 1 to 10 with specific, falsifiable findings rather than vague opinion. The audit also runs a disruption simulation: it models how a 2-person team using Claude and open-source AI tools could replicate the company's most vulnerable, highest-margin business line in 60 to 90 days. The output is a prioritised action plan and a C-suite ready PDF report that tells leadership exactly where they are exposed and what to build at the edge first. It is based on the ExO 3.0 / Organizational Singularity framework developed by Salim Ismail and Peter Diamandis, applied with AI audit tooling for depth and rigour.
           </p>
         </div>
       </Section>
 
-      {/* WHY SOLO BEATS BLOATED — COMPARISON TABLE (TASK 2) */}
+      {/* WHY SOLO BEATS BLOATED, COMPARISON TABLE (TASK 2) */}
       <Section>
         <div className="container-x">
           <SectionHeading
@@ -1686,7 +1686,7 @@ function AiStrategyPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2">
               <div className="border-b border-emerald-300 bg-emerald-50 p-5">
                 <p className="text-lg font-bold text-emerald-800">✅ Eljones Digital</p>
-                <p className="text-sm text-emerald-700">1 person + Claude</p>
+                <p className="text-sm text-emerald-700">1 person, AI-native workflow</p>
               </div>
               <div className="border-b border-red-300 bg-red-50 p-5 sm:border-l sm:border-line">
                 <p className="text-lg font-bold text-red-900">❌ Traditional Consultancy</p>
@@ -1696,12 +1696,12 @@ function AiStrategyPage() {
             {[
               {
                 label: "Audit delivery",
-                left: "Same day. 25 AI agents run 271 tests in 15 minutes.",
+                left: "24–48 hours. 25 AI agents run 271 tests across 24 dimensions. Then Errol reviews and prioritises every finding.",
                 right: "4–8 weeks. Junior analysts, manager review, senior sign-off, PDF formatting.",
               },
               {
                 label: "Findings",
-                left: "Falsifiable. Every finding ships with a terminal command to verify it's real.",
+                left: "Falsifiable. Every finding includes a verification check you can run yourself.",
                 right: "Opinion-based. \"Trust our senior partner's 20 years of experience.\"",
               },
               {
@@ -1744,7 +1744,7 @@ function AiStrategyPage() {
         </div>
       </Section>
 
-      {/* SECTION 5 — Disruption risk framing */}
+      {/* SECTION 5: Disruption risk framing */}
       <Section>
         <div className="container-x">
           <SectionHeading
@@ -1762,13 +1762,13 @@ function AiStrategyPage() {
         </div>
       </Section>
 
-      {/* SAMPLE OUTPUT (4b) — anchor target for /ai-strategy#simulation */}
+      {/* SAMPLE OUTPUT (4b), anchor target for /ai-strategy#simulation */}
       <Section id="simulation" className="scroll-mt-28">
         <div className="container-x">
           <SectionHeading
             eyebrow="Sample output"
             title="What does a 90-day disruption simulation look like?"
-            intro="An illustrative walkthrough for a mid-sized recruitment agency — the same week-by-week build plan the ExO audit produces for your own highest-margin business line. The figures are sample figures, grounded in tools and costs that exist today."
+            intro="An illustrative walkthrough for a mid-sized recruitment agency, the same week-by-week build plan the ExO audit produces for your own highest-margin business line. The figures are sample figures, grounded in tools and costs that exist today."
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
             {[
@@ -1787,7 +1787,7 @@ function AiStrategyPage() {
               {
                 week: "Weeks 1–2",
                 title: "Map the workflow",
-                body: "Two operators document the agency's core loop end to end — intake brief, sourcing, screening, shortlisting, client updates. Claude turns the transcripts into a prescriptive, step-by-step playbook an AI agent can execute.",
+                body: "Two operators document the agency's core loop end to end: intake brief, sourcing, screening, shortlisting, client updates. Claude turns the transcripts into a prescriptive, step-by-step playbook an AI agent can execute.",
               },
               {
                 week: "Weeks 3–5",
@@ -1797,7 +1797,7 @@ function AiStrategyPage() {
               {
                 week: "Weeks 6–8",
                 title: "Automate screening & shortlists",
-                body: "Claude runs structured interviews, scores transcripts against the brief, and drafts client-ready shortlists with evidence. The two operators move to oversight — approving, correcting, handling exceptions.",
+                body: "Claude runs structured interviews, scores transcripts against the brief, and drafts client-ready shortlists with evidence. The two operators move to oversight: approving, correcting, handling exceptions.",
               },
               {
                 week: "Weeks 9–12",
@@ -1814,20 +1814,20 @@ function AiStrategyPage() {
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <div className="flex flex-col">
-              <h3 className="text-xl font-bold text-navy">Day 90 — the replica is live</h3>
+              <h3 className="text-xl font-bold text-navy">Day 90: the replica is live</h3>
               <p className="answer-block mt-5 flex-1">
-                By Day 90 the replica exists as a working service: a client submits a role, an AI agent sources and screens candidates overnight, and a human reviewer approves a shortlist by morning. Turnaround drops from two weeks to 48 hours, the fee is roughly 40% lower than the incumbent agency, and the whole operation runs on two people plus a ~£150/month AI toolset. It is not a prototype — it bills clients.
+                By Day 90 the replica exists as a working service: a client submits a role, an AI agent sources and screens candidates overnight, and a human reviewer approves a shortlist by morning. Turnaround drops from two weeks to 48 hours, the fee is roughly 40% lower than the incumbent agency, and the whole operation runs on two people plus a ~£150/month AI toolset. It is not a prototype. It bills clients.
               </p>
             </div>
             <div className="flex flex-col">
-              <h3 className="text-xl font-bold text-navy">Month 6 — the gap widens</h3>
+              <h3 className="text-xl font-bold text-navy">Month 6: the gap widens</h3>
               <p className="answer-block mt-5 flex-1">
-                By Month 6 the same two-person team has templatised the workflow across three more verticals, because the expensive part — designing the agent loop — is already done. Margin per placement is several times that of a traditional agency, so they can keep undercutting on price and still reinvest. The incumbent's defender response window has closed: matching that cost base now means rebuilding around AI agents from the inside, which is exactly what the ExO audit tells you to start before the simulation becomes someone else's real business.
+                By Month 6 the same two-person team has templatised the workflow across three more verticals, because the expensive part, designing the agent loop, is already done. Margin per placement is several times that of a traditional agency, so they can keep undercutting on price and still reinvest. The incumbent's defender response window has closed: matching that cost base now means rebuilding around AI agents from the inside, which is exactly what the ExO audit tells you to start before the simulation becomes someone else's real business.
               </p>
             </div>
           </div>
           <p className="mt-8 max-w-3xl leading-relaxed text-muted">
-            Your audit replaces “recruitment agency” with your business — and tells you how wide your response window really is.{" "}
+            Your audit replaces “recruitment agency” with your business, and tells you how wide your response window really is.{" "}
             <Link className="font-semibold text-royal hover:text-accent" to="/contact">
               Run this simulation on my business →
             </Link>
@@ -1835,13 +1835,13 @@ function AiStrategyPage() {
         </div>
       </Section>
 
-      {/* SECTION 6 — The 7 scoring dimensions */}
+      {/* SECTION 6: The 7 scoring dimensions */}
       <Section surface>
         <div className="container-x">
           <SectionHeading
             eyebrow="The 7 dimensions"
             title="What does an ExO AI readiness score measure?"
-            intro="Each dimension is scored from 1 to 10 with a specific, falsifiable finding — so leadership can see exactly where the organisation is exposed."
+            intro="Each dimension is scored from 1 to 10 with a specific, falsifiable finding, so leadership can see exactly where the organisation is exposed."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {aiDimensions.map((d) => (
@@ -1855,7 +1855,7 @@ function AiStrategyPage() {
         </div>
       </Section>
 
-      {/* SECTION 7 — The 6 audit services */}
+      {/* SECTION 7: The 6 audit services */}
       <Section id="audit-services">
         <div className="container-x">
           <SectionHeading
@@ -1889,7 +1889,7 @@ function AiStrategyPage() {
         </div>
       </Section>
 
-      {/* SECTION 8 — Framework attribution (required) */}
+      {/* SECTION 8: Framework attribution (required) */}
       <Section surface>
         <div className="container-x">
           <SectionHeading
@@ -1897,7 +1897,7 @@ function AiStrategyPage() {
             title="What is the ExO 3.0 Organizational Singularity framework?"
           />
           <p className="answer-block mt-8">
-            ExO 3.0 is the third evolution of the Exponential Organizations framework developed by Salim Ismail and Peter Diamandis. First published in 2014, the framework was updated as ExO 2.0 in 2023 and evolved into ExO 3.0, the Organizational Singularity, in 2026. It defines how organisations transition from human-centred coordination models — where work moves through meetings, approvals and knowledge held in people's heads — to AI-native intelligence systems where agents execute and humans supervise. The framework is used by Singularity University, Fortune 500 strategy teams and independent consultants certified through OpenExO. It treats AI not as a bolt-on tool but as a first-class participant in how an organisation thinks, decides and delivers. Eljones Digital applies the ExO 3.0 framework using AI audit tooling to deliver the same depth of analysis as a traditional consulting engagement, at a fraction of the cost and in days rather than months.
+            ExO 3.0 is the third evolution of the Exponential Organizations framework developed by Salim Ismail and Peter Diamandis. First published in 2014, the framework was updated as ExO 2.0 in 2023 and evolved into ExO 3.0, the Organizational Singularity, in 2026. It defines how organisations transition from human-centred coordination models: where work moves through meetings, approvals and knowledge held in people's heads, to AI-native intelligence systems where agents execute and humans supervise. The framework is used by Singularity University, Fortune 500 strategy teams and independent consultants certified through OpenExO. It treats AI not as a bolt-on tool but as a first-class participant in how an organisation thinks, decides and delivers. Eljones Digital applies the ExO 3.0 framework using AI audit tooling to deliver the same depth of analysis as a traditional consulting engagement, at a fraction of the cost and in days rather than months.
           </p>
           <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted">
             ExO 3.0 / Organizational Singularity framework developed by Salim Ismail and Peter Diamandis. Published through{" "}
@@ -1914,7 +1914,7 @@ function AiStrategyPage() {
         </div>
       </Section>
 
-      {/* SECTION 9 — Who this is for */}
+      {/* SECTION 9: Who this is for */}
       <Section>
         <div className="container-x">
           <SectionHeading
@@ -1948,7 +1948,7 @@ function AiStrategyPage() {
         </div>
       </Section>
 
-      {/* THE PLAYBOOK — 6-STEP REWRITE (TASK 3) */}
+      {/* THE PLAYBOOK, 6-STEP REWRITE (TASK 3) */}
       <Section>
         <div className="container-x">
           <SectionHeading
@@ -1966,12 +1966,12 @@ function AiStrategyPage() {
               {
                 n: "02",
                 name: "Fork the Data",
-                body: "Give the edge team a copy of the historical data for that workflow. They work from the fork — they never touch live production systems. The mothership keeps running normally. Zero disruption to current revenue.",
+                body: "Give the edge team a copy of the historical data for that workflow. They work from the fork. They never touch live production systems. The mothership keeps running normally. Zero disruption to current revenue.",
               },
               {
                 n: "03",
                 name: "Rebuild from Scratch",
-                body: "The edge team doesn't automate the old process. They rebuild it from zero using AI agents — reason, act, observe loops. Every step that took a human 3 days now takes an agent 14 seconds. They map the workflow for machines, not for humans.",
+                body: "The edge team doesn't automate the old process. They rebuild it from zero using AI agents: reason, act, observe loops. Every step that took a human 3 days now takes an agent 14 seconds. They map the workflow for machines, not for humans.",
               },
               {
                 n: "04",
@@ -1981,12 +1981,12 @@ function AiStrategyPage() {
               {
                 n: "05",
                 name: "Iterate Until the Twin Wins",
-                body: "Agent loops self-improve. Every failure is a prompt adjustment. Every gap in quality is a new instruction. You are not aiming for 10% improvement — you are aiming for 100× faster, 80% cheaper, equal or better quality. This takes weeks, not months.",
+                body: "Agent loops self-improve. Every failure is a prompt adjustment. Every gap in quality is a new instruction. You are not aiming for 10% improvement: you are aiming for 100× faster, 80% cheaper, equal or better quality. This takes weeks, not months.",
               },
               {
                 n: "06",
                 name: "Deprecate the Legacy",
-                body: "Only when the digital twin is undeniably, mathematically superior do you fold it back in as the new core. The legacy workflow is deprecated. Middle management coordination is replaced by orchestration agents. Your company just became AI-native — without a single day of disruption to your existing clients.",
+                body: "Only when the digital twin is undeniably, mathematically superior do you fold it back in as the new core. The legacy workflow is deprecated. Middle management coordination is replaced by orchestration agents. Your company just became AI-native, without a single day of disruption to your existing clients.",
               },
             ].map((step, i) => (
               <article
@@ -2005,13 +2005,13 @@ function AiStrategyPage() {
           </div>
           <div className="mt-8 rounded-lg border border-amber-300 bg-amber-50 p-6 text-amber-900 sm:p-7">
             <p className="leading-relaxed">
-              <span className="font-bold">💡 This is how Nestlé built Nespresso.</span> Separate building. Different leadership. Different supply chain. Because the instant coffee executives would have killed it. You fund your own disruption — or someone else funds theirs.
+              <span className="font-bold">💡 This is how Nestlé built Nespresso.</span> Separate building. Different leadership. Different supply chain. Because the instant coffee executives would have killed it. You fund your own disruption, or someone else funds theirs.
             </p>
           </div>
         </div>
       </Section>
 
-      {/* SECTION 10 — FAQ */}
+      {/* SECTION 10: FAQ */}
       <Section surface>
         <div className="container-x">
           <SectionHeading eyebrow="FAQ" title="Questions about the ExO AI strategy audit" />
@@ -2026,7 +2026,7 @@ function AiStrategyPage() {
         </div>
       </Section>
 
-      {/* SECTION 11 — CTA (custom band; mirrors the shared CTA styling but with
+      {/* SECTION 11: CTA (custom band; mirrors the shared CTA styling but with
           this page's specified buttons: /contact + /services). */}
       <section className="relative overflow-hidden bg-navy text-white">
         <div className="dotgrid absolute inset-0 opacity-60" aria-hidden="true" />
@@ -2040,7 +2040,7 @@ function AiStrategyPage() {
             Ready to see how exposed your business really is?
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/70">
-            Share your website and we'll run the ExO Quick Score in 24 hours — 7 dimension scores and 3 priority actions per dimension, no preparation needed.
+            Share your website and we'll run the ExO Quick Score in 24 hours: 7 dimension scores and 3 priority actions per dimension, no preparation needed.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link className="btn-accent" to="/contact">
@@ -2082,7 +2082,7 @@ function pricingOfferCatalogLd() {
         "@type": "Offer",
         name: "GEO + SEO Full Audit",
         description:
-          "Complete SEO and GEO audit scoring your website 0-100 across 24 dimensions with a prioritised fix plan and same-day delivery.",
+          "Complete SEO and GEO audit scoring your website 0-100 across 24 dimensions with a prioritised fix plan, delivered within 24–48 hours.",
         price: "497",
         priceCurrency: "GBP",
         url: `${SITE.url}/pricing`,
@@ -2091,7 +2091,7 @@ function pricingOfferCatalogLd() {
       },
       {
         "@type": "Offer",
-        name: "ExO AI Strategy Audit — Quick Score",
+        name: "ExO AI Strategy Audit: Quick Score",
         description:
           "7-dimension ExO 3.0 AI readiness scorecard with written findings and a prioritised recommendation for your highest-risk business line.",
         price: "497",
@@ -2139,7 +2139,7 @@ function PricingPage() {
 
   // SINGLE SOURCE OF TRUTH FOR ALL PRICES.
   // These are sample/indicative figures to be confirmed after competitor
-  // research — changing one later is a one-line edit here, nowhere else.
+  // research: changing one later is a one-line edit here, nowhere else.
   // No price string is hardcoded anywhere else on the page.
   const PRICING = {
     seoSnapshot: { label: "SEO + GEO Snapshot", price: "£249", note: "single report" },
@@ -2165,18 +2165,18 @@ function PricingPage() {
     },
     {
       key: "auditWithFixes",
-      desc: "Everything in the full audit, plus the priority fixes implemented for you — technical changes, schema and content rewrites. The fastest route from finding to a measurable score improvement.",
+      desc: "Everything in the full audit, plus the priority fixes implemented for you: technical changes, schema and content rewrites. The fastest route from finding to a measurable score improvement.",
     },
     {
       key: "monthlyRetainer",
-      desc: "AI answer engines update their crawler rules and citation weighting every 4–6 weeks — what earns you a citation today may not next month. GEO Drift Protection runs a monthly AI-visibility simulation, flags algorithmic drift, and updates your llms.txt, schema and citability blocks to stay ahead. Continuous algorithmic adaptation, not a traditional SEO retainer.",
+      desc: "AI answer engines update their crawler rules and citation weighting every 4–6 weeks, what earns you a citation today may not next month. GEO Drift Protection runs a monthly AI-visibility simulation, flags algorithmic drift, and updates your llms.txt, schema and citability blocks to stay ahead. Continuous algorithmic adaptation, not a traditional SEO retainer.",
     },
   ];
 
   const exoCards: { key: PriceKey; desc: string }[] = [
     {
       key: "exoQuickScore",
-      desc: "All 7 ExO readiness dimensions scored 1–10 in a single session, with 3 prioritised actions per dimension. A clear, prioritised read on exactly how exposed your organisation is — no preparation required.",
+      desc: "All 7 ExO readiness dimensions scored 1–10 in a single session, with 3 prioritised actions per dimension. A clear, prioritised read on exactly how exposed your organisation is. No preparation required.",
     },
     {
       key: "exoFullAudit",
@@ -2193,9 +2193,9 @@ function PricingPage() {
   ];
 
   const included: { title: string; body: string }[] = [
-    { title: "Direct access to Errol", body: "No account manager layer and no junior hand-off — you work directly with the person doing the audit." },
+    { title: "Direct access to Errol", body: "No account manager layer and no junior hand-off. You work directly with the person doing the audit." },
     { title: "Falsifiable findings", body: "Every issue ships with a verification check you can run yourself, so you never take a finding on trust." },
-    { title: "Plain-language report", body: "No jargon. Written for business owners, not developers — clear enough to act on, with the technical detail there when you need it." },
+    { title: "Plain-language report", body: "No jargon. Written for business owners, not developers: clear enough to act on, with the technical detail there when you need it." },
   ];
 
   const PriceCard = ({ entry, desc }: { entry: { label: string; price: string; note: string }; desc: string }) => (
@@ -2230,7 +2230,7 @@ function PricingPage() {
             Start with Phase 1. Add Phase 2 when you're ready.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Every client begins with the GEO + SEO audit. The ExO AI Strategy services are the natural next step — once you've seen the external threat, the internal one becomes impossible to ignore.
+            Every client begins with the GEO + SEO audit. The ExO AI Strategy services are the natural next step: once you've seen the external threat, the internal one becomes impossible to ignore.
           </p>
           <div
             role="note"
@@ -2250,10 +2250,10 @@ function PricingPage() {
         </div>
       </section>
 
-      {/* SEO & GEO AUDITS — PHASE 1 (3b) */}
+      {/* SEO & GEO AUDITS, PHASE 1 (3b) */}
       <Section surface>
         <div className="container-x">
-          <span className="chip">Phase 1 — Get found by AI</span>
+          <span className="chip">Phase 1: Get found by AI</span>
           <h2 className="mt-5 text-balance text-3xl font-bold text-navy sm:text-[2.5rem] sm:leading-[1.1]">
             SEO + GEO Audit Pricing
           </h2>
@@ -2268,7 +2268,7 @@ function PricingPage() {
         </div>
       </Section>
 
-      {/* JOURNEY CALLOUT BETWEEN PHASES (3c) — dark navy band */}
+      {/* JOURNEY CALLOUT BETWEEN PHASES (3c), dark navy band */}
       <Section dark>
         <div className="container-x">
           <p className="mx-auto max-w-3xl text-balance text-center text-xl font-medium leading-relaxed sm:text-2xl">
@@ -2277,15 +2277,15 @@ function PricingPage() {
         </div>
       </Section>
 
-      {/* ExO AI STRATEGY — PHASE 2 (3b) */}
+      {/* ExO AI STRATEGY, PHASE 2 (3b) */}
       <Section>
         <div className="container-x">
-          <span className="chip">Phase 2 — Don't get replaced by AI</span>
+          <span className="chip">Phase 2: Don't get replaced by AI</span>
           <h2 className="mt-5 text-balance text-3xl font-bold text-navy sm:text-[2.5rem] sm:leading-[1.1]">
             ExO AI Strategy Audit Pricing
           </h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-            Recommended after Phase 1. Sold independently — no Phase 1 required.
+            Recommended after Phase 1. Sold independently. No Phase 1 required.
           </p>
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
             {exoCards.map((c) => (
@@ -2293,7 +2293,7 @@ function PricingPage() {
             ))}
           </div>
           <p className="mt-6 max-w-3xl text-sm italic leading-relaxed text-muted">
-            ExO AI strategy engagements include a structured leadership interview, bespoke strategic synthesis, and a 60-minute findings walkthrough with your leadership team — not just an automated report.
+            ExO AI strategy engagements include a structured leadership interview, bespoke strategic synthesis, and a 60-minute findings walkthrough with your leadership team, not just an automated report.
           </p>
           <p className="mt-8 max-w-3xl text-sm leading-relaxed text-muted">
             ExO AI Strategy services are based on the ExO 3.0 / Organizational Singularity framework by Salim Ismail and Peter Diamandis.{" "}
@@ -2339,7 +2339,7 @@ function PricingPage() {
         </div>
       </Section>
 
-      {/* CTA — mirrors the shared CTA band styling, with this page's button. */}
+      {/* CTA: mirrors the shared CTA band styling, with this page's button. */}
       <section className="relative overflow-hidden bg-navy text-white">
         <div className="dotgrid absolute inset-0 opacity-60" aria-hidden="true" />
         <div
@@ -2352,7 +2352,7 @@ function PricingPage() {
             Not sure which audit you need?
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/70">
-            Share your website and I'll recommend the right starting point — no commitment required.
+            Share your website and I'll recommend the right starting point. No commitment required.
           </p>
           <div className="mt-9 flex items-center justify-center">
             <Link className="btn-accent" to="/contact">

@@ -1,4 +1,4 @@
-// Reusable STAT BAR — a horizontal bar showing a metric against a benchmark.
+// Reusable STAT BAR, a horizontal bar showing a metric against a benchmark.
 // Designed for dark backgrounds (navy / #0f3460 / #1a1a2e panels): the track is
 // gray-700 and the label/value text is light. Used on the homepage "How we
 // compare" block and the GEO Drift Protection service card.
