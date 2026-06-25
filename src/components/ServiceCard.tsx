@@ -40,14 +40,6 @@ export function ServiceCard({ service }: { service: Service }) {
           ))}
         </ol>
       </div>
-
-      {service.command && service.command.startsWith("/") && (
-        <div className="mt-5 pt-1">
-          <code className="inline-block rounded-md bg-navy px-2.5 py-1 font-mono text-[0.72rem] text-azure-400">
-            {service.command}
-          </code>
-        </div>
-      )}
     </article>
   );
 }
