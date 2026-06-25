@@ -708,8 +708,8 @@ function HomePage() {
               },
               {
                 n: "2",
-                title: "Fix Implementation",
-                body: "Action the critical fixes from the report: either yourself, your developer, or with our implementation service.",
+                title: "Apply the fixes",
+                body: "Action the critical fixes from the report yourself or with your own developer. Each finding includes the detail a developer needs to act on it.",
                 link: "See what's included →",
                 to: "/services",
               },

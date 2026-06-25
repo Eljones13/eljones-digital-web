@@ -55,7 +55,7 @@ export const SERVICES: Service[] = [
       "CrUX + PageSpeed data reveals real-world field performance vs lab estimates",
       "We identify LCP subpart bottlenecks (TTFB, load delay, render delay)",
       "We produce a fix list with exact code changes and priority order",
-      "Optional: we implement fixes directly on your codebase",
+      "Your developer applies the exact code fixes from the prioritised list",
     ],
   },
   {
@@ -87,7 +87,7 @@ export const SERVICES: Service[] = [
       "We detect: thin content, filler language, missing author bios, unverified claims",
       "We check helpfulness signals: Who wrote it? How do they know? Why should I trust it?",
       "Produce a page-by-page content brief with specific rewrites",
-      "Optional: we write the improved content for you",
+      "Your team applies the rewrites from the page-by-page brief",
     ],
   },
   {
