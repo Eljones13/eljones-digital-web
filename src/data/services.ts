@@ -55,7 +55,7 @@ export const SERVICES: Service[] = [
       "CrUX + PageSpeed data reveals real-world field performance vs lab estimates",
       "We identify LCP subpart bottlenecks (TTFB, load delay, render delay)",
       "We produce a fix list with exact code changes and priority order",
-      "Optional: we implement fixes directly on your codebase",
+      "Your developer applies the exact code fixes from the prioritised list",
     ],
   },
   {
@@ -87,7 +87,7 @@ export const SERVICES: Service[] = [
       "We detect: thin content, filler language, missing author bios, unverified claims",
       "We check helpfulness signals: Who wrote it? How do they know? Why should I trust it?",
       "Produce a page-by-page content brief with specific rewrites",
-      "Optional: we write the improved content for you",
+      "Your team applies the rewrites from the page-by-page brief",
     ],
   },
   {
@@ -209,7 +209,7 @@ export const SERVICES: Service[] = [
     tag: "International",
     question: "How do we fix hreflang errors stopping your global site from ranking in each country?",
     value:
-      "We find and fix the hreflang errors that quietly stop your global pages from ranking in the right country and language, and verify the fix after deployment.",
+      "We find every hreflang error and deliver a corrected sitemap or tag implementation your developer can deploy directly, then re-audit to confirm it's live and working.",
     steps: [
       "Audit all language and country variants for hreflang errors",
       "Detect: missing return tags, incorrect language codes, self-referencing errors",
@@ -262,7 +262,7 @@ export const SERVICES: Service[] = [
       "Analyse your current sitemap state",
       "Check: non-canonical URLs, noindex pages, blocked resources, oversized files",
       "Generate a clean, production-ready XML sitemap with industry-standard structure",
-      "Submit to Google Search Console and verify indexation status",
+      "Your team submits the corrected sitemap to Google Search Console",
       "Re-check coverage after Google recrawls to confirm pages are indexed",
     ],
   },

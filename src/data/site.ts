@@ -35,6 +35,32 @@ export const NAV: { label: string; to: string }[] = [
   { label: "Contact", to: "/contact" },
 ];
 
+// Grouped navigation for the header (desktop dropdowns + mobile menu).
+// Groups with `items` render as a dropdown; entries with `to` render as a
+// single link. "Home" is intentionally omitted: the logo links to "/".
+export type NavGroup = { label: string; to?: string; items?: { label: string; to: string }[] };
+export const NAV_GROUPS: NavGroup[] = [
+  {
+    label: "Services",
+    items: [
+      { label: "Services", to: "/services" },
+      { label: "Pricing", to: "/pricing" },
+      { label: "AI Strategy", to: "/ai-strategy" },
+      { label: "AI Search", to: "/ai-search-optimization" },
+    ],
+  },
+  {
+    label: "Resources",
+    items: [
+      { label: "Proof", to: "/case-studies/sample-geo-audit" },
+      { label: "How It Works", to: "/how-it-works" },
+      { label: "Blog", to: "/blog" },
+    ],
+  },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
+];
+
 export const STATS: { num: string; label: string }[] = [
   { num: "24", label: "Audit dimensions" },
   { num: "271", label: "Individual tests per audit" },
@@ -147,15 +173,15 @@ export const PROCESS: {
   },
   {
     step: "06",
-    title: "Fix implementation",
-    what: "We implement the fixes: technical changes, schema code and content rewrites, or hand a clear brief to your own dev team. Either way, each change maps back to a specific finding in the report so nothing is done blindly.",
+    title: "Your team implements",
+    what: "Your team implements the fixes using the prioritised brief in your report. Each finding includes the reason it matters and enough technical detail for a developer to act on it without guesswork.",
     time: "1–5 days",
-    input: "Optional",
+    input: "Your dev team",
   },
   {
     step: "07",
     title: "Verification",
-    what: "We re-run the audit after the fixes to confirm the score improved and close out each finding. This verification step is what turns the audit from a one-off opinion into a measurable, repeatable result.",
+    what: "We re-run the audit after your team applies the fixes, to confirm the score improved and close out each finding. This verification step is what turns the audit from a one-off opinion into a measurable, repeatable result.",
     time: "24–48 hours",
     input: "None",
   },

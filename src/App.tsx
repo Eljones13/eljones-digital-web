@@ -6,6 +6,7 @@ import { Seo } from "./components/Seo";
 import { ServiceCard } from "./components/ServiceCard";
 import { ScoreGauge } from "./components/ScoreGauge";
 import { StatBar } from "./components/StatBar";
+import { SiteHeader } from "./components/SiteHeader";
 import {
   BENEFITS,
   COMPARE,
@@ -342,33 +343,7 @@ function VisualProofGrid({ items = premiumVisuals.slice(0, 3) }: { items?: typeo
 function Layout() {
   return (
     <div className="min-h-screen bg-white text-ink">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy/95 text-white backdrop-blur">
-        <div className="container-x flex min-h-20 items-center justify-between gap-5">
-          <Link to="/" className="flex items-center gap-3" aria-label="Eljones Digital home">
-            <span className="grid h-10 w-10 place-items-center rounded-md bg-accent font-mono text-sm font-bold">
-              ED
-            </span>
-            <span className="font-display text-lg font-bold">{SITE.name}</span>
-          </Link>
-          <nav className="hidden items-center gap-5 text-sm font-semibold text-white/78 lg:flex">
-            {NAV.map((item) => (
-              <Link key={item.to} to={item.to} className="transition-colors hover:text-white">
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-          <a className="btn-accent hidden px-5 py-2.5 text-sm sm:inline-flex" href={mailto("SEO and GEO audit request")}>
-            Request audit
-          </a>
-        </div>
-        <nav className="container-x flex gap-4 overflow-x-auto pb-3 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-white/70 lg:hidden">
-          {NAV.map((item) => (
-            <Link key={item.to} to={item.to} className="flex-none transition-colors hover:text-white">
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-      </header>
+      <SiteHeader />
       <main>
         <Outlet />
       </main>
@@ -708,8 +683,8 @@ function HomePage() {
               },
               {
                 n: "2",
-                title: "Fix Implementation",
-                body: "Action the critical fixes from the report: either yourself, your developer, or with our implementation service.",
+                title: "Apply the fixes",
+                body: "Action the critical fixes from the report yourself or with your own developer. Each finding includes the detail a developer needs to act on it.",
                 link: "See what's included →",
                 to: "/services",
               },
