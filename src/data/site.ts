@@ -35,6 +35,32 @@ export const NAV: { label: string; to: string }[] = [
   { label: "Contact", to: "/contact" },
 ];
 
+// Grouped navigation for the header (desktop dropdowns + mobile menu).
+// Groups with `items` render as a dropdown; entries with `to` render as a
+// single link. "Home" is intentionally omitted: the logo links to "/".
+export type NavGroup = { label: string; to?: string; items?: { label: string; to: string }[] };
+export const NAV_GROUPS: NavGroup[] = [
+  {
+    label: "Services",
+    items: [
+      { label: "Services", to: "/services" },
+      { label: "Pricing", to: "/pricing" },
+      { label: "AI Strategy", to: "/ai-strategy" },
+      { label: "AI Search", to: "/ai-search-optimization" },
+    ],
+  },
+  {
+    label: "Resources",
+    items: [
+      { label: "Proof", to: "/case-studies/sample-geo-audit" },
+      { label: "How It Works", to: "/how-it-works" },
+      { label: "Blog", to: "/blog" },
+    ],
+  },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
+];
+
 export const STATS: { num: string; label: string }[] = [
   { num: "24", label: "Audit dimensions" },
   { num: "271", label: "Individual tests per audit" },
